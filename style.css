@@ -72,6 +72,21 @@ mark { background: var(--orange); color: var(--encre); padding: 0 .15em; }
   margin-bottom: .25rem;
 }
 
+/* Les deux outils : deux cartes, un trait orange en tête. */
+.outils {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+.outil {
+  border-top: 4px solid var(--orange);
+  padding-top: .75rem;
+}
+.outil h3 { font-size: 1.4rem; margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: normal; }
+.outil .quand { color: var(--doux); font-size: .9rem; margin-bottom: .75rem; }
+@media (max-width: 36rem) { .outils { grid-template-columns: 1fr; } }
+
 /* La section des associations, dans le cadre. */
 .cadre {
   border: 2px dashed var(--encre);
