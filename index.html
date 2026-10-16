@@ -3,94 +3,131 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hors Zone AI : l'IA là où l'argent ne suit pas</title>
-<meta name="description" content="Association loi 1901 : des développeurs bénévoles construisent des outils d'IA libres et gratuits, d'abord pour les étudiants qui n'ont personne pour les aider.">
+<title>Révise et Entretien blanc, gratuits pour les étudiants · Hors Zone AI</title>
+<meta name="description" content="Révise transforme tes cours en fiches et en quiz, Entretien blanc t'entraîne aux entretiens. Gratuit, fait par une association. Bêta fin novembre avec les 50 premiers inscrits.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Les bons outils coûtent cher. Pas ici.">
+<meta property="og:description" content="Révise pour tes partiels, Entretien blanc pour tes entretiens. Gratuit, fait par une association. Bêta fin novembre avec les 50 premiers inscrits.">
+<meta property="og:url" content="https://hors-zone-ai.github.io/site/">
+<meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/avatar-512.png">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="evitement" href="#contenu">Aller au contenu</a>
+<a class="evitement" href="#inscription">Aller au formulaire</a>
 
 <header class="haut">
-  <p class="marque"><a href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a></p>
-  <nav aria-label="Sections de la page">
-    <a href="#outils">Outils</a>
-    <a href="#methode">Méthode</a>
+  <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
+  <nav aria-label="Sections">
+    <a href="#revise">Révise</a>
+    <a href="#entretien">Entretien blanc</a>
     <a href="#associations">Associations</a>
-    <a href="#contribuer">Contribuer</a>
-    <a href="#contact">Contact</a>
+    <a class="bouton petit" href="#inscription">Je m'inscris</a>
   </nav>
 </header>
 
-<main id="contenu">
+<main>
 
   <section class="ouverture" aria-labelledby="titre">
-    <h1 id="titre">Rendre l'IA utilisable là où <mark>l'argent</mark> ne suit pas.</h1>
-    <p>Coder coûte cher. Faire construire un outil sur mesure aussi, et les outils d'IA qui aident à coder se paient chaque mois. Pour une petite association ou un étudiant, ça fait vite trop.</p>
-    <p>Hors Zone AI est une association loi 1901, créée à Paris en septembre 2026. Des développeurs bénévoles, souvent étudiants, y construisent des outils libres et gratuits pour ceux qui n'auraient jamais eu le budget.</p>
-    <p class="etat">Où on en est : on démarre. Deux premiers outils sont en préparation pour les étudiants, Révise avant les partiels de décembre, Entretien blanc début janvier. Et on cherche la première association qui nous confiera un besoin.</p>
+    <h1 id="titre">Les bons outils coûtent cher.<br><mark>Pas ici.</mark></h1>
+    <p class="chapo">Deux outils gratuits pour les 16 à 25 ans, faits par une association : <strong>Révise</strong> pour tes partiels, <strong>Entretien blanc</strong> pour tes entretiens.</p>
+
+    <form id="inscription" class="inscription" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+      <input type="hidden" name="type" value="etudiant">
+      <input type="hidden" name="source" value="site, haut de page">
+      <label for="email">Ton mail</label>
+      <div class="ligne">
+        <input id="email" name="email" type="email" required autocomplete="email" inputmode="email" placeholder="prenom@mail.fr">
+        <button type="submit">Je m'inscris à la bêta</button>
+      </div>
+      <div class="choix" role="radiogroup" aria-label="Je veux tester">
+        <span>Je veux tester :</span>
+        <label><input type="radio" name="outil" value="les-deux" checked> les deux</label>
+        <label><input type="radio" name="outil" value="revise"> Révise</label>
+        <label><input type="radio" name="outil" value="entretien-blanc"> Entretien blanc</label>
+      </div>
+      <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI m'écrive au sujet de la bêta. Je peux me désinscrire quand je veux.</span></label>
+      <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+      <p class="petit">Bêta fin novembre avec les 50 premiers inscrits. Ton mail ne sert qu'à ça.</p>
+    </form>
   </section>
 
-  <section id="outils" aria-labelledby="titre-outils">
-    <h2 id="titre-outils">Deux premiers outils, pour les étudiants</h2>
-    <p>Gratuits, pour les 16 à 25 ans, d'abord les étudiants de première année et ceux qui vivent loin des grandes villes.</p>
-
-    <div class="outils">
-      <article class="outil" aria-labelledby="titre-revise">
-        <h3 id="titre-revise">Révise</h3>
-        <p class="quand">Avant les partiels de décembre</p>
-        <p>Faire de bonnes fiches prend des heures, et la méthode ne s'apprend pas partout. Tu déposes tes notes, un PDF ou la photo de ton cahier. Une minute plus tard : une fiche, un quiz de 10 questions et des cartes mémoire, rangés par matière. Chaque point de la fiche renvoie au passage du cours d'où il vient, pour vérifier.</p>
-        <p><a href="mailto:contact@horszoneai.fr?subject=Liste%20d%27attente%20R%C3%A9vise">Je veux tester Révise</a></p>
-      </article>
-
-      <article class="outil" aria-labelledby="titre-entretien">
-        <h3 id="titre-entretien">Entretien blanc</h3>
-        <p class="quand">Début janvier, pour la saison des stages</p>
-        <p>Sans réseau, on arrive souvent à son premier entretien sans s'être jamais entraîné. Tu choisis un scénario (stage, alternance, job étudiant, oral d'école), tu colles l'offre si tu l'as, tu réponds à 6 à 8 questions avec des relances comme en vrai. Tu repars avec une note sur 4 critères, 3 points forts et 3 choses à améliorer.</p>
-        <p><a href="mailto:contact@horszoneai.fr?subject=Liste%20d%27attente%20Entretien%20blanc">Je veux tester Entretien blanc</a></p>
-      </article>
+  <section id="revise" class="outil" aria-labelledby="titre-revise">
+    <div>
+      <p class="quand">Révise · prévu avant les partiels de décembre</p>
+      <h2 id="titre-revise">Tes notes deviennent une fiche, un quiz et des cartes mémoire.</h2>
+      <p>Dépose un texte, un PDF ou la photo de ton cahier. Une minute plus tard, tout est rangé par matière, et chaque point de la fiche renvoie à ton cours pour vérifier.</p>
     </div>
-
-    <p class="etat">Ce que ces outils ne feront jamais : analyser ta voix ou ton visage, transmettre tes résultats à un recruteur ou à une école, garder tes contenus après traitement, ni s'en servir pour entraîner un modèle. Les noms sont provisoires.</p>
+    <div class="apercu" aria-hidden="true">
+      <div class="cadre-fiche">
+        <p class="titre">Fiche · Droit constitutionnel, chapitre 2</p>
+        <div class="trait" style="width:92%"></div>
+        <div class="trait" style="width:76%"></div>
+        <div class="trait" style="width:84%"></div>
+        <div class="puces"><span class="puce">Quiz · 10 questions</span><span class="puce">12 cartes mémoire</span></div>
+      </div>
+      <p class="exemple">Exemple</p>
+    </div>
   </section>
 
-  <section id="methode" aria-labelledby="titre-methode">
-    <h2 id="titre-methode">Comment on travaille</h2>
+  <section id="entretien" class="outil" aria-labelledby="titre-entretien">
+    <div>
+      <p class="quand">Entretien blanc · prévu début janvier</p>
+      <h2 id="titre-entretien">Tu répètes, puis tu sais quoi améliorer.</h2>
+      <p>Stage, alternance, job étudiant ou oral d'école : 6 à 8 questions avec des relances, comme en vrai. Tu repars avec une note sur 4 critères, 3 points forts et 3 choses à travailler.</p>
+    </div>
+    <div class="apercu" aria-hidden="true">
+      <div class="cadre-fiche">
+        <div class="note"><span>Structure</span><span class="barre"><span style="width:75%"></span></span><span>3/4</span></div>
+        <div class="note"><span>Exemples</span><span class="barre"><span style="width:50%"></span></span><span>2/4</span></div>
+        <div class="note"><span>Clarté</span><span class="barre"><span style="width:100%"></span></span><span>4/4</span></div>
+        <div class="note"><span>Motivation</span><span class="barre"><span style="width:75%"></span></span><span>3/4</span></div>
+        <p class="titre">À travailler : un exemple chiffré</p>
+      </div>
+      <p class="exemple">Exemple</p>
+    </div>
+  </section>
 
-    <h3><span class="num" aria-hidden="true">1</span>On part d'un besoin réel</h3>
-    <p>Une association, une mission locale ou un lycée nous dit ce qui manque. On ne construit jamais un outil juste parce qu'il serait amusant à coder.</p>
+  <ul class="promesses">
+    <li>Gratuit, sans pub</li>
+    <li>Tes résultats restent à toi</li>
+    <li>Ni ta voix, ni ton visage</li>
+    <li>Code ouvert</li>
+  </ul>
+  <p class="relance"><a class="bouton" href="#inscription">Je m'inscris à la bêta</a></p>
 
-    <h3><span class="num" aria-hidden="true">2</span>Une petite équipe, une date</h3>
-    <p>Deux ou trois développeurs bénévoles construisent l'outil en 4 à 6 semaines. La date de démonstration est fixée dès le premier jour.</p>
-
-    <h3><span class="num" aria-hidden="true">3</span>Le moins cher à faire tourner</h3>
-    <p>On prend le plus petit modèle d'IA qui fait le travail et des briques libres, parce qu'un outil qu'on ne peut pas payer chaque mois finit débranché. Le code est public du premier jour à la dernière version.</p>
+  <section class="qui" aria-labelledby="titre-qui">
+    <h2 id="titre-qui">Qui est derrière</h2>
+    <p>Hors Zone AI, une association loi 1901 créée à Paris en septembre 2026. Des bénévoles construisent des outils libres pour ceux qui n'ont pas le budget, et tout le code est public.</p>
   </section>
 
   <section id="associations" class="cadre" aria-labelledby="titre-associations">
     <h2 id="titre-associations">Vous êtes une association ?</h2>
-    <p>Vous tenez une petite structure, souvent avec des bénévoles et un budget serré. Une tâche revient chaque semaine et vous prend des heures : un compte rendu à taper, une pile de dossiers à trier. Un prestataire vous demanderait une somme que vous n'avez pas.</p>
-    <p>Écrivez-nous en deux lignes. Si un outil simple peut vous aider, on regarde avec vous comment le construire, sans vous le facturer. Le code sera libre : vous pourrez l'utiliser, le modifier et le garder.</p>
+    <p>Une tâche vous prend des heures chaque semaine ? Dites-le nous en deux lignes. Si un outil simple peut aider, on regarde avec vous comment le construire, sans vous le facturer.</p>
+    <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+      <input type="hidden" name="type" value="association">
+      <input type="hidden" name="source" value="site, associations">
+      <label for="asso-email">Votre mail</label>
+      <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@votre-asso.fr">
+      <label for="asso-message">Votre besoin, en deux lignes</label>
+      <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
+      <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI me réponde par mail.</span></label>
+      <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+      <button type="submit">Envoyer</button>
+    </form>
   </section>
 
-  <section id="contribuer" aria-labelledby="titre-contribuer">
-    <h2 id="titre-contribuer">Vous codez ?</h2>
-    <p>Ici, ce que vous codez sert à quelqu'un qui en a besoin, et votre nom reste dans l'historique du code. Tout est public sur GitHub, sous licence MIT. Chaque contribution est signée avec <code>git commit -s</code> : vous gardez vos droits d'auteur.</p>
-    <p>Le premier projet ouvert, c'est ce site. Deux pages, aucun cookie, pas de JavaScript, rien qui se charge depuis un autre site, et ça doit le rester. Les premières tâches pour débuter sont listées dans le dépôt. Révise et Entretien blanc se construisent en novembre : on cherche les mains.</p>
-    <p><a href="https://github.com/hors-zone-ai/site">Voir le dépôt sur GitHub</a></p>
+  <section class="dev" aria-labelledby="titre-dev">
+    <h2 id="titre-dev">Vous codez ?</h2>
+    <p>Tout est public sur GitHub, sous licence MIT, et vous gardez vos droits d'auteur. Six tâches pour débuter sur ce site, puis Révise et Entretien blanc à construire en novembre.</p>
+    <p><a href="https://github.com/hors-zone-ai/site">Voir les tâches sur GitHub</a></p>
   </section>
-
-  <section id="contact" aria-labelledby="titre-contact">
-    <h2 id="titre-contact">Contact</h2>
-    <p>Un mail suffit : <a href="mailto:contact@horszoneai.fr">contact@horszoneai.fr</a></p>
-  </section>
-
-  <p class="signature">Coder coûte cher.<br>Pas ici.</p>
 
 </main>
 
 <footer class="bas">
-  <p>Hors Zone AI, association loi 1901, Paris. <a href="mentions-legales.html">Mentions légales</a></p>
+  <p>Hors Zone AI, association loi 1901, Paris · <a href="mentions-legales.html">Mentions légales et données</a> · <a href="https://github.com/hors-zone-ai/site">Code source</a></p>
   <p>Cette page pèse moins de 20 Ko : elle s'ouvre vite, même sur un vieux téléphone.</p>
 </footer>
 </body>

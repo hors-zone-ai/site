@@ -2,133 +2,128 @@
 
 :root {
   --papier: #f4efe4;
+  --papier-clair: #fbf8f1;
   --encre: #15120f;
   --orange: #e24f17;
   --doux: #5f5e5a;
+  --gris: #d3d1c7;
 }
 
 * { box-sizing: border-box; }
 
-html { font-size: 112.5%; }
+html { font-size: 112.5%; scroll-behavior: smooth; }
 
 body {
   margin: 0;
   background: var(--papier);
   color: var(--encre);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
-.haut, main, .bas {
-  max-width: 38rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-}
+.haut, main, .bas { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
 
-/* Le logo : le nom qui dépasse du cadre. Le cadre, c'est la zone. */
+/* En-tête : le logo, le menu, un seul bouton. */
 .haut {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: .75rem 1.5rem;
-  padding-top: 1.5rem;
+  gap: .75rem 1.25rem;
+  padding-top: 1.25rem;
 }
-
-.marque {
-  margin: 0;
-  font-weight: 800;
-  font-size: 1.35rem;
-  letter-spacing: -.02em;
-  line-height: 1;
-}
-.marque a { color: var(--encre); text-decoration: none; }
+.marque { font-weight: 800; font-size: 1.25rem; letter-spacing: -.02em; line-height: 1; color: var(--encre); text-decoration: none; }
 .marque .zone { display: inline-block; border: 2px dashed var(--encre); padding: .3rem .5rem; }
 .marque .ai { color: var(--orange); margin-left: .2em; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem; font-size: .9rem; }
 
-nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
-
-h1, h2, .signature {
-  font-family: Georgia, "Times New Roman", serif;
-  font-weight: normal;
-  line-height: 1.15;
-}
-h1 { font-size: 2.3rem; margin: 3.5rem 0 1.25rem; }
-h2 { font-size: 1.5rem; margin: 3.5rem 0 1rem; }
-h3 { font-size: 1rem; margin: 2rem 0 .25rem; }
-
+h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; line-height: 1.12; }
+h1 { font-size: 2.7rem; margin: 2.5rem 0 1rem; }
+h2 { font-size: 1.55rem; margin: 0 0 .75rem; }
 p { margin: 0 0 1rem; }
-
-/* Le mot qui compte, surligné à l'orange. */
 mark { background: var(--orange); color: var(--encre); padding: 0 .15em; }
+.chapo { font-size: 1.1rem; max-width: 34rem; }
 
-/* Les étapes de la méthode : un gros chiffre orange. */
-.num {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1;
-  color: var(--orange);
-  margin-bottom: .25rem;
-}
+a { color: var(--encre); text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: .15em; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
 
-/* Les deux outils : deux cartes, un trait orange en tête. */
-.outils {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin: 1.5rem 0;
-}
-.outil {
-  border-top: 4px solid var(--orange);
-  padding-top: .75rem;
-}
-.outil h3 { font-size: 1.4rem; margin: 0; font-family: Georgia, "Times New Roman", serif; font-weight: normal; }
-.outil .quand { color: var(--doux); font-size: .9rem; margin-bottom: .75rem; }
-@media (max-width: 36rem) { .outils { grid-template-columns: 1fr; } }
-
-/* La section des associations, dans le cadre. */
-.cadre {
-  border: 2px dashed var(--encre);
-  padding: 1.5rem 1.5rem .5rem;
-  margin-top: 3.5rem;
-}
-.cadre h2 { margin-top: 0; }
-
-a {
+/* Boutons : orange, texte encre (contraste 4,8). */
+.bouton, button {
+  display: inline-block;
+  background: var(--orange);
   color: var(--encre);
-  text-decoration-color: var(--orange);
-  text-decoration-thickness: 2px;
-  text-underline-offset: .15em;
+  border: 0;
+  border-radius: 4px;
+  padding: .7rem 1.1rem;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
 }
-a:hover { background: var(--orange); text-decoration: none; }
-a:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+.bouton:hover, button:hover { outline: 2px solid var(--encre); outline-offset: 2px; }
+.bouton.petit { padding: .4rem .75rem; font-size: .9rem; }
 
-.etat { color: var(--doux); }
-
-code {
-  font-family: ui-monospace, Menlo, Consolas, monospace;
-  font-size: .9em;
+/* Formulaire d'inscription, dans le cadre. */
+.inscription { margin-top: 1.5rem; padding: 1.25rem; background: var(--papier-clair); border: 2px dashed var(--encre); max-width: 38rem; }
+label { font-weight: 700; }
+.ligne { display: flex; flex-wrap: wrap; gap: .5rem; margin: .35rem 0 .75rem; }
+input[type=email], input[type=text], textarea {
+  font: inherit;
+  padding: .65rem .75rem;
+  border: 2px solid var(--encre);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--encre);
+  width: 100%;
 }
+.ligne input { flex: 1 1 14rem; width: auto; min-width: 0; }
+.choix { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-bottom: .75rem; font-size: .95rem; }
+.choix label { font-weight: 400; }
+.accord { display: flex; gap: .5rem; align-items: flex-start; font-weight: 400; font-size: .9rem; margin-bottom: .5rem; }
+.accord input { margin-top: .3rem; flex: none; }
+.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
+.pot { position: absolute; left: -999rem; }
 
-.signature {
-  font-size: 2rem;
-  margin: 4.5rem 0 0;
-}
+/* Les deux outils : le texte, puis ce que l'outil produit. */
+.outil { margin-top: 3.5rem; display: grid; gap: 1.25rem; }
+@media (min-width: 46rem) { .outil { grid-template-columns: 1fr 1fr; align-items: center; } }
+.quand { color: var(--doux); font-size: .9rem; margin: 0 0 .35rem; }
+.apercu { background: var(--papier-clair); border-top: 4px solid var(--orange); padding: 1rem; }
+.cadre-fiche { border: 1.5px dashed var(--encre); padding: .75rem .9rem; }
+.titre { font-size: .8rem; font-weight: 700; margin: .4rem 0 .6rem; }
+.trait { height: .4rem; background: var(--gris); margin: 0 0 .45rem; }
+.puces { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+.puce { font-size: .75rem; background: var(--encre); color: var(--papier); padding: .1rem .5rem; }
+.note { display: grid; grid-template-columns: 5.5rem 1fr 2rem; align-items: center; gap: .5rem; font-size: .8rem; margin-bottom: .4rem; }
+.barre { height: .5rem; background: var(--gris); }
+.barre span { display: block; height: 100%; background: var(--orange); }
+.exemple { font-size: .75rem; color: var(--doux); margin: .5rem 0 0; }
 
-.bas {
-  margin-top: 3rem;
-  padding-bottom: 2.5rem;
-  color: var(--doux);
-  font-size: .85rem;
-}
+/* Les promesses, puis le second bouton. */
+.promesses { list-style: none; padding: 0; margin: 3rem 0 1.5rem; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-weight: 700; }
+.promesses li::before { content: ""; display: inline-block; width: .55rem; height: .55rem; background: var(--orange); margin-right: .5rem; }
+.relance { margin: 0 0 3rem; }
+
+.qui, .dev { margin-top: 3rem; }
+
+/* Associations, dans le cadre. */
+.cadre { border: 2px dashed var(--encre); padding: 1.25rem 1.25rem .75rem; margin-top: 3rem; }
+.asso label { display: block; margin-top: .6rem; }
+.asso input, .asso textarea { margin-top: .35rem; }
+.asso .accord { display: flex; margin-top: .75rem; }
+.asso button { margin: .5rem 0 .75rem; }
+
+.bas { margin-top: 3.5rem; padding-bottom: 2rem; color: var(--doux); font-size: .85rem; }
 
 .evitement { position: absolute; left: -999rem; }
 .evitement:focus { left: 1rem; top: 1rem; padding: .5rem; background: var(--papier); }
 
 .a-completer { background: #ffe58a; padding: 0 .25em; }
 
+/* Mentions légales et merci. */
+.texte h2 { font-size: 1.25rem; margin-top: 2rem; }
+
 @media (max-width: 30rem) {
-  h1 { font-size: 1.8rem; margin-top: 2.5rem; }
-  .signature { font-size: 1.6rem; }
+  h1 { font-size: 2.05rem; margin-top: 1.75rem; }
+  nav a:not(.bouton) { display: none; }
 }
