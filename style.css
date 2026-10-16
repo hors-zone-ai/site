@@ -1,0 +1,119 @@
+/* Site de Hors Zone AI. Marque « Hors cadre » : papier, encre, orange chantier, un cadre en pointillés. Aucune police externe. */
+
+:root {
+  --papier: #f4efe4;
+  --encre: #15120f;
+  --orange: #e24f17;
+  --doux: #5f5e5a;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 112.5%; }
+
+body {
+  margin: 0;
+  background: var(--papier);
+  color: var(--encre);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.haut, main, .bas {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Le logo : le nom qui dépasse du cadre. Le cadre, c'est la zone. */
+.haut {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: .75rem 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.marque {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: -.02em;
+  line-height: 1;
+}
+.marque a { color: var(--encre); text-decoration: none; }
+.marque .zone { display: inline-block; border: 2px dashed var(--encre); padding: .3rem .5rem; }
+.marque .ai { color: var(--orange); margin-left: .2em; }
+
+nav { display: flex; flex-wrap: wrap; gap: .25rem 1rem; }
+
+h1, h2, .signature {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  line-height: 1.15;
+}
+h1 { font-size: 2.3rem; margin: 3.5rem 0 1.25rem; }
+h2 { font-size: 1.5rem; margin: 3.5rem 0 1rem; }
+h3 { font-size: 1rem; margin: 2rem 0 .25rem; }
+
+p { margin: 0 0 1rem; }
+
+/* Le mot qui compte, surligné à l'orange. */
+mark { background: var(--orange); color: var(--encre); padding: 0 .15em; }
+
+/* Les étapes de la méthode : un gros chiffre orange. */
+.num {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--orange);
+  margin-bottom: .25rem;
+}
+
+/* La section des associations, dans le cadre. */
+.cadre {
+  border: 2px dashed var(--encre);
+  padding: 1.5rem 1.5rem .5rem;
+  margin-top: 3.5rem;
+}
+.cadre h2 { margin-top: 0; }
+
+a {
+  color: var(--encre);
+  text-decoration-color: var(--orange);
+  text-decoration-thickness: 2px;
+  text-underline-offset: .15em;
+}
+a:hover { background: var(--orange); text-decoration: none; }
+a:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+
+.etat { color: var(--doux); }
+
+code {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: .9em;
+}
+
+.signature {
+  font-size: 2rem;
+  margin: 4.5rem 0 0;
+}
+
+.bas {
+  margin-top: 3rem;
+  padding-bottom: 2.5rem;
+  color: var(--doux);
+  font-size: .85rem;
+}
+
+.evitement { position: absolute; left: -999rem; }
+.evitement:focus { left: 1rem; top: 1rem; padding: .5rem; background: var(--papier); }
+
+.a-completer { background: #ffe58a; padding: 0 .25em; }
+
+@media (max-width: 30rem) {
+  h1 { font-size: 1.8rem; margin-top: 2.5rem; }
+  .signature { font-size: 1.6rem; }
+}
