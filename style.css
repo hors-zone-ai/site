@@ -1,4 +1,6 @@
-/* Site de Hors Zone AI. Marque « Hors cadre » : papier, encre, orange chantier, un cadre en pointillés. Aucune police externe. */
+/* Site de Hors Zone AI. Marque « Hors cadre » : papier, encre, orange chantier, cadre en pointillés.
+   Une asso sérieuse, avec un pied dans le code : titres serif, étiquettes en monospace, papier pointé.
+   Aucune police ni image externe. */
 
 :root {
   --papier: #f4efe4;
@@ -7,77 +9,99 @@
   --orange: #e24f17;
   --doux: #5f5e5a;
   --gris: #d3d1c7;
+  --serif: Georgia, "Times New Roman", serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
 * { box-sizing: border-box; }
-
-html { font-size: 112.5%; scroll-behavior: smooth; }
+html { font-size: 106.25%; scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background: var(--papier);
   color: var(--encre);
+  background-color: var(--papier);
+  background-image: radial-gradient(rgba(21, 18, 15, .08) 1px, transparent 1.2px);
+  background-size: 20px 20px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.55;
 }
 
-.haut, main, .bas { max-width: 46rem; margin: 0 auto; padding: 0 1.25rem; }
-
-/* En-tête : le logo, le menu, un seul bouton. */
-.haut {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: .75rem 1.25rem;
-  padding-top: 1.25rem;
-}
-.marque { font-weight: 800; font-size: 1.25rem; letter-spacing: -.02em; line-height: 1; color: var(--encre); text-decoration: none; }
-.marque .zone { display: inline-block; border: 2px dashed var(--encre); padding: .3rem .5rem; }
-.marque .ai { color: var(--orange); margin-left: .2em; }
-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1rem; font-size: .9rem; }
-
-h1, h2 { font-family: Georgia, "Times New Roman", serif; font-weight: normal; line-height: 1.12; }
-h1 { font-size: 2.7rem; margin: 2.5rem 0 1rem; }
-h2 { font-size: 1.55rem; margin: 0 0 .75rem; }
 p { margin: 0 0 1rem; }
-mark { background: var(--orange); color: var(--encre); padding: 0 .15em; }
-.chapo { font-size: 1.1rem; max-width: 36rem; }
-.surtitre { font-size: .85rem; font-weight: 700; letter-spacing: .02em; margin: 2.25rem 0 .5rem; }
-.surtitre + h1 { margin-top: 0; }
-
 a { color: var(--encre); text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: .15em; }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
+mark { background: var(--orange); color: var(--encre); padding: 0 .12em; }
+h1 mark { white-space: nowrap; }
 
-/* Boutons : orange, texte encre (contraste 4,8). */
+h1, h2 { font-family: var(--serif); font-weight: normal; line-height: 1.08; }
+h1 { font-size: clamp(2.2rem, 5.2vw, 3.5rem); margin: 0 0 1.1rem; }
+h2 { font-size: clamp(1.75rem, 3.6vw, 2.35rem); margin: 0 0 .5rem; }
+h3 { font-size: 1.05rem; margin: 0 0 .35rem; }
+
+/* Mises en page : une colonne large, les sections se suivent. */
+.haut, main > section, .bande-contenu, .bas, .texte { max-width: 68rem; margin: 0 auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+main > section.bande { max-width: none; padding: 0; }
+main > section + section { padding-top: 4.5rem; }
+main > section.bande + section { padding-top: 4rem; }
+
+/* En-tête. */
+.haut { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.25rem; padding-top: 1.25rem; }
+.marque { font-weight: 800; font-size: 1.25rem; letter-spacing: -.02em; line-height: 1; color: var(--encre); text-decoration: none; }
+.marque .zone { display: inline-block; border: 2px dashed var(--encre); padding: .3rem .5rem; background: var(--papier); }
+.marque .ai { color: var(--orange); margin-left: .2em; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.1rem; font-size: .9rem; }
+
+/* Étiquettes et petites lignes techniques, en monospace. */
+.surtitre { font-family: var(--mono); font-size: .8rem; letter-spacing: .02em; margin: 0 0 .75rem; }
+.meta { font-family: var(--mono); font-size: .78rem; color: var(--doux); }
+.clair { color: var(--gris); }
+
+/* Boutons. Texte encre sur orange : contraste 4,8. */
 .bouton, button {
-  display: inline-block;
-  background: var(--orange);
-  color: var(--encre);
-  border: 0;
-  border-radius: 4px;
-  padding: .7rem 1.1rem;
-  font: inherit;
-  font-weight: 700;
-  text-decoration: none;
-  cursor: pointer;
+  display: inline-block; background: var(--orange); color: var(--encre); border: 0; border-radius: 4px;
+  padding: .7rem 1.1rem; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
 }
 .bouton:hover, button:hover { outline: 2px solid var(--encre); outline-offset: 2px; }
 .bouton.petit { padding: .4rem .75rem; font-size: .9rem; }
+.bouton.contour { background: var(--papier); border: 2px solid var(--encre); padding: calc(.7rem - 2px) calc(1.1rem - 2px); }
+
+/* Haut de page : la mission, puis la feuille de route. */
+.ouverture { display: grid; gap: 2.5rem; align-items: center; padding-top: 3.5rem; padding-bottom: 4rem; }
+@media (min-width: 54rem) { .ouverture { grid-template-columns: 1.45fr 1fr; } }
+.chapo { font-size: 1.12rem; max-width: 36rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.6rem 0 1rem; }
+.feuille { background: var(--papier-clair); border: 1.5px dashed var(--encre); padding: 1.1rem 1.25rem; font-family: var(--mono); font-size: .82rem; }
+.feuille-titre { margin: 0 0 .6rem; color: var(--doux); }
+.feuille ol { list-style: none; margin: 0; padding: 0; }
+.feuille li { display: grid; grid-template-columns: 5.2rem 1fr; gap: .5rem; padding: .45rem 0; border-top: 1px solid var(--gris); }
+.feuille li:first-child { border-top: 0; }
+.feuille li span { font-weight: 700; }
+.feuille li.fait span::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--orange); margin-right: .35rem; }
+.feuille-note { margin: .6rem 0 0; color: var(--doux); font-size: .75rem; }
+
+/* La bannière Nos outils : bandeau encre, trois cartes identiques. */
+.bande { background: var(--encre); color: var(--papier); }
+.bande-contenu { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+.bande h2 { color: var(--papier); margin-bottom: 1.75rem; }
+.cartes { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.carte { display: flex; flex-direction: column; background: var(--papier-clair); color: var(--encre); border-top: 4px solid var(--orange); padding: 1.25rem; }
+.carte h3 { font-family: var(--serif); font-weight: normal; font-size: 1.65rem; margin: .7rem 0 .3rem; }
+.badge { align-self: flex-start; margin: 0; font-family: var(--mono); font-size: .72rem; background: var(--encre); color: var(--papier); padding: .15rem .5rem; }
+.accroche { font-weight: 600; }
+.carte ul { list-style: none; padding: 0; margin: 0 0 1.1rem; font-size: .92rem; }
+.carte li { padding: .35rem 0; border-top: 1px solid var(--gris); }
+.carte li::before { content: "+ "; font-family: var(--mono); font-weight: 700; }
+.lien { font-weight: 700; }
+.carte .lien { margin-top: auto; }
+.carte.a-venir { background: transparent; color: var(--papier); border: 1.5px dashed var(--papier); }
+.carte.a-venir .badge { background: transparent; border: 1px solid var(--papier); }
+.carte.a-venir .lien { color: var(--papier); }
+.bande .meta { margin: 1.75rem 0 0; }
 
 /* Formulaire d'inscription, dans le cadre. */
-.inscription { margin-top: 1.5rem; padding: 1.25rem; background: var(--papier-clair); border: 2px dashed var(--encre); max-width: 38rem; }
+.inscription { margin-top: 1.25rem; padding: 1.25rem; background: var(--papier-clair); border: 2px dashed var(--encre); max-width: 40rem; }
 label { font-weight: 700; }
 .ligne { display: flex; flex-wrap: wrap; gap: .5rem; margin: .35rem 0 .75rem; }
-input[type=email], input[type=text], textarea {
-  font: inherit;
-  padding: .65rem .75rem;
-  border: 2px solid var(--encre);
-  border-radius: 4px;
-  background: #fff;
-  color: var(--encre);
-  width: 100%;
-}
+input[type=email], input[type=text], textarea { font: inherit; padding: .65rem .75rem; border: 2px solid var(--encre); border-radius: 4px; background: #fff; color: var(--encre); width: 100%; }
 .ligne input { flex: 1 1 14rem; width: auto; min-width: 0; }
 .choix { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-bottom: .75rem; font-size: .95rem; }
 .choix label { font-weight: 400; }
@@ -86,46 +110,42 @@ input[type=email], input[type=text], textarea {
 p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .pot { position: absolute; left: -999rem; }
 
-/* Les deux outils : le texte, puis ce que l'outil produit. */
-.outil { margin-top: 3.5rem; display: grid; gap: 1.25rem; }
-@media (min-width: 46rem) { .outil { grid-template-columns: 1fr 1fr; align-items: center; } }
-.quand { color: var(--doux); font-size: .9rem; margin: 0 0 .35rem; }
-.apercu { background: var(--papier-clair); border-top: 4px solid var(--orange); padding: 1rem; }
-.cadre-fiche { border: 1.5px dashed var(--encre); padding: .75rem .9rem; }
-.titre { font-size: .8rem; font-weight: 700; margin: .4rem 0 .6rem; }
-.trait { height: .4rem; background: var(--gris); margin: 0 0 .45rem; }
-.puces { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
-.puce { font-size: .75rem; background: var(--encre); color: var(--papier); padding: .1rem .5rem; }
-.note { display: grid; grid-template-columns: 5.5rem 1fr 2rem; align-items: center; gap: .5rem; font-size: .8rem; margin-bottom: .4rem; }
-.barre { height: .5rem; background: var(--gris); }
-.barre span { display: block; height: 100%; background: var(--orange); }
-.exemple { font-size: .75rem; color: var(--doux); margin: .5rem 0 0; }
+/* Ce qui nous anime : quatre valeurs numérotées. */
+.valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
+.valeur { border-top: 1.5px solid var(--encre); padding-top: .8rem; }
+.num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
 
-/* Les promesses, puis le second bouton. */
-.promesses { list-style: none; padding: 0; margin: 3rem 0 1.5rem; display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-weight: 700; }
-.promesses li::before { content: ""; display: inline-block; width: .55rem; height: .55rem; background: var(--orange); margin-right: .5rem; }
-.relance { margin: 0 0 3rem; }
-
-.qui, .dev { margin-top: 3rem; }
-
-/* Associations, dans le cadre. */
-.cadre { border: 2px dashed var(--encre); padding: 1.25rem 1.25rem .75rem; margin-top: 3rem; }
+/* Nous rejoindre : trois chemins, puis le formulaire des structures. */
+.chemins { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin: 1.75rem 0 1.5rem; }
+.chemin { display: flex; flex-direction: column; background: var(--papier-clair); border: 1.5px dashed var(--encre); padding: 1rem 1.1rem; }
+.chemin .lien { margin-top: auto; }
+.cmd { margin: 0 0 1rem; padding: .5rem .6rem; background: var(--encre); color: var(--papier); font-family: var(--mono); font-size: .7rem; white-space: pre-wrap; overflow-x: auto; }
+.cmd code { font: inherit; }
+.cmd span { white-space: nowrap; }
+.cadre { background: var(--papier-clair); border: 2px dashed var(--encre); padding: 1.25rem 1.25rem .75rem; max-width: 40rem; }
 .asso label { display: block; margin-top: .6rem; }
 .asso input, .asso textarea { margin-top: .35rem; }
 .asso .accord { display: flex; margin-top: .75rem; }
 .asso button { margin: .5rem 0 .75rem; }
 
-.bas { margin-top: 3.5rem; padding-bottom: 2rem; color: var(--doux); font-size: .85rem; }
+.qui p:last-child { max-width: 40rem; }
+
+/* Pied de page. */
+.bas { margin-top: 5rem; padding-bottom: 2.5rem; font-size: .88rem; color: var(--doux); }
+.bas::before { content: ""; display: block; border-top: 1.5px solid var(--encre); margin-bottom: 2rem; }
+.bas p { margin: 0 0 .5rem; }
+.signature { font-family: var(--serif); font-size: 1.6rem; color: var(--encre); margin-bottom: 1rem !important; }
+
+/* Pages simples : merci, mentions légales. */
+.texte { max-width: 46rem; padding-top: 1rem; }
+.texte h1 { margin-top: 2.5rem; }
+.texte h2 { font-size: 1.25rem; margin-top: 2rem; }
 
 .evitement { position: absolute; left: -999rem; }
 .evitement:focus { left: 1rem; top: 1rem; padding: .5rem; background: var(--papier); }
-
 .a-completer { background: #ffe58a; padding: 0 .25em; }
 
-/* Mentions légales et merci. */
-.texte h2 { font-size: 1.25rem; margin-top: 2rem; }
-
-@media (max-width: 30rem) {
-  h1 { font-size: 2.05rem; margin-top: 1.75rem; }
+@media (max-width: 34rem) {
   nav a:not(.bouton) { display: none; }
+  .ouverture { padding-top: 2.25rem; }
 }

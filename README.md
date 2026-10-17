@@ -1,6 +1,6 @@
 # Site de Hors Zone AI
 
-Le site de l'association [Hors Zone AI](https://github.com/hors-zone-ai) : la page d'inscription à la bêta de **Révise** (fiches, quiz et cartes mémoire à partir de tes cours) et d'**Entretien blanc** (répétition d'entretiens), deux outils gratuits pour les 16 à 25 ans. En ligne sur https://hors-zone-ai.github.io/site/.
+Le site de l'association [Hors Zone AI](https://github.com/hors-zone-ai) : sa mission (l'IA à chances égales), ses outils et l'inscription à leur bêta. Les deux premiers outils, gratuits pour les 16 à 25 ans : **Révise** (fiches, quiz et cartes mémoire à partir de tes cours) et **Entretien blanc** (répétition d'entretiens). En ligne sur https://hors-zone-ai.github.io/site/.
 
 C'est notre premier projet ouvert. La page doit rester légère et ne rien coûter à faire tourner, alors on s'en tient à peu de choses :
 
@@ -11,7 +11,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 ## Les fichiers
 
-- `index.html` : la page d'accueil et les deux formulaires (bêta pour les étudiants, message pour les associations).
+- `index.html` : la page d'accueil (mission, nos outils, ce qui nous anime, nous rejoindre) et les deux formulaires (bêta pour les étudiants, besoin pour les associations et autres structures).
 - `merci.html` : la page affichée après une inscription.
 - `mentions-legales.html` : mentions légales et données personnelles.
 - `style.css` : la seule feuille de style.
