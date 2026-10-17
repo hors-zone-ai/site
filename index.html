@@ -15,27 +15,27 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="evitement" href="#inscription">Aller au formulaire</a>
+<a class="evitement" href="#contenu">Aller au contenu</a>
 
 <header class="haut">
   <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
-  <nav aria-label="Sections">
-    <a href="#outils">Nos outils</a>
-    <a href="#mission">Notre mission</a>
-    <a href="#comptes">Nos comptes</a>
-    <a href="#rejoindre">Nous rejoindre</a>
+  <nav aria-label="Pages">
+    <a href="outils.html">Nos outils</a>
+    <a href="mission.html">Notre mission</a>
+    <a href="comptes.html">Nos comptes</a>
+    <a href="rejoindre.html">Nous rejoindre</a>
     <a class="bouton petit" href="#inscription">Je m'inscris</a>
   </nav>
 </header>
 
-<main>
+<main id="contenu">
 
   <section class="ouverture" aria-labelledby="titre">
     <div>
       <p class="surtitre">association loi 1901&nbsp;· l'IA à chances égales</p>
       <h1 id="titre">Développer un outil d'IA coûte cher. Les nôtres sont <mark>gratuits.</mark></h1>
       <p class="chapo">Hors Zone AI est une association de bénévoles. On construit des outils d'IA et on les met à disposition gratuitement, accessibles à tous. Les deux premiers sont pour les 16 à 25 ans.</p>
-      <p class="actions"><a class="bouton" href="#inscription">Je m'inscris à la bêta</a> <a class="bouton contour" href="#outils">Découvrir nos outils</a></p>
+      <p class="actions"><a class="bouton" href="#inscription">Je m'inscris à la bêta</a> <a class="bouton contour" href="outils.html">Découvrir nos outils</a></p>
       <p class="meta">gratuit&nbsp;· sans pub&nbsp;· code ouvert, licence MIT</p>
     </div>
     <aside class="feuille" aria-label="Feuille de route">
@@ -60,32 +60,21 @@
           <p class="badge">bêta&nbsp;· fin novembre</p>
           <h3>Révise</h3>
           <p class="accroche">Transforme tes cours en fiches, quiz et cartes mémoire.</p>
-          <ul>
-            <li>Texte, PDF ou photo de ton cahier</li>
-            <li>Prêt en une minute, rangé par matière</li>
-            <li>Chaque point renvoie à ton cours</li>
-          </ul>
-          <a class="lien" href="#inscription">Je veux tester Révise&nbsp;→</a>
+          <a class="lien" href="outils.html#revise">Voir Révise&nbsp;→</a>
         </article>
         <article class="carte">
           <p class="badge">lancement&nbsp;· janvier</p>
           <h3>Entretien blanc</h3>
           <p class="accroche">Te prépare à un entretien de stage, d'alternance ou d'école.</p>
-          <ul>
-            <li>6 à 8 questions avec des relances</li>
-            <li>Une note sur 4 critères</li>
-            <li>3 points forts, 3 choses à travailler</li>
-          </ul>
-          <a class="lien" href="#inscription">Je veux tester Entretien blanc&nbsp;→</a>
+          <a class="lien" href="outils.html#entretien-blanc">Voir Entretien blanc&nbsp;→</a>
         </article>
         <article class="carte a-venir">
           <p class="badge">à venir</p>
           <h3>Le prochain&nbsp;?</h3>
           <p class="accroche">Une association, un BDE ou une mission locale a un besoin&nbsp;? On le construit avec vous, sans vous le facturer.</p>
-          <a class="lien" href="#besoin">Proposer un besoin&nbsp;→</a>
+          <a class="lien" href="rejoindre.html#besoin">Proposer un besoin&nbsp;→</a>
         </article>
       </div>
-      <p class="meta clair">tes résultats restent à toi&nbsp;· rien ne sert à entraîner une IA&nbsp;· aucune analyse de ta voix ni de ton visage</p>
     </div>
   </section>
 
@@ -112,104 +101,35 @@
     </form>
   </section>
 
-  <section id="mission" aria-labelledby="titre-mission">
-    <p class="surtitre">// notre mission</p>
-    <h2 id="titre-mission">Ce qui nous anime</h2>
-    <div class="valeurs">
-      <div class="valeur">
-        <p class="num">01</p>
-        <h3>Égalité des chances</h3>
-        <p>Un bon outil ne devrait pas être réservé à ceux qui peuvent se le payer.</p>
-      </div>
-      <div class="valeur">
-        <p class="num">02</p>
-        <h3>Partage</h3>
-        <p>Ce qu'on donne&nbsp;: des outils gratuits, sans pub, et un code ouvert. Ils appartiennent à tout le monde.</p>
-      </div>
-      <div class="valeur">
-        <p class="num">03</p>
-        <h3>Transmission</h3>
-        <p>Ce qu'on apprend aux autres&nbsp;: Révise apprend une méthode, Entretien blanc apprend à se présenter, et ceux qui codent avec nous apprennent en construisant.</p>
-      </div>
-      <div class="valeur">
-        <p class="num">04</p>
-        <h3>Impact</h3>
-        <p>On compte ce qui compte&nbsp;: étudiants aidés, fiches créées, entretiens répétés. Et on publie tout, comptes compris.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="comptes" class="duo" aria-labelledby="titre-comptes">
-    <div>
-      <p class="surtitre">// transparence</p>
-      <h2 id="titre-comptes">Nos comptes, ouverts</h2>
-      <p>Chaque euro reçu ou dépensé est publié, ligne par ligne, et chaque don est remercié. L'argent va d'abord à des accès Claude pour les étudiants qui codent avec nous, puis à nos outils (IA, hébergement), enfin aux frais de l'asso.</p>
-      <a class="lien" href="comptes.html">Voir nos comptes et nos soutiens&nbsp;→</a>
-    </div>
-    <aside class="feuille" aria-label="Nos chiffres">
-      <p class="feuille-titre">// au 17 oct. 2026</p>
-      <ul>
-        <li><span>0&nbsp;€</span>reçu</li>
-        <li><span>0&nbsp;€</span>dépensé</li>
-        <li><span>0</span>dev accompagné</li>
-        <li><span>0</span>étudiant accompagné</li>
-      </ul>
-      <p class="feuille-note">Les dons ouvriront avec le compte bancaire de l'asso.</p>
-    </aside>
-  </section>
-
-  <section id="rejoindre" aria-labelledby="titre-rejoindre">
-    <p class="surtitre">// étudiants&nbsp;· devs&nbsp;· structures</p>
-    <h2 id="titre-rejoindre">Nous rejoindre</h2>
+  <section aria-labelledby="titre-asso">
+    <p class="surtitre">// en savoir plus</p>
+    <h2 id="titre-asso">L'association</h2>
     <div class="chemins">
       <div class="chemin">
-        <h3>Tu étudies</h3>
-        <p>Inscris-toi à la bêta, et dis-nous ce qui te manque.</p>
-        <a class="lien" href="#inscription">Je m'inscris&nbsp;→</a>
+        <h3>Notre mission</h3>
+        <p>Égalité des chances, partage, transmission, impact&nbsp;: ce qui nous anime, et qui est derrière.</p>
+        <a class="lien" href="mission.html">Lire notre mission&nbsp;→</a>
       </div>
       <div class="chemin">
-        <h3>Tu codes</h3>
-        <p>Prends une première tâche sur GitHub. Licence MIT&nbsp;: tu gardes tes droits d'auteur.</p>
-        <pre class="cmd"><code>git clone <span>https://github.com/hors-zone-ai/site</span></code></pre>
-        <a class="lien" href="https://github.com/hors-zone-ai/site/issues">Voir les tâches&nbsp;→</a>
+        <h3>Nos comptes</h3>
+        <p>Chaque euro reçu ou dépensé est publié, ligne par ligne. Au 17 octobre&nbsp;: 0&nbsp;€ reçu, 0&nbsp;€ dépensé.</p>
+        <a class="lien" href="comptes.html">Voir nos comptes&nbsp;→</a>
       </div>
       <div class="chemin">
-        <h3>Vous êtes une structure</h3>
-        <p>Association, BDE, mission locale, lycée&nbsp;: un outil vous aiderait, mais le faire coder coûte trop cher&nbsp;? Dites-le-nous.</p>
-        <a class="lien" href="#besoin">Proposer un besoin&nbsp;→</a>
+        <h3>Nous rejoindre</h3>
+        <p>On prend des étudiants qui codent, et des structures qui ont un besoin.</p>
+        <a class="lien" href="rejoindre.html">Nous rejoindre&nbsp;→</a>
       </div>
     </div>
-
-    <div id="besoin" class="cadre">
-      <h3>Proposer un besoin</h3>
-      <p>En deux lignes. Si un outil simple peut aider, on regarde avec vous comment le construire, sans vous le facturer.</p>
-      <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
-        <input type="hidden" name="type" value="association">
-        <input type="hidden" name="source" value="site, proposer un besoin">
-        <label for="asso-email">Votre mail</label>
-        <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@votre-asso.fr">
-        <label for="asso-message">Votre besoin, en deux lignes</label>
-        <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
-        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI me réponde par mail.</span></label>
-        <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="qui" aria-labelledby="titre-qui">
-    <p class="surtitre">// l'association</p>
-    <h2 id="titre-qui">Qui est derrière</h2>
-    <p>Hors Zone AI est née à Paris en septembre 2026, sans actionnaire ni pub. Les outils sont construits par des bénévoles, et tout le code est public sur GitHub&nbsp;: chacun peut le lire.</p>
   </section>
 
 </main>
 
 <footer class="bas">
   <p class="signature">Les bons outils coûtent cher. <mark>Pas ici.</mark></p>
-  <p>Hors Zone AI&nbsp;· association loi 1901&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris</p>
-  <p><a href="mentions-legales.html">Mentions légales et données</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Code source</a></p>
-  <p class="meta">site statique&nbsp;· 0 cookie&nbsp;· moins de 20&nbsp;Ko&nbsp;· licence MIT</p>
+  <p><a href="outils.html">Nos outils</a>&nbsp;· <a href="mission.html">Notre mission</a>&nbsp;· <a href="comptes.html">Nos comptes</a>&nbsp;· <a href="rejoindre.html">Nous rejoindre</a></p>
+  <p>Hors Zone AI&nbsp;· association loi 1901&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="mentions-legales.html">Mentions légales et données</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Code source</a></p>
+  <p class="meta">site statique&nbsp;· 0 cookie&nbsp;· moins de 20&nbsp;Ko par page&nbsp;· licence MIT</p>
 </footer>
 </body>
 </html>

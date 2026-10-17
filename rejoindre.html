@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nous rejoindre&nbsp;· Hors Zone AI</title>
+<meta name="description" content="Étudiant dev ou structure avec un besoin : comment rejoindre Hors Zone AI.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+
+<header class="haut">
+  <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
+  <nav aria-label="Pages">
+    <a href="outils.html">Nos outils</a>
+    <a href="mission.html">Notre mission</a>
+    <a href="comptes.html">Nos comptes</a>
+    <a href="rejoindre.html" aria-current="page">Nous rejoindre</a>
+    <a class="bouton petit" href="index.html#inscription">Je m'inscris</a>
+  </nav>
+</header>
+
+<main id="contenu">
+
+  <section class="entete" aria-labelledby="titre">
+    <p class="surtitre">// devs&nbsp;· structures</p>
+    <h1 id="titre">Nous rejoindre</h1>
+    <p class="chapo">On prend des étudiants qui codent, et des structures qui ont un besoin. Une première tâche suffit pour commencer.</p>
+  </section>
+
+  <section aria-label="Deux façons de nous rejoindre">
+    <div class="chemins">
+      <div class="chemin" id="devs">
+        <h2>Tu codes</h2>
+        <p>Étudiant dev&nbsp;: prends une première tâche sur GitHub. Licence MIT&nbsp;: tu gardes tes droits d'auteur.</p>
+        <p>Les dons servent d'abord à des accès Claude pour les devs qui contribuent, à partir d'une première contribution acceptée (voir <a href="comptes.html">nos comptes</a>).</p>
+        <pre class="cmd"><code>git clone <span>https://github.com/hors-zone-ai/site</span></code></pre>
+        <a class="lien" href="https://github.com/hors-zone-ai/site/issues">Voir les tâches&nbsp;→</a>
+      </div>
+      <div class="chemin">
+        <h2>Vous êtes une structure</h2>
+        <p>Association, BDE, mission locale, lycée&nbsp;: un outil vous aiderait, mais le faire coder coûte trop cher&nbsp;? Dites-le-nous.</p>
+        <a class="lien" href="#besoin">Proposer un besoin&nbsp;→</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Proposer un besoin">
+    <div id="besoin" class="cadre">
+      <h3>Proposer un besoin</h3>
+      <p>En deux lignes. Si un outil simple peut aider, on regarde avec vous comment le construire, sans vous le facturer.</p>
+      <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+        <input type="hidden" name="type" value="association">
+        <input type="hidden" name="source" value="site, proposer un besoin">
+        <label for="asso-email">Votre mail</label>
+        <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@votre-asso.fr">
+        <label for="asso-message">Votre besoin, en deux lignes</label>
+        <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
+        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI me réponde par mail.</span></label>
+        <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bas">
+  <p class="signature">Les bons outils coûtent cher. <mark>Pas ici.</mark></p>
+  <p><a href="outils.html">Nos outils</a>&nbsp;· <a href="mission.html">Notre mission</a>&nbsp;· <a href="comptes.html">Nos comptes</a>&nbsp;· <a href="rejoindre.html">Nous rejoindre</a></p>
+  <p>Hors Zone AI&nbsp;· association loi 1901&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="mentions-legales.html">Mentions légales et données</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Code source</a></p>
+  <p class="meta">site statique&nbsp;· 0 cookie&nbsp;· moins de 20&nbsp;Ko par page&nbsp;· licence MIT</p>
+</footer>
+</body>
+</html>

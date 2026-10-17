@@ -7,56 +7,74 @@
 <meta name="description" content="Les comptes de Hors Zone AI, publiés ligne par ligne : ce qu'on reçoit, ce qu'on dépense, à quoi ça sert, et merci à celles et ceux qui nous soutiennent.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Nos comptes, ouverts · Hors Zone AI">
+<meta property="og:description" content="Les comptes de Hors Zone AI, publiés ligne par ligne : ce qu'on reçoit, ce qu'on dépense, à quoi ça sert.">
 <meta property="og:url" content="https://hors-zone-ai.github.io/site/comptes.html">
 <meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/avatar-512.png">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+
 <header class="haut">
   <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
-  <nav aria-label="Sections"><a class="bouton petit" href="index.html#inscription">Je m'inscris</a></nav>
+  <nav aria-label="Pages">
+    <a href="outils.html">Nos outils</a>
+    <a href="mission.html">Notre mission</a>
+    <a href="comptes.html" aria-current="page">Nos comptes</a>
+    <a href="rejoindre.html">Nous rejoindre</a>
+    <a class="bouton petit" href="index.html#inscription">Je m'inscris</a>
+  </nav>
 </header>
 
-<main class="texte">
-  <h1>Nos comptes, <mark>ouverts.</mark></h1>
-  <p class="chapo">Tout ce que Hors Zone AI reçoit et dépense est publié ici, ligne par ligne. Le détail vit dans un fichier de notre dépôt GitHub&nbsp;: chaque modification y laisse une trace publique.</p>
+<main id="contenu">
 
-  <aside class="feuille" aria-label="Nos chiffres">
-    <p class="feuille-titre">// au 17 octobre 2026</p>
-    <ul>
-      <li><span>0&nbsp;€</span>reçu</li>
-      <li><span>0&nbsp;€</span>dépensé</li>
-      <li><span>0&nbsp;€</span>en caisse</li>
-      <li><span>0</span>dev accompagné</li>
-      <li><span>0</span>étudiant accompagné</li>
-    </ul>
-    <p class="feuille-note">L'association attend l'ouverture de son compte bancaire. La première ligne arrivera avec lui.</p>
-  </aside>
+  <section class="entete" aria-labelledby="titre">
+    <p class="surtitre">// transparence</p>
+    <h1 id="titre">Nos comptes, <mark>ouverts.</mark></h1>
+    <p class="chapo">Tout ce que Hors Zone AI reçoit et dépense est publié ici, ligne par ligne. Le détail vit dans un fichier de notre dépôt GitHub&nbsp;: chaque modification y laisse une trace publique.</p>
+  </section>
 
-  <h2>Où va l'argent</h2>
-  <ol>
-    <li><strong>Des accès Claude pour les étudiants qui codent avec nous.</strong> C'est le premier poste. Chaque accès est ouvert sur le compte de l'association, au nom d'une seule personne, à partir d'une première contribution acceptée, pour la durée et les besoins de la contribution. Jamais de compte partagé, jamais de revente.</li>
-    <li><strong>Nos outils</strong>&nbsp;: l'IA de Révise et d'Entretien blanc, l'hébergement.</li>
-    <li><strong>Les frais de l'association</strong>&nbsp;: nom de domaine, assurance, dépôt de la marque.</li>
-  </ol>
-  <p>Aujourd'hui, personne n'est payé&nbsp;: l'association fonctionne avec des bénévoles.</p>
+  <section class="duo" aria-labelledby="titre-argent">
+    <div>
+      <h2 id="titre-argent">Où va l'argent</h2>
+      <ol>
+        <li><strong>Des accès Claude pour les étudiants qui codent avec nous.</strong> C'est le premier poste. Chaque accès est ouvert sur le compte de l'association, au nom d'une seule personne, à partir d'une première contribution acceptée, pour la durée et les besoins de la contribution. Jamais de compte partagé, jamais de revente.</li>
+        <li><strong>Nos outils</strong>&nbsp;: l'IA de Révise et d'Entretien blanc, l'hébergement.</li>
+        <li><strong>Les frais de l'association</strong>&nbsp;: nom de domaine, assurance, dépôt de la marque.</li>
+      </ol>
+      <p>On ne prend que des devs&nbsp;: un dev accompagné, c'est un étudiant qui code avec nous. Aujourd'hui, personne n'est payé&nbsp;: l'association fonctionne avec des bénévoles.</p>
+    </div>
+    <aside class="feuille" aria-label="Nos chiffres">
+      <p class="feuille-titre">// au 17 octobre 2026</p>
+      <ul>
+        <li><span>0&nbsp;€</span>reçu</li>
+        <li><span>0&nbsp;€</span>dépensé</li>
+        <li><span>0&nbsp;€</span>en caisse</li>
+        <li><span>0</span>dev accompagné</li>
+      </ul>
+      <p class="feuille-note">L'association attend l'ouverture de son compte bancaire. La première ligne arrivera avec lui.</p>
+    </aside>
+  </section>
 
-  <h2>Ce qu'on compte</h2>
-  <p><strong>Devs accompagnés</strong>&nbsp;: les étudiants qui codent avec nous et ont un accès Claude. <strong>Étudiants accompagnés</strong>&nbsp;: les inscrits qui utilisent Révise ou Entretien blanc, dès la bêta de fin novembre.</p>
+  <section aria-labelledby="titre-merci">
+    <h2 id="titre-merci">Merci à nos soutiens</h2>
+    <p>Chaque don est remercié ici, avec son montant. Il apparaît comme « anonyme », sauf si la personne nous demande d'afficher son nom.</p>
+    <p class="petit">Pas encore de don&nbsp;: les dons ouvriront avec le compte bancaire de l'association.</p>
+  </section>
 
-  <h2>Merci à nos soutiens</h2>
-  <p>Chaque don est remercié ici, avec son montant. Il apparaît comme « anonyme », sauf si la personne nous demande d'afficher son nom.</p>
-  <p class="petit">Pas encore de don&nbsp;: les dons ouvriront avec le compte bancaire de l'association.</p>
+  <section aria-labelledby="titre-detail">
+    <h2 id="titre-detail">Le détail, ligne par ligne</h2>
+    <p>Le fichier <a href="https://github.com/hors-zone-ai/site/blob/main/comptes.csv">comptes.csv</a>, sur GitHub&nbsp;: date, sens, catégorie, libellé, montant. Son <a href="https://github.com/hors-zone-ai/site/commits/main/comptes.csv">historique</a> montre chaque modification.</p>
+  </section>
 
-  <h2>Le détail, ligne par ligne</h2>
-  <p>Le fichier <a href="https://github.com/hors-zone-ai/site/blob/main/comptes.csv">comptes.csv</a>, sur GitHub&nbsp;: date, sens, catégorie, libellé, montant. Son <a href="https://github.com/hors-zone-ai/site/commits/main/comptes.csv">historique</a> montre chaque modification.</p>
-
-  <p><a class="bouton" href="index.html">Retour au site</a></p>
 </main>
 
 <footer class="bas">
-  <p>Hors Zone AI, association loi 1901, Paris&nbsp;· <a href="mentions-legales.html">Mentions légales et données</a></p>
+  <p class="signature">Les bons outils coûtent cher. <mark>Pas ici.</mark></p>
+  <p><a href="outils.html">Nos outils</a>&nbsp;· <a href="mission.html">Notre mission</a>&nbsp;· <a href="comptes.html">Nos comptes</a>&nbsp;· <a href="rejoindre.html">Nous rejoindre</a></p>
+  <p>Hors Zone AI&nbsp;· association loi 1901&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="mentions-legales.html">Mentions légales et données</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Code source</a></p>
+  <p class="meta">site statique&nbsp;· 0 cookie&nbsp;· moins de 20&nbsp;Ko par page&nbsp;· licence MIT</p>
 </footer>
 </body>
 </html>

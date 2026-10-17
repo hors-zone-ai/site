@@ -7,17 +7,22 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - aucun cookie, aucun outil de mesure d'audience ;
 - rien qui se charge depuis un autre site (police, script, image) ;
 - pas de JavaScript tant qu'on peut s'en passer ;
-- la page d'accueil et sa feuille de style pèsent moins de 20 Ko à elles deux.
+- chaque page, avec la feuille de style, pèse moins de 20 Ko.
 
 ## Les fichiers
 
-- `index.html` : la page d'accueil (mission, nos outils, ce qui nous anime, nous rejoindre) et les deux formulaires (bêta pour les étudiants, besoin pour les associations et autres structures).
+- `index.html` : l'accueil (la mission en une phrase, nos outils en bref, le formulaire d'inscription à la bêta, les liens vers les autres pages).
+- `outils.html` : nos outils, Révise et Entretien blanc, et nos règles.
+- `mission.html` : ce qui nous anime et qui est derrière.
+- `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une inscription.
 - `comptes.html` : nos comptes, ouverts : les chiffres, où va l'argent, merci aux soutiens.
 - `comptes.csv` : les comptes, une ligne par opération (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
 - `style.css` : la seule feuille de style.
 - `marque/` : le logo et l'avatar.
+
+Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout.
 
 Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient vers un webhook de l'association, qui vérifie le mail et l'accord, écarte les robots (un champ piège caché) et renvoie vers `merci.html`.
 

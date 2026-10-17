@@ -47,6 +47,7 @@ main > section.bande + section { padding-top: 4rem; }
 .marque .zone { display: inline-block; border: 2px dashed var(--encre); padding: .3rem .5rem; background: var(--papier); }
 .marque .ai { color: var(--orange); margin-left: .2em; }
 nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.1rem; font-size: .9rem; }
+nav [aria-current=page] { font-weight: 700; text-decoration-thickness: 4px; }
 
 /* Étiquettes en monospace */
 .surtitre { font-family: var(--mono); font-size: .8rem; margin: 0 0 .75rem; }
@@ -63,6 +64,9 @@ nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.1rem; f
 .bouton.contour { background: var(--papier); border: 2px solid var(--encre); padding: calc(.7rem - 2px) calc(1.1rem - 2px); }
 
 /* Haut de page et encadrés */
+.entete { padding-top: 3rem; }
+.entete + section { padding-top: 2.5rem; }
+.regles { max-width: 40rem; }
 .ouverture, .duo { display: grid; gap: 2.5rem; align-items: center; }
 .ouverture { padding-top: 3.5rem; padding-bottom: 4rem; }
 @media (min-width: 54rem) { .ouverture, .duo { grid-template-columns: 1.45fr 1fr; } }
@@ -80,10 +84,10 @@ nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.1rem; f
 /* Nos outils */
 .bande { background: var(--encre); color: var(--papier); }
 .bande-contenu { padding-top: 3.5rem; padding-bottom: 3.5rem; }
-.bande h2 { color: var(--papier); margin-bottom: 1.75rem; }
+.bande-contenu > h2 { color: var(--papier); margin-bottom: 1.75rem; }
 .cartes { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
 .carte { display: flex; flex-direction: column; background: var(--papier-clair); color: var(--encre); border-top: 4px solid var(--orange); padding: 1.25rem; }
-.carte h3 { font-family: var(--serif); font-weight: normal; font-size: 1.65rem; margin: .7rem 0 .3rem; }
+.carte h2, .carte h3 { font-family: var(--serif); font-weight: normal; font-size: 1.65rem; margin: .7rem 0 .3rem; }
 .badge { align-self: flex-start; margin: 0; font-family: var(--mono); font-size: .72rem; background: var(--encre); color: var(--papier); padding: .15rem .5rem; }
 .accroche { font-weight: 600; }
 .carte ul { list-style: none; padding: 0; margin: 0 0 1.1rem; font-size: .92rem; }
@@ -118,6 +122,7 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .chemins { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin: 1.75rem 0 1.5rem; }
 .chemin { display: flex; flex-direction: column; background: var(--papier-clair); border: 1.5px dashed var(--encre); padding: 1rem 1.1rem; }
 .chemin .lien { margin-top: auto; }
+.chemin h2 { font-size: 1.5rem; margin: 0 0 .5rem; }
 .cmd { margin: 0 0 1rem; padding: .5rem .6rem; background: var(--encre); color: var(--papier); font-family: var(--mono); font-size: .7rem; white-space: pre-wrap; overflow-x: auto; }
 .cmd code { font: inherit; }
 .cmd span { white-space: nowrap; }
@@ -146,6 +151,6 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .a-completer { background: #ffe58a; padding: 0 .25em; }
 
 @media (max-width: 34rem) {
-  nav a:not(.bouton) { display: none; }
+  nav { width: 100%; gap: .3rem .9rem; font-size: .85rem; }
   .ouverture { padding-top: 2.25rem; }
 }
