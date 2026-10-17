@@ -13,11 +13,25 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 - `index.html` : la page d'accueil (mission, nos outils, ce qui nous anime, nous rejoindre) et les deux formulaires (bêta pour les étudiants, besoin pour les associations et autres structures).
 - `merci.html` : la page affichée après une inscription.
+- `comptes.html` : nos comptes, ouverts : les chiffres, où va l'argent, merci aux soutiens.
+- `comptes.csv` : les comptes, une ligne par opération (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
 - `style.css` : la seule feuille de style.
 - `marque/` : le logo et l'avatar.
 
 Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient vers un webhook de l'association, qui vérifie le mail et l'accord, écarte les robots (un champ piège caché) et renvoie vers `merci.html`.
+
+## Les comptes
+
+`comptes.csv` contient une ligne par opération, en UTF-8, séparateur virgule :
+
+- `date` : AAAA-MM-JJ ;
+- `sens` : `recette` ou `depense` ;
+- `categorie` : `acces-claude`, `outils` ou `frais` pour une dépense ; `don`, `mecenat`, `subvention` ou `cotisation` pour une recette ;
+- `libelle` : un don s'écrit « Don anonyme », sauf si le donateur demande à voir son nom ;
+- `montant_eur` : en euros, avec un point pour les centimes.
+
+Les chiffres de `comptes.html` et de l'accueil sont mis à jour dans le même commit que la ligne ajoutée.
 
 ## Voir le site sur votre ordinateur
 
