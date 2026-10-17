@@ -13,6 +13,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 - `index.html` : l'accueil (la mission en une phrase, nos outils en bref, le formulaire d'inscription à la bêta, les liens vers les autres pages).
 - `outils.html` : nos outils, Révise et Entretien blanc, et nos règles.
+- `acces.html` : l'accès aux outils d'IA, gratuit pour les étudiants qui codent avec nous, tarifs réduits à venir, et nos règles (compte à ton nom, jamais de revente).
 - `mission.html` : ce qui nous anime et qui est derrière.
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une inscription.
