@@ -1,6 +1,6 @@
 # Site de Hors Zone AI
 
-Le site de l'association [Hors Zone AI](https://github.com/hors-zone-ai) : sa mission (l'IA à chances égales), ses outils et l'inscription à leur bêta. Les deux premiers outils, gratuits pour les 16 à 25 ans : **Révise** (fiches, quiz et cartes mémoire à partir de tes cours) et **Entretien blanc** (répétition d'entretiens). En ligne sur https://hors-zone-ai.github.io/site/.
+Le site de l'association [Hors Zone AI](https://github.com/hors-zone-ai) : sa mission (aider les devs et les étudiants en informatique à coder avec l'IA, gratuitement ou moins cher), l'accès aux outils d'IA, ses apps et l'inscription à leur bêta. Les deux premières apps, gratuites : **Révise** (fiches, quiz et cartes mémoire à partir de tes cours) et **Entretien blanc** (répétition d'entretiens). En ligne sur https://hors-zone-ai.github.io/site/.
 
 C'est notre premier projet ouvert. La page doit rester légère et ne rien coûter à faire tourner, alors on s'en tient à peu de choses :
 
