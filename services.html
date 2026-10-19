@@ -7,6 +7,15 @@
 <meta name="description" content="Pour les devs et les étudiants en informatique : un programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso), des offres réduites, et nos apps gratuites.">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
+<style>
+/* Styles propres à cette page : le terminal */
+.terminal { max-width: 46rem; margin: 1.75rem 0 0; padding: 1.1rem 1.25rem; background: var(--encre); color: var(--papier); border-radius: 6px; font: .82rem/1.8 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.terminal i { color: #a8a59c; }
+.terminal b { color: var(--orange); font-weight: 400; }
+.curseur { display: inline-block; width: .6em; height: 1.1em; vertical-align: -.2em; background: var(--orange); animation: clignote 1s steps(1) infinite; }
+@keyframes clignote { 50% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .curseur { animation: none; } }
+</style>
 </head>
 <body>
 <a class="evitement" href="#contenu">Aller au contenu</a>
@@ -48,9 +57,9 @@
     </div>
   </section>
 
-  <section id="acces" aria-labelledby="titre-acces">
+  <section id="acces" class="filets" aria-labelledby="titre-acces">
     <p class="surtitre">// 01&nbsp;· programme de sponsoring&nbsp;· sur candidature</p>
-    <h2 id="titre-acces">Claude Code ou Codex, <mark>payé par l'asso</mark></h2>
+    <h2 id="titre-acces"><span>Claude Code ou Codex, <mark>payé par l'asso</mark></span></h2>
     <p class="chapo">Pour les devs et les étudiants en informatique qui veulent coder avec nous. Tu candidates, tu fais une première contribution sur un de nos projets, et l'asso te paie l'un des deux, au choix, à ton nom.</p>
     <div class="cartes">
       <article class="carte">
@@ -86,23 +95,13 @@
   <section aria-labelledby="titre-etapes">
     <p class="surtitre">// comment ça marche</p>
     <h2 id="titre-etapes">En trois étapes</h2>
-    <div class="valeurs">
-      <div class="valeur">
-        <p class="num">01</p>
-        <h3>Candidate</h3>
-        <p>Dis-nous qui tu es, ton GitHub et ce que tu veux construire.</p>
-      </div>
-      <div class="valeur">
-        <p class="num">02</p>
-        <h3>Contribue</h3>
-        <p>On te propose une première tâche. Ta contribution est relue, puis acceptée.</p>
-      </div>
-      <div class="valeur">
-        <p class="num">03</p>
-        <h3>Code avec l'IA</h3>
-        <p>Tu choisis Claude Code ou Codex&nbsp;: l'asso te l'ouvre, à ton nom.</p>
-      </div>
-    </div>
+    <pre class="terminal"><i># 1. candidate, puis prends une première tâche</i>
+<b>$</b> git clone <b>https://github.com/hors-zone-ai/revise</b>
+<i># 2. contribue&nbsp;: ta contribution est relue, puis acceptée</i>
+<b>$</b> git push
+<i># 3. code avec l'IA&nbsp;: l'asso t'ouvre Claude Code ou Codex, à ton nom</i>
+<b>$</b> claude  <i># ou codex</i>
+<b>$</b> <span class="curseur" aria-hidden="true"></span></pre>
     <div id="candidature" class="cadre bloc">
       <h3>Candidater au programme</h3>
       <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
@@ -133,7 +132,7 @@
   </section>
 
   <section id="apps" class="bande" aria-labelledby="titre-apps">
-    <div class="bande-contenu">
+    <div class="bande-contenu filets">
       <p class="surtitre clair">// 03&nbsp;· nos apps&nbsp;· gratuites et open source</p>
       <h2 id="titre-apps">Révise et Entretien blanc</h2>
       <div class="cartes">

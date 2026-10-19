@@ -19,7 +19,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
 - `comptes.csv` : les comptes, une ligne par opération (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
-- `style.css` : la seule feuille de style.
+- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine de l'accueil, le terminal de Nos services, les valeurs d'À propos) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
 - `marque/` : le logo et l'avatar.
 
 Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout.

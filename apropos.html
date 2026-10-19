@@ -11,6 +11,12 @@
 <meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/avatar-512.png">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
+<style>
+/* Styles propres à cette page : les valeurs */
+.valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
+.valeur { border-top: 1.5px solid var(--encre); padding-top: .8rem; }
+.num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
+</style>
 </head>
 <body>
 <a class="evitement" href="#contenu">Aller au contenu</a>
@@ -33,7 +39,7 @@
     <p class="actions"><a class="bouton contour" href="#mission">Notre mission</a> <a class="bouton contour" href="#comptes">Nos comptes</a></p>
   </section>
 
-  <section id="mission" aria-labelledby="titre-valeurs">
+  <section id="mission" class="filets" aria-labelledby="titre-valeurs">
     <p class="surtitre">// notre mission</p>
     <h2 id="titre-valeurs">Ce qui nous anime</h2>
     <div class="valeurs">
@@ -67,9 +73,9 @@
     <p>Association loi 1901, RNA&nbsp;W751286221, siège à Paris. Nos comptes sont ouverts&nbsp;: <a href="#comptes">voir nos comptes</a>.</p>
   </section>
 
-  <section id="comptes" aria-labelledby="titre-comptes">
+  <section id="comptes" class="filets" aria-labelledby="titre-comptes">
     <p class="surtitre">// transparence</p>
-    <h2 id="titre-comptes">Nos comptes, <mark>ouverts.</mark></h2>
+    <h2 id="titre-comptes"><span>Nos comptes, <mark>ouverts.</mark></span></h2>
     <p class="chapo">Tout ce que Hors Zone AI reçoit et dépense est publié ici, ligne par ligne. Le détail vit dans un fichier de notre dépôt GitHub&nbsp;: chaque modification y laisse une trace publique.</p>
     <div class="duo bloc">
       <div>

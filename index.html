@@ -13,6 +13,24 @@
 <meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/avatar-512.png">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
+<style>
+/* Styles propres à l'accueil : vitrine en code, inscription à la bêta */
+.vitrine { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 54rem) { .vitrine { grid-template-columns: 1.45fr 1fr; } }
+main > section.vitrine { max-width: 66rem; width: calc(100% - 1.5rem); margin: 1.5rem auto 0; padding: 3rem clamp(1.25rem, 4vw, 3rem); background: var(--encre); color: var(--papier); border-radius: 10px; }
+.vitrine a:not(.bouton) { color: var(--papier); }
+.depots { background: #1f1a16; border: 1px solid #3a332c; border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .82rem; }
+.depots p { margin: 0; color: var(--gris); }
+.depots ul { list-style: none; margin: .5rem 0 1rem; padding: 0; }
+.depots li { padding: .6rem 0; border-top: 1px solid #3a332c; }
+.depots li a { text-decoration: none; }
+.depots li a:hover { text-decoration: underline; }
+.depots li a::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--orange); margin-right: .5rem; }
+.depots li span { display: block; color: var(--gris); font-size: .72rem; }
+.inscription { margin-top: 1.25rem; padding: 1.25rem; background: var(--papier-clair); border: 2px dashed var(--encre); max-width: 40rem; }
+.ligne { display: flex; flex-wrap: wrap; gap: .5rem; margin: .35rem 0 .75rem; }
+.ligne input { flex: 1 1 14rem; width: auto; min-width: 0; }
+</style>
 </head>
 <body>
 <a class="evitement" href="#contenu">Aller au contenu</a>
@@ -28,25 +46,23 @@
 
 <main id="contenu">
 
-  <section class="ouverture" aria-labelledby="titre">
+  <section class="vitrine" aria-labelledby="titre">
     <div>
-      <p class="surtitre">association loi 1901&nbsp;· devs et étudiants en informatique</p>
+      <p class="surtitre clair">// association loi 1901&nbsp;· devs et étudiants en informatique</p>
       <h1 id="titre">Développer avec l'IA coûte cher. <mark>Pas ici.</mark></h1>
       <p class="chapo">Hors Zone AI est une association de bénévoles. On aide les développeurs et les étudiants en informatique à coder avec l'IA&nbsp;: accès aux outils gratuit ou moins cher, et des apps gratuites construites ensemble.</p>
       <p class="actions"><a class="bouton" href="services.html#acces">Avoir Claude Code ou Codex</a> <a class="bouton contour" href="#inscription">Je m'inscris à la bêta</a></p>
-      <p class="meta">gratuit&nbsp;· sans pub&nbsp;· code ouvert, licence MIT</p>
+      <p class="meta clair">gratuit&nbsp;· sans pub&nbsp;· code ouvert, licence MIT</p>
     </div>
-    <aside class="feuille" aria-label="Feuille de route">
-      <p class="feuille-titre">// feuille de route</p>
-      <ol>
-        <li class="fait"><span>16 oct.</span>site en ligne, liste d'attente ouverte</li>
-        <li><span>nov.</span>construction de Révise et d'Entretien blanc</li>
-        <li><span>fin nov.</span>bêta avec les 50 premiers inscrits</li>
-        <li><span>déc.</span>Révise, avant les partiels</li>
-        <li><span>janv.</span>Entretien blanc, pour la saison des stages</li>
-      </ol>
-      <p class="feuille-note">Dates prévues, tenues à jour ici.</p>
-    </aside>
+    <div class="depots">
+      <p>// nos dépôts</p>
+      <ul>
+        <li><a href="https://github.com/hors-zone-ai/revise">hors-zone-ai/revise</a><span>app&nbsp;· en conception&nbsp;· licence MIT</span></li>
+        <li><a href="https://github.com/hors-zone-ai/entretien-blanc">hors-zone-ai/entretien-blanc</a><span>app&nbsp;· en conception&nbsp;· licence MIT</span></li>
+        <li><a href="https://github.com/hors-zone-ai/site">hors-zone-ai/site</a><span>ce site&nbsp;· en ligne&nbsp;· licence MIT</span></li>
+      </ul>
+      <a class="lien" href="https://github.com/hors-zone-ai">Voir sur GitHub&nbsp;→</a>
+    </div>
   </section>
 
   <section aria-labelledby="titre-acces">
@@ -57,7 +73,7 @@
   </section>
 
   <section id="outils" class="bande" aria-labelledby="titre-outils">
-    <div class="bande-contenu">
+    <div class="bande-contenu filets">
       <p class="surtitre clair">// nos apps&nbsp;· gratuites et open source</p>
       <h2 id="titre-outils">Nos apps</h2>
       <div class="cartes">
@@ -84,29 +100,44 @@
   </section>
 
   <section id="inscription" aria-labelledby="titre-inscription">
-    <p class="surtitre">// liste d'attente</p>
-    <h2 id="titre-inscription">Rejoins la bêta</h2>
-    <p>50 places, fin novembre. On t'écrit seulement pour ça.</p>
-    <form class="inscription" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
-      <input type="hidden" name="type" value="etudiant">
-      <input type="hidden" name="source" value="site, rejoins la bêta">
-      <label for="email">Ton mail</label>
-      <div class="ligne">
-        <input id="email" name="email" type="email" required autocomplete="email" placeholder="prenom@mail.fr">
-        <button type="submit">Je m'inscris à la bêta</button>
+    <div class="duo">
+      <div>
+        <p class="surtitre">// liste d'attente</p>
+        <h2 id="titre-inscription">Rejoins la bêta</h2>
+        <p>50 places, fin novembre. On t'écrit seulement pour ça.</p>
+        <form class="inscription" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+          <input type="hidden" name="type" value="etudiant">
+          <input type="hidden" name="source" value="site, rejoins la bêta">
+          <label for="email">Ton mail</label>
+          <div class="ligne">
+            <input id="email" name="email" type="email" required autocomplete="email" placeholder="prenom@mail.fr">
+            <button type="submit">Je m'inscris à la bêta</button>
+          </div>
+          <div class="choix" role="radiogroup" aria-label="Je veux tester">
+            <span>Je veux tester&nbsp;:</span>
+            <label><input type="radio" name="outil" value="les-deux" checked> les deux</label>
+            <label><input type="radio" name="outil" value="revise"> Révise</label>
+            <label><input type="radio" name="outil" value="entretien-blanc"> Entretien blanc</label>
+          </div>
+          <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI m'écrive au sujet de la bêta. Je peux me désinscrire quand je veux.</span></label>
+          <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+        </form>
       </div>
-      <div class="choix" role="radiogroup" aria-label="Je veux tester">
-        <span>Je veux tester&nbsp;:</span>
-        <label><input type="radio" name="outil" value="les-deux" checked> les deux</label>
-        <label><input type="radio" name="outil" value="revise"> Révise</label>
-        <label><input type="radio" name="outil" value="entretien-blanc"> Entretien blanc</label>
-      </div>
-      <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI m'écrive au sujet de la bêta. Je peux me désinscrire quand je veux.</span></label>
-      <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
-    </form>
+      <aside class="feuille" aria-label="Feuille de route">
+        <p class="feuille-titre">// feuille de route</p>
+        <ol>
+          <li class="fait"><span>16 oct.</span>site en ligne, liste d'attente ouverte</li>
+          <li><span>nov.</span>construction de Révise et d'Entretien blanc</li>
+          <li><span>fin nov.</span>bêta avec les 50 premiers inscrits</li>
+          <li><span>déc.</span>Révise, avant les partiels</li>
+          <li><span>janv.</span>Entretien blanc, pour la saison des stages</li>
+        </ol>
+        <p class="feuille-note">Dates prévues, tenues à jour ici.</p>
+      </aside>
+    </div>
   </section>
 
-  <section aria-labelledby="titre-asso">
+  <section class="filets" aria-labelledby="titre-asso">
     <p class="surtitre">// en savoir plus</p>
     <h2 id="titre-asso">L'association</h2>
     <div class="chemins">

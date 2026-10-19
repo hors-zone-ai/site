@@ -73,9 +73,8 @@ nav a[aria-current=page] { font-weight: 700; }
 .bloc { margin-top: 2.25rem; }
 .bloc p, .bloc ol { max-width: 46rem; }
 .bloc h3 { font-family: var(--serif); font-weight: normal; font-size: 1.45rem; margin-bottom: .5rem; }
-.ouverture, .duo { display: grid; gap: 2.5rem; align-items: center; }
-.ouverture { padding-top: 3.5rem; padding-bottom: 4rem; }
-@media (min-width: 54rem) { .ouverture, .duo { grid-template-columns: 1.45fr 1fr; } }
+.duo { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 54rem) { .duo { grid-template-columns: 1.45fr 1fr; } }
 .chapo { font-size: 1.12rem; max-width: 36rem; }
 .actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.6rem 0 1rem; }
 .feuille { background: var(--papier-clair); border: 1.5px dashed var(--encre); padding: 1.1rem 1.25rem; font-family: var(--mono); font-size: .82rem; }
@@ -86,6 +85,12 @@ nav a[aria-current=page] { font-weight: 700; }
 .feuille li span { font-weight: 700; }
 .feuille li.fait span::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--orange); margin-right: .35rem; }
 .feuille-note { margin: .6rem 0 0; color: var(--doux); font-size: .75rem; }
+
+/* Titres entre deux filets */
+.filets > .surtitre, .filets > h2, .filets > h2 + p { text-align: center; }
+.filets > h2 { display: flex; align-items: center; gap: 1rem; }
+.filets > h2::before, .filets > h2::after { content: ""; flex: 1 1 1.5rem; border-top: 1.5px solid; }
+.filets > h2 + p { margin-inline: auto; }
 
 /* Nos outils */
 .bande { background: var(--encre); color: var(--papier); }
@@ -108,22 +113,14 @@ nav a[aria-current=page] { font-weight: 700; }
 .bande .meta a { color: var(--papier); }
 
 /* Formulaires */
-.inscription { margin-top: 1.25rem; padding: 1.25rem; background: var(--papier-clair); border: 2px dashed var(--encre); max-width: 40rem; }
 label { font-weight: 700; }
-.ligne { display: flex; flex-wrap: wrap; gap: .5rem; margin: .35rem 0 .75rem; }
 input[type=email], input[type=text], textarea { font: inherit; padding: .65rem .75rem; border: 2px solid var(--encre); border-radius: 4px; background: #fff; color: var(--encre); width: 100%; }
-.ligne input { flex: 1 1 14rem; width: auto; min-width: 0; }
 .choix { display: flex; flex-wrap: wrap; gap: .25rem 1rem; margin-bottom: .75rem; font-size: .95rem; }
 .choix label { font-weight: 400; }
 .accord { display: flex; gap: .5rem; align-items: flex-start; font-weight: 400; font-size: .9rem; margin-bottom: .5rem; }
 .accord input { margin-top: .3rem; flex: none; }
 p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .pot { position: absolute; left: -999rem; }
-
-/* Valeurs */
-.valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
-.valeur { border-top: 1.5px solid var(--encre); padding-top: .8rem; }
-.num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
 
 /* Nous rejoindre */
 .chemins { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin: 1.75rem 0 1.5rem; }
@@ -159,8 +156,10 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .evitement:focus { left: 1rem; top: 1rem; padding: .5rem; background: var(--papier); }
 .a-completer { background: #ffe58a; padding: 0 .25em; }
 
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
 @media (max-width: 34rem) {
   nav { width: 100%; gap: .3rem .9rem; font-size: .85rem; }
   nav .bouton { margin-left: auto; }
-  .ouverture { padding-top: 2.25rem; }
+  .filets > h2 { display: block; }
 }
