@@ -132,6 +132,8 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .cmd span { white-space: nowrap; }
 .cadre { background: var(--papier-clair); border: 2px dashed var(--encre); padding: 1.25rem 1.25rem .75rem; max-width: 40rem; }
 .asso label { display: block; margin-top: .6rem; }
+.asso .choix { margin-top: .75rem; align-items: center; }
+.asso .choix label { margin-top: 0; }
 .asso input, .asso textarea { margin-top: .35rem; }
 .asso .accord { display: flex; margin-top: .75rem; }
 .asso button { margin: .5rem 0 .75rem; }

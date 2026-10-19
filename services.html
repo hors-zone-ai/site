@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nos services&nbsp;· Hors Zone AI</title>
-<meta name="description" content="Pour les devs et les étudiants en informatique : Claude Code ou Codex payé par l'asso, et des apps gratuites, Révise et Entretien blanc.">
+<meta name="description" content="Pour les devs et les étudiants en informatique : un programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso), des offres réduites, et nos apps gratuites.">
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -26,14 +26,33 @@
   <section class="entete" aria-labelledby="titre">
     <p class="surtitre">// nos services&nbsp;· devs et étudiants en informatique</p>
     <h1 id="titre">Nos services</h1>
-    <p class="chapo">Développer avec l'IA coûte cher. Tu entres dans notre programme&nbsp;? L'asso te paie Claude Code ou Codex. Sinon, profite des offres qu'elle négocie avec les éditeurs, bientôt ici. Et on construit des apps gratuites.</p>
-    <p class="actions"><a class="bouton" href="#acces">Claude Code ou Codex</a> <a class="bouton contour" href="#offres">Offres négociées</a> <a class="bouton contour" href="#apps">Nos apps</a></p>
+    <p class="chapo">Développer avec l'IA coûte cher. Trois façons de t'aider.</p>
+    <div class="cartes">
+      <article class="carte">
+        <p class="badge">01&nbsp;· sur candidature</p>
+        <h2>Programme de sponsoring</h2>
+        <p class="accroche">L'asso te paie Claude Code ou Codex, à ton nom.</p>
+        <a class="lien" href="#acces">Candidater&nbsp;→</a>
+      </article>
+      <article class="carte">
+        <p class="badge">02&nbsp;· bientôt</p>
+        <h2>Offres réduites</h2>
+        <p class="accroche">Des outils d'IA à prix réduit, négociés par l'asso, pour tous.</p>
+        <a class="lien" href="#offres">En savoir plus&nbsp;→</a>
+      </article>
+      <article class="carte">
+        <p class="badge">03&nbsp;· gratuit</p>
+        <h2>Nos apps</h2>
+        <p class="accroche">Révise et Entretien blanc, gratuites et open source.</p>
+        <a class="lien" href="#apps">Voir nos apps&nbsp;→</a>
+      </article>
+    </div>
   </section>
 
   <section id="acces" aria-labelledby="titre-acces">
-    <p class="surtitre">// service 01&nbsp;· accès aux outils d'IA</p>
+    <p class="surtitre">// 01&nbsp;· programme de sponsoring&nbsp;· sur candidature</p>
     <h2 id="titre-acces">Claude Code ou Codex, <mark>payé par l'asso</mark></h2>
-    <p class="chapo">Coder avec l'IA coûte cher&nbsp;: un abonnement par outil, chaque mois. Si tu es dev ou étudiant en informatique et que tu codes avec nous, l'asso te paie l'un des deux, au choix, à ton nom.</p>
+    <p class="chapo">Pour les devs et les étudiants en informatique qui veulent coder avec nous. Tu candidates, tu fais une première contribution sur un de nos projets, et l'asso te paie l'un des deux, au choix, à ton nom.</p>
     <div class="cartes">
       <article class="carte">
         <p class="badge">au choix&nbsp;· Anthropic</p>
@@ -59,18 +78,18 @@
   </section>
 
   <section aria-labelledby="titre-etapes">
-    <p class="surtitre">// comment l'avoir</p>
+    <p class="surtitre">// comment ça marche</p>
     <h2 id="titre-etapes">En trois étapes</h2>
     <div class="valeurs">
       <div class="valeur">
         <p class="num">01</p>
-        <h3>Prends une tâche</h3>
-        <p>Tu es dev ou étudiant en informatique&nbsp;: choisis une tâche pour débuter sur notre GitHub.</p>
+        <h3>Candidate</h3>
+        <p>Dis-nous qui tu es, ton GitHub et ce que tu veux construire.</p>
       </div>
       <div class="valeur">
         <p class="num">02</p>
         <h3>Contribue</h3>
-        <p>Ta contribution est relue, puis acceptée.</p>
+        <p>On te propose une première tâche. Ta contribution est relue, puis acceptée.</p>
       </div>
       <div class="valeur">
         <p class="num">03</p>
@@ -78,7 +97,25 @@
         <p>Tu choisis Claude Code ou Codex&nbsp;: l'asso te l'ouvre, à ton nom.</p>
       </div>
     </div>
-    <p class="actions"><a class="bouton" href="https://github.com/hors-zone-ai/site/issues">Voir les tâches</a></p>
+    <div id="candidature" class="cadre bloc">
+      <h3>Candidater au programme</h3>
+      <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+        <input type="hidden" name="type" value="etudiant">
+        <input type="hidden" name="source" value="site, candidature sponsoring">
+        <label for="cand-email">Ton mail</label>
+        <input id="cand-email" name="email" type="email" required autocomplete="email" placeholder="prenom@mail.fr">
+        <div class="choix" role="radiogroup" aria-label="Outil choisi">
+          <span>Je veux&nbsp;:</span>
+          <label><input type="radio" name="outil" value="claude-code" checked> Claude Code</label>
+          <label><input type="radio" name="outil" value="codex"> Codex</label>
+        </div>
+        <label for="cand-message">Ton GitHub, et ce que tu veux construire</label>
+        <textarea id="cand-message" name="message" rows="3" maxlength="1000" required></textarea>
+        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI étudie ma candidature et m'écrive à son sujet.</span></label>
+        <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+        <button type="submit">Candidater</button>
+      </form>
+    </div>
   </section>
 
   <section aria-labelledby="titre-finance">
@@ -95,16 +132,16 @@
   </section>
 
   <section id="offres" aria-labelledby="titre-offres">
-    <p class="surtitre">// service 02&nbsp;· offres négociées&nbsp;· bientôt</p>
-    <h2 id="titre-offres">Pas dans le programme&nbsp;? Des offres négociées</h2>
-    <p class="chapo">Tous les devs et les étudiants en informatique pourront profiter des tarifs que l'asso négocie avec les éditeurs d'outils d'IA, sans passer par le programme.</p>
+    <p class="surtitre">// 02&nbsp;· offres réduites&nbsp;· bientôt</p>
+    <h2 id="titre-offres">Des outils d'IA à prix réduit</h2>
+    <p class="chapo">Pour tous les devs et les étudiants en informatique, sans candidature&nbsp;: des tarifs que l'asso négocie avec les éditeurs d'outils d'IA.</p>
     <p class="petit">Les premiers accords seront annoncés ici dès qu'ils sont signés. Rien n'est signé pour l'instant.</p>
     <p class="meta">toujours à ton nom&nbsp;· uniquement des offres officielles des éditeurs&nbsp;· jamais de revente</p>
   </section>
 
   <section id="apps" class="bande" aria-labelledby="titre-apps">
     <div class="bande-contenu">
-      <p class="surtitre clair">// service 03&nbsp;· nos apps, gratuites et open source</p>
+      <p class="surtitre clair">// 03&nbsp;· nos apps&nbsp;· gratuites et open source</p>
       <h2 id="titre-apps">Révise et Entretien blanc</h2>
       <div class="cartes">
         <article id="revise" class="carte">

@@ -12,7 +12,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 ## Les fichiers
 
 - `index.html` : l'accueil (la mission en une phrase, Claude Code ou Codex, nos apps en bref, le formulaire d'inscription à la bêta, les liens vers les autres pages).
-- `services.html` : nos services, Claude Code ou Codex payé par l'asso, et nos apps Révise et Entretien blanc.
+- `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Révise et Entretien blanc.
 - `apropos.html` : à propos, notre mission, qui est derrière, et nos comptes ouverts.
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une inscription.
@@ -23,6 +23,8 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `marque/` : le logo et l'avatar.
 
 Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout.
+
+Trois formulaires (bêta, candidature au programme, besoin d'une structure) envoient vers le même webhook ; le champ caché `source` dit d'où vient chaque envoi.
 
 Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient vers un webhook de l'association, qui vérifie le mail et l'accord, écarte les robots (un champ piège caché) et renvoie vers `merci.html`.
 
