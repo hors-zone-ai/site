@@ -82,7 +82,6 @@ main > section.vitrine, main > section.entete { max-width: 66rem; width: calc(10
 .feuille li { display: grid; grid-template-columns: 5.2rem 1fr; gap: .5rem; padding: .45rem 0; border-top: 1px solid var(--gris); }
 .feuille li:first-child { border-top: 0; }
 .feuille li span { font-weight: 700; }
-.feuille li.fait span::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--orange); margin-right: .35rem; }
 .feuille-note { margin: .6rem 0 0; color: var(--doux); font-size: .75rem; }
 
 /* Titres entre deux filets */
