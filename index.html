@@ -118,7 +118,7 @@
       <p class="feuille-titre direct" id="maj">// en direct&nbsp;· d'après comptes.csv</p>
       <ul>
         <li><span id="recu">1&nbsp;000&nbsp;€</span>reçus</li>
-        <li><span id="places">6 places</span>6 mois d'abonnement chacune</li>
+        <li><span id="places">6 devs</span>6 mois d'abonnement chacun</li>
         <li><span>0</span>dev accompagné</li>
       </ul>
       <p class="feuille-note">Fonds de départ, en attente du compte bancaire de l'asso.</p>
@@ -127,7 +127,7 @@
     <div class="bloc">
       <h3>Les 1&nbsp;000&nbsp;€ du départ</h3>
     <p>Les 1&nbsp;000&nbsp;€ reçus servent à lancer les premiers abonnements Claude Code ou Codex. Ce qu'ils financent&nbsp;: <strong>environ 38 mois d'abonnement, par exemple 6 devs pendant 6 mois.</strong></p>
-    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin. L'encadré se recalcule tout seul à partir de comptes.csv&nbsp;: chaque don y ajoute des places.</p>
+    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin. L'encadré se recalcule tout seul à partir de comptes.csv&nbsp;: chaque don finance plus de devs.</p>
     </div>
     <div class="bloc">
       <h3>Merci à nos soutiens</h3>
@@ -161,7 +161,7 @@ fetch('comptes.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
   });
   const places = Math.floor(Math.floor(solde * 1.15 / 30) / 6);
   document.getElementById('recu').textContent = Math.round(recu).toLocaleString('fr-FR') + '\u00a0€';
-  document.getElementById('places').textContent = places + (places > 1 ? ' places' : ' place');
+  document.getElementById('places').textContent = places + (places > 1 ? ' devs' : ' dev');
   const d = der.split('-');
   if (d.length === 3) document.getElementById('maj').textContent = '// en direct\u00a0· dernière opération le ' + d[2] + '/' + d[1] + '/' + d[0];
 }).catch(() => {});
