@@ -20,6 +20,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `comptes.csv` : les comptes, une ligne par opération (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
 - `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine de l'accueil, le terminal de Nos services, les valeurs d'À propos) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
+- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=2`, puis `?v=3`…) sur les six pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `marque/` : le logo et l'avatar.
 
 Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout.
