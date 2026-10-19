@@ -48,7 +48,9 @@ main > section + .bande { margin-top: 4.5rem; }
 .marque .zone { display: inline-block; border: 2px dashed var(--encre); padding: .3rem .5rem; background: var(--papier); }
 .marque .ai { color: var(--orange); margin-left: .2em; }
 nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.1rem; font-size: .9rem; }
-nav [aria-current=page] { font-weight: 700; text-decoration-thickness: 4px; }
+nav a:not(.bouton) { text-decoration: none; padding-bottom: .1rem; border-bottom: 3px solid transparent; }
+nav a:not(.bouton):hover, nav a[aria-current=page]:not(.bouton) { border-bottom-color: var(--orange); }
+nav a[aria-current=page] { font-weight: 700; }
 
 /* Étiquettes en monospace */
 .surtitre { font-family: var(--mono); font-size: .8rem; margin: 0 0 .75rem; }
@@ -60,7 +62,7 @@ nav [aria-current=page] { font-weight: 700; text-decoration-thickness: 4px; }
   display: inline-block; background: var(--orange); color: var(--encre); border: 0; border-radius: 4px;
   padding: .7rem 1.1rem; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
 }
-.bouton:hover, button:hover { outline: 2px solid var(--encre); outline-offset: 2px; }
+.bouton:hover, button:hover, nav .bouton[aria-current=page] { outline: 2px solid var(--encre); outline-offset: 2px; }
 .bouton.petit { padding: .4rem .75rem; font-size: .9rem; }
 .bouton.contour { background: var(--papier); border: 2px solid var(--encre); padding: calc(.7rem - 2px) calc(1.1rem - 2px); }
 
@@ -159,5 +161,6 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 
 @media (max-width: 34rem) {
   nav { width: 100%; gap: .3rem .9rem; font-size: .85rem; }
+  nav .bouton { margin-left: auto; }
   .ouverture { padding-top: 2.25rem; }
 }
