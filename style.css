@@ -68,6 +68,9 @@ nav [aria-current=page] { font-weight: 700; text-decoration-thickness: 4px; }
 .entete { padding-top: 3rem; }
 .entete + section { padding-top: 2.5rem; }
 .regles { max-width: 40rem; }
+.bloc { margin-top: 2.25rem; }
+.bloc p, .bloc ol { max-width: 46rem; }
+.bloc h3 { font-family: var(--serif); font-weight: normal; font-size: 1.45rem; margin-bottom: .5rem; }
 .ouverture, .duo { display: grid; gap: 2.5rem; align-items: center; }
 .ouverture { padding-top: 3.5rem; padding-bottom: 4rem; }
 @media (min-width: 54rem) { .ouverture, .duo { grid-template-columns: 1.45fr 1fr; } }

@@ -11,13 +11,12 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 ## Les fichiers
 
-- `index.html` : l'accueil (la mission en une phrase, nos outils en bref, le formulaire d'inscription à la bêta, les liens vers les autres pages).
-- `outils.html` : nos outils, Révise et Entretien blanc, et nos règles.
-- `acces.html` : l'accès aux outils d'IA, gratuit pour les étudiants qui codent avec nous, tarifs réduits à venir, et nos règles (compte à ton nom, jamais de revente).
-- `mission.html` : ce qui nous anime et qui est derrière.
+- `index.html` : l'accueil (la mission en une phrase, Claude Code ou Codex, nos apps en bref, le formulaire d'inscription à la bêta, les liens vers les autres pages).
+- `services.html` : nos services, Claude Code ou Codex payé par l'asso, et nos apps Révise et Entretien blanc.
+- `apropos.html` : à propos, notre mission, qui est derrière, et nos comptes ouverts.
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une inscription.
-- `comptes.html` : nos comptes, ouverts : les chiffres, où va l'argent, merci aux soutiens.
+- `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
 - `comptes.csv` : les comptes, une ligne par opération (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
 - `style.css` : la seule feuille de style.
@@ -37,7 +36,7 @@ Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient 
 - `libelle` : un don s'écrit « Don anonyme », sauf si le donateur demande à voir son nom ;
 - `montant_eur` : en euros, avec un point pour les centimes.
 
-Les chiffres de `comptes.html` et de l'accueil sont mis à jour dans le même commit que la ligne ajoutée.
+Les chiffres de `apropos.html` et de l'accueil sont mis à jour dans le même commit que la ligne ajoutée.
 
 ## Voir le site sur votre ordinateur
 
