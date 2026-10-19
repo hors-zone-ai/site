@@ -11,15 +11,14 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 ## Les fichiers
 
-- `index.html` : l'accueil (la mission en une phrase, Claude Code ou Codex, nos apps en bref, les liens vers les autres pages).
+- `index.html` : l'accueil, qui est aussi la page À propos (la vitrine, notre mission, qui est derrière, nos comptes ouverts).
 - `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Révise et Entretien blanc.
-- `apropos.html` : à propos, notre mission, qui est derrière, et nos comptes ouverts.
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une candidature ou une demande.
-- `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
+- `apropos.html`, `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
 - `comptes.csv` : les comptes, une ligne par opération (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
-- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine de l'accueil, le terminal de Nos services, les valeurs d'À propos) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
+- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine et les valeurs de l'accueil, le terminal de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
 - Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=3`, puis `?v=4`…) sur les six pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `marque/` : le logo et l'avatar.
 
@@ -39,7 +38,7 @@ Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient 
 - `libelle` : un don s'écrit « Don anonyme », sauf si le donateur demande à voir son nom ;
 - `montant_eur` : en euros, avec un point pour les centimes.
 
-Les chiffres de `apropos.html` et de l'accueil sont mis à jour dans le même commit que la ligne ajoutée.
+Les chiffres de l'accueil sont mis à jour dans le même commit que la ligne ajoutée.
 
 ## Voir le site sur votre ordinateur
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hors Zone AI&nbsp;· coder avec l'IA, gratuitement ou moins cher</title>
-<meta name="description" content="Association loi 1901 pour les développeurs et les étudiants en informatique : coder avec l'IA, gratuitement ou moins cher. Accès aux outils d'IA, apps gratuites, comptes ouverts.">
+<meta name="description" content="Association loi 1901 pour les développeurs et les étudiants en informatique : coder avec l'IA, gratuitement ou moins cher. Notre mission, qui est derrière, et nos comptes ouverts.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Développer avec l'IA coûte cher. Pas ici.">
@@ -14,7 +14,7 @@
 <link rel="icon" href="data:,">
 <link rel="stylesheet" href="style.css?v=3">
 <style>
-/* Styles propres à l'accueil : vitrine en code */
+/* Styles propres à l'accueil : vitrine en code, valeurs */
 .vitrine { display: grid; gap: 2.5rem; align-items: center; }
 @media (min-width: 54rem) { .vitrine { grid-template-columns: 1.45fr 1fr; } }
 .vitrine a:not(.bouton) { color: var(--papier); }
@@ -26,6 +26,9 @@
 .depots li a:hover { text-decoration: underline; }
 .depots li a::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--orange); margin-right: .5rem; }
 .depots li span { display: block; color: var(--gris); font-size: .72rem; }
+.valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
+.valeur { border-top: 1.5px solid var(--encre); padding-top: .8rem; }
+.num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
 </style>
 </head>
 <body>
@@ -34,7 +37,7 @@
 <header class="haut">
   <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
   <nav aria-label="Pages">
-    <a href="apropos.html">À propos</a>
+    <a href="index.html" aria-current="page">À propos</a>
     <a href="services.html">Nos services</a>
     <a class="bouton petit" href="rejoindre.html">Nous rejoindre</a>
   </nav>
@@ -61,59 +64,79 @@
     </div>
   </section>
 
-  <section aria-labelledby="titre-acces">
-    <p class="surtitre">// accès aux outils d'IA</p>
-    <h2 id="titre-acces">Claude Code ou Codex, payé par l'asso</h2>
-    <p>Tu es dev ou étudiant en informatique&nbsp;? Candidate à notre programme de sponsoring&nbsp;: après une première contribution, l'asso te paie l'un des deux, au choix, à ton nom. Sinon, des offres réduites arrivent bientôt. Jamais de compte partagé, jamais de revente.</p>
-    <a class="lien" href="services.html#candidature">Candidater&nbsp;→</a>
-  </section>
-
-  <section id="outils" class="bande" aria-labelledby="titre-outils">
-    <div class="bande-contenu filets">
-      <p class="surtitre clair">// nos apps&nbsp;· gratuites&nbsp;· open core</p>
-      <h2 id="titre-outils">Nos apps</h2>
-      <div class="cartes">
-        <article class="carte">
-          <p class="badge">en conception</p>
-          <h3>Révise</h3>
-          <p class="accroche">Transforme tes cours en fiches, quiz et cartes mémoire.</p>
-          <a class="lien" href="services.html#revise">Voir Révise&nbsp;→</a>
-        </article>
-        <article class="carte">
-          <p class="badge">en conception</p>
-          <h3>Entretien blanc</h3>
-          <p class="accroche">Te prépare à un entretien de stage, d'alternance ou d'école.</p>
-          <a class="lien" href="services.html#entretien-blanc">Voir Entretien blanc&nbsp;→</a>
-        </article>
-        <article class="carte a-venir">
-          <p class="badge">à venir</p>
-          <h3>Le prochain&nbsp;?</h3>
-          <p class="accroche">Une association, un BDE ou une mission locale a un besoin&nbsp;? On le construit avec vous, sans vous le facturer.</p>
-          <a class="lien" href="rejoindre.html#besoin">Proposer un besoin&nbsp;→</a>
-        </article>
+  <section id="mission" class="filets" aria-labelledby="titre-valeurs">
+    <p class="surtitre">// notre mission</p>
+    <h2 id="titre-valeurs">Ce qui nous anime</h2>
+    <div class="valeurs">
+      <div class="valeur">
+        <p class="num">01</p>
+        <h3>Égalité des chances</h3>
+        <p>Coder avec l'IA ne devrait pas être réservé à ceux qui peuvent se payer les abonnements.</p>
+      </div>
+      <div class="valeur">
+        <p class="num">02</p>
+        <h3>Partage</h3>
+        <p>Ce qu'on donne&nbsp;: des accès aux outils d'IA, des apps gratuites, et notre code en open source, sauf le cœur des apps.</p>
+      </div>
+      <div class="valeur">
+        <p class="num">03</p>
+        <h3>Transmission</h3>
+        <p>Ce qu'on apprend aux autres&nbsp;: on code ensemble de vraies apps, et chacun apprend à travailler avec l'IA.</p>
+      </div>
+      <div class="valeur">
+        <p class="num">04</p>
+        <h3>Impact</h3>
+        <p>On compte ce qui compte&nbsp;: devs accompagnés, contributions acceptées, apps livrées. Et on publie nos chiffres, <a href="#comptes">comptes compris</a>.</p>
       </div>
     </div>
   </section>
 
-  <section class="filets" aria-labelledby="titre-asso">
-    <p class="surtitre">// en savoir plus</p>
-    <h2 id="titre-asso">L'association</h2>
-    <div class="chemins">
-      <div class="chemin">
-        <h3>Notre mission</h3>
-        <p>Égalité des chances, partage, transmission, impact&nbsp;: ce qui nous anime, et qui est derrière.</p>
-        <a class="lien" href="apropos.html#mission">Lire notre mission&nbsp;→</a>
+  <section class="qui" aria-labelledby="titre-qui">
+    <p class="surtitre">// l'association</p>
+    <h2 id="titre-qui">Qui est derrière</h2>
+    <p>Hors Zone AI est née à Paris en septembre 2026, sans actionnaire ni pub. Les outils sont construits par des bénévoles, et notre code est public sur GitHub, sauf le cœur des apps (prompts, critères, contenus).</p>
+    <p>Association loi 1901, RNA&nbsp;W751286221, siège à Paris. Nos comptes sont ouverts&nbsp;: <a href="#comptes">voir nos comptes</a>.</p>
+  </section>
+
+  <section id="comptes" class="filets" aria-labelledby="titre-comptes">
+    <p class="surtitre">// transparence</p>
+    <h2 id="titre-comptes"><span>Nos comptes, <mark>ouverts.</mark></span></h2>
+    <p class="chapo">Tout ce que Hors Zone AI reçoit et dépense est publié ici, ligne par ligne. Le détail vit dans un fichier de notre dépôt GitHub&nbsp;: chaque modification y laisse une trace publique.</p>
+    <div class="duo bloc">
+      <div>
+        <h3>Où va l'argent</h3>
+      <ol>
+        <li><strong>Des abonnements Claude Code ou Codex pour les devs du programme de sponsoring.</strong> C'est le premier poste. Chaque accès est ouvert sur le compte de l'association, au nom d'une seule personne, à partir d'une première contribution acceptée, pour la durée et les besoins de la contribution. Jamais de compte partagé, jamais de revente.</li>
+        <li><strong>Nos outils</strong>&nbsp;: l'IA de Révise et d'Entretien blanc, l'hébergement.</li>
+        <li><strong>Les frais de l'association</strong>&nbsp;: nom de domaine, assurance, dépôt de la marque.</li>
+      </ol>
+      <p>On ne prend que des devs&nbsp;: un dev accompagné, c'est un dev ou un étudiant en informatique qui code avec nous. Aujourd'hui, personne n'est payé&nbsp;: l'association fonctionne avec des bénévoles.</p>
       </div>
-      <div class="chemin">
-        <h3>Nos comptes</h3>
-        <p>Chaque euro reçu ou dépensé est publié, ligne par ligne. Au 17 octobre&nbsp;: 1&nbsp;000&nbsp;€ reçus, soit environ 38 mois d'accès Claude pour les devs.</p>
-        <a class="lien" href="apropos.html#comptes">Voir nos comptes&nbsp;→</a>
-      </div>
-      <div class="chemin">
-        <h3>Nous rejoindre</h3>
-        <p>On prend des devs et des étudiants en informatique, et des structures qui ont un besoin.</p>
-        <a class="lien" href="rejoindre.html">Nous rejoindre&nbsp;→</a>
-      </div>
+    <aside class="feuille" aria-label="Nos chiffres">
+      <p class="feuille-titre">// au 17 octobre 2026</p>
+      <ul>
+        <li><span>1&nbsp;000&nbsp;€</span>reçu</li>
+        <li><span>0</span>dev accompagné</li>
+      </ul>
+      <p class="feuille-note">Fonds de départ, en attente du compte bancaire de l'asso.</p>
+    </aside>
+    </div>
+    <div class="bloc">
+      <h3>Les 1&nbsp;000&nbsp;€ du départ</h3>
+    <p>Les 1&nbsp;000&nbsp;€ reçus servent à lancer les premiers abonnements Claude Code ou Codex. Ce qu'ils financent&nbsp;: <strong>environ 38 mois d'abonnement, par exemple 6 devs pendant 6 mois.</strong></p>
+    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin.</p>
+    </div>
+    <div class="bloc">
+      <h3>Merci à nos soutiens</h3>
+    <p>Chaque don est remercié ici, avec son montant. Il apparaît comme « anonyme », sauf si la personne nous demande d'afficher son nom.</p>
+    <ul>
+      <li><strong>1&nbsp;000&nbsp;€</strong>&nbsp;· anonyme&nbsp;· fonds de départ</li>
+    </ul>
+    <p class="petit">Les autres dons ouvriront avec le compte bancaire de l'association.</p>
+    </div>
+    <div class="bloc">
+      <h3>Le détail, ligne par ligne</h3>
+    <p>Le fichier <a href="https://github.com/hors-zone-ai/site/blob/main/comptes.csv">comptes.csv</a>, sur GitHub&nbsp;: date, sens, catégorie, libellé, montant. Son <a href="https://github.com/hors-zone-ai/site/commits/main/comptes.csv">historique</a> montre chaque modification.</p>
     </div>
   </section>
 
@@ -121,7 +144,7 @@
 
 <footer class="bas">
   <p class="signature">Les bons outils coûtent cher. <mark>Pas ici.</mark></p>
-  <p><a href="apropos.html">À propos</a>&nbsp;· <a href="services.html">Nos services</a>&nbsp;· <a href="rejoindre.html">Nous rejoindre</a></p>
+  <p><a href="index.html">À propos</a>&nbsp;· <a href="services.html">Nos services</a>&nbsp;· <a href="rejoindre.html">Nous rejoindre</a></p>
   <p>Hors Zone AI&nbsp;· association loi 1901&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="mentions-legales.html">Mentions légales et données</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Code source</a></p>
   <p class="meta">site statique&nbsp;· 0 cookie&nbsp;· moins de 20&nbsp;Ko par page&nbsp;· licence MIT</p>
 </footer>
