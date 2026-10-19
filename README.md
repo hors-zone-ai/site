@@ -6,7 +6,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 - aucun cookie, aucun outil de mesure d'audience ;
 - rien qui se charge depuis un autre site (police, script, image) ;
-- pas de JavaScript tant qu'on peut s'en passer : le seul script est celui de l'encadré des comptes de l'accueil, qui lit `comptes.csv` pour se mettre à jour tout seul (sans lui, les chiffres écrits dans la page restent affichés) ;
+- pas de JavaScript tant qu'on peut s'en passer : le seul script est celui des chiffres en direct de l'accueil, qui lit `comptes.csv` pour se mettre à jour tout seul (sans lui, les chiffres écrits dans la page restent affichés) ;
 - chaque page, avec la feuille de style, pèse moins de 20 Ko.
 
 ## Les fichiers
@@ -19,7 +19,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `comptes.csv` : les comptes, une ligne par opération (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
 - `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine et les valeurs de l'accueil, le terminal de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
-- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=3`, puis `?v=4`…) sur les six pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
+- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=4`, puis `?v=5`…) sur les six pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `marque/` : le logo et l'avatar.
 
 Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout.

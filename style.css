@@ -67,22 +67,13 @@ nav a[aria-current=page] { font-weight: 700; }
 .bouton.contour { background: var(--papier); border: 2px solid var(--encre); padding: calc(.7rem - 2px) calc(1.1rem - 2px); }
 
 /* Haut de page sur fond encre, comme la vitrine de l'accueil, et encadrés */
-main > section.vitrine, main > section.entete { max-width: 66rem; width: calc(100% - 1.5rem); margin: 1.5rem auto 0; padding: 3rem clamp(1.25rem, 4vw, 3rem); background: var(--encre); color: var(--papier); border-radius: 10px; }
+main > section.vitrine, main > section.entete { max-width: 65rem; width: calc(100% - 3rem); margin: 1.5rem auto 0; padding: 3rem clamp(1.25rem, 4vw, 3rem); background: var(--encre); color: var(--papier); border-radius: 10px; }
 .regles { max-width: 40rem; }
 .bloc { margin-top: 2.25rem; }
 .bloc p, .bloc ol { max-width: 46rem; }
 .bloc h3 { font-family: var(--serif); font-weight: normal; font-size: 1.45rem; margin-bottom: .5rem; }
-.duo { display: grid; gap: 2.5rem; align-items: center; }
-@media (min-width: 54rem) { .duo { grid-template-columns: 1.45fr 1fr; } }
 .chapo { font-size: 1.12rem; max-width: 36rem; }
 .actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.6rem 0 1rem; }
-.feuille { background: var(--papier-clair); border: 1.5px dashed var(--encre); padding: 1.1rem 1.25rem; font-family: var(--mono); font-size: .82rem; }
-.feuille-titre { margin: 0 0 .6rem; color: var(--doux); }
-.feuille ol, .feuille ul { list-style: none; margin: 0; padding: 0; }
-.feuille li { display: grid; grid-template-columns: 5.2rem 1fr; gap: .5rem; padding: .45rem 0; border-top: 1px solid var(--gris); }
-.feuille li:first-child { border-top: 0; }
-.feuille li span { font-weight: 700; }
-.feuille-note { margin: .6rem 0 0; color: var(--doux); font-size: .75rem; }
 
 /* Titres entre deux filets */
 .filets > .surtitre, .filets > h2, .filets > h2 + p { text-align: center; }

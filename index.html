@@ -12,20 +12,17 @@
 <meta property="og:url" content="https://hors-zone-ai.github.io/site/">
 <meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/avatar-512.png">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 <style>
-/* Styles propres à l'accueil : vitrine en code, valeurs */
+/* Styles propres à l'accueil : vitrine et chiffres en direct, valeurs */
 .vitrine { display: grid; gap: 2.5rem; align-items: center; }
 @media (min-width: 54rem) { .vitrine { grid-template-columns: 1.45fr 1fr; } }
 .vitrine a:not(.bouton) { color: var(--papier); }
-.depots { background: #1f1a16; border: 1px solid #3a332c; border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .82rem; }
-.depots p { margin: 0; color: var(--gris); }
-.depots ul { list-style: none; margin: .5rem 0 1rem; padding: 0; }
-.depots li { padding: .6rem 0; border-top: 1px solid #3a332c; }
-.depots li a { text-decoration: none; }
-.depots li a:hover { text-decoration: underline; }
-.depots li a::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--orange); margin-right: .5rem; }
-.depots li span { display: block; color: var(--gris); font-size: .72rem; }
+.chiffres { background: #1f1a16; border: 1px solid #3a332c; border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .82rem; }
+.chiffres p { margin: 0; color: var(--gris); }
+.chiffres ul { list-style: none; margin: .5rem 0 .75rem; padding: 0; }
+.chiffres li { display: grid; grid-template-columns: 5.5rem 1fr; gap: .5rem; padding: .6rem 0; border-top: 1px solid #3a332c; }
+.chiffres .note { font-size: .72rem; margin-bottom: 1rem; }
 .valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
 .num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
 .direct::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--orange); margin-right: .45rem; animation: pouls 2s infinite; }
@@ -53,23 +50,24 @@
       <h1 id="titre">Développer avec l'IA coûte cher. <mark>Pas ici.</mark></h1>
       <p class="chapo">Hors Zone AI est une association de bénévoles. On aide à coder avec l'IA les développeurs et les étudiants en informatique qui n'en ont pas les moyens&nbsp;: accès aux outils gratuit ou moins cher, et des apps gratuites construites ensemble.</p>
       <p class="actions"><a class="bouton" href="services.html#acces">Avoir Claude Code ou Codex</a></p>
-      <p class="meta clair">gratuit&nbsp;· sans pub&nbsp;· code ouvert, sauf le cœur des apps</p>
+      <p class="meta clair">gratuit&nbsp;· sans pub&nbsp;· open source</p>
     </div>
-    <div class="depots">
-      <p>// nos dépôts</p>
+    <aside class="chiffres" aria-label="Nos chiffres en direct">
+      <p class="direct" id="maj">// en direct&nbsp;· d'après comptes.csv</p>
       <ul>
-        <li><a href="https://github.com/hors-zone-ai/revise">hors-zone-ai/revise</a><span>app&nbsp;· en conception&nbsp;· open core</span></li>
-        <li><a href="https://github.com/hors-zone-ai/entretien-blanc">hors-zone-ai/entretien-blanc</a><span>app&nbsp;· en conception&nbsp;· open core</span></li>
-        <li><a href="https://github.com/hors-zone-ai/site">hors-zone-ai/site</a><span>ce site&nbsp;· en ligne&nbsp;· licence MIT</span></li>
+        <li><b id="recu">1&nbsp;000&nbsp;€</b>reçus</li>
+        <li><b id="places">6 devs</b>6 mois d'abonnement chacun</li>
+        <li><b>0</b>dev accompagné</li>
       </ul>
-      <a class="lien" href="https://github.com/hors-zone-ai">Voir sur GitHub&nbsp;→</a>
-    </div>
+      <p class="note">Fonds de départ, en attente du compte bancaire de l'asso.</p>
+      <a class="lien" href="#comptes">Voir nos comptes&nbsp;→</a>
+    </aside>
   </section>
 
   <section class="qui" aria-labelledby="titre-qui">
     <p class="surtitre">// l'association</p>
     <h2 id="titre-qui">Qui est derrière</h2>
-    <p>Hors Zone AI est née à Paris en septembre 2026, sans actionnaire ni pub. Les outils sont construits par des bénévoles, et notre code est public sur GitHub, sauf le cœur des apps (prompts, critères, contenus).</p>
+    <p>Hors Zone AI est née à Paris en septembre 2026, sans actionnaire ni pub. Les outils sont construits par des bénévoles, et notre code est open source, sur GitHub.</p>
     <p>Association loi 1901, RNA&nbsp;W751286221, siège à Paris. Nos comptes sont ouverts&nbsp;: <a href="#comptes">voir nos comptes</a>.</p>
   </section>
 
@@ -85,7 +83,7 @@
       <div class="valeur">
         <p class="num">02</p>
         <h3>Partage</h3>
-        <p>Ce qu'on donne&nbsp;: des accès aux outils d'IA, des apps gratuites, et notre code en open source, sauf le cœur des apps.</p>
+        <p>Ce qu'on donne&nbsp;: des accès aux outils d'IA, des apps gratuites, et notre code en open source.</p>
       </div>
       <div class="valeur">
         <p class="num">03</p>
@@ -104,8 +102,7 @@
     <p class="surtitre">// transparence</p>
     <h2 id="titre-comptes"><span>Nos comptes, <mark>ouverts.</mark></span></h2>
     <p class="chapo">Tout ce que Hors Zone AI reçoit et dépense est publié ici, ligne par ligne. Le détail vit dans un fichier de notre dépôt GitHub&nbsp;: chaque modification y laisse une trace publique.</p>
-    <div class="duo bloc">
-      <div>
+    <div class="bloc">
         <h3>Où va l'argent</h3>
       <ol>
         <li><strong>Des abonnements Claude Code ou Codex pour les devs du programme de sponsoring.</strong> C'est le premier poste. Chaque accès est ouvert sur le compte de l'association, au nom d'une seule personne retenue dans le programme, pour la durée et les besoins de son travail sur nos projets. Jamais de compte partagé, jamais de revente.</li>
@@ -113,21 +110,11 @@
         <li><strong>Les frais de l'association</strong>&nbsp;: nom de domaine, assurance, dépôt de la marque.</li>
       </ol>
       <p>On ne prend que des devs&nbsp;: un dev accompagné, c'est un dev ou un étudiant en informatique qui code avec nous. Aujourd'hui, personne n'est payé&nbsp;: l'association fonctionne avec des bénévoles.</p>
-      </div>
-    <aside class="feuille" aria-label="Nos chiffres">
-      <p class="feuille-titre direct" id="maj">// en direct&nbsp;· d'après comptes.csv</p>
-      <ul>
-        <li><span id="recu">1&nbsp;000&nbsp;€</span>reçus</li>
-        <li><span id="places">6 devs</span>6 mois d'abonnement chacun</li>
-        <li><span>0</span>dev accompagné</li>
-      </ul>
-      <p class="feuille-note">Fonds de départ, en attente du compte bancaire de l'asso.</p>
-    </aside>
     </div>
     <div class="bloc">
       <h3>Les 1&nbsp;000&nbsp;€ du départ</h3>
     <p>Les 1&nbsp;000&nbsp;€ reçus servent à lancer les premiers abonnements Claude Code ou Codex. Ce qu'ils financent&nbsp;: <strong>environ 38 mois d'abonnement, par exemple 6 devs pendant 6 mois.</strong></p>
-    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin. L'encadré se recalcule tout seul à partir de comptes.csv&nbsp;: chaque don finance plus de devs.</p>
+    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin. Les chiffres en direct, en haut de la page, se recalculent tout seuls à partir de comptes.csv&nbsp;: chaque don finance plus de devs.</p>
     </div>
     <div class="bloc">
       <h3>Merci à nos soutiens</h3>

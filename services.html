@@ -6,7 +6,7 @@
 <title>Nos services&nbsp;· Hors Zone AI</title>
 <meta name="description" content="Pour les devs et les étudiants en informatique : un programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso), des offres réduites, et nos apps gratuites.">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 <style>
 /* Styles propres à cette page : le terminal */
 .terminal { max-width: 46rem; margin: 1.75rem 0 0; padding: 1.1rem 1.25rem; background: var(--encre); color: var(--papier); border-radius: 6px; font: .82rem/1.8 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
@@ -15,6 +15,7 @@
 .curseur { display: inline-block; width: .6em; height: 1.1em; vertical-align: -.2em; background: var(--orange); animation: clignote 1s steps(1) infinite; }
 @keyframes clignote { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .curseur { animation: none; } }
+.depot { font-family: var(--mono); font-size: .85rem; }
 </style>
 </head>
 <body>
@@ -51,7 +52,7 @@
       <article class="carte">
         <p class="badge">03&nbsp;· gratuit</p>
         <h2>Nos apps</h2>
-        <p class="accroche">Révise et Entretien blanc, gratuites, en open core.</p>
+        <p class="accroche">Révise et Entretien blanc, gratuites et open source.</p>
         <a class="lien" href="#apps">Voir nos apps&nbsp;→</a>
       </article>
     </div>
@@ -132,7 +133,7 @@
 
   <section id="apps" class="bande" aria-labelledby="titre-apps">
     <div class="bande-contenu filets">
-      <p class="surtitre clair">// 03&nbsp;· nos apps&nbsp;· gratuites&nbsp;· open core</p>
+      <p class="surtitre clair">// 03&nbsp;· nos apps&nbsp;· gratuites&nbsp;· open source</p>
       <h2 id="titre-apps">Révise et Entretien blanc</h2>
       <div class="cartes">
         <article id="revise" class="carte">
@@ -144,6 +145,7 @@
             <li>Une fiche, un quiz de 10 questions et des cartes mémoire en une minute</li>
             <li>Rangé par matière, chaque point renvoie à ton cours</li>
           </ul>
+          <a class="lien depot" href="https://github.com/hors-zone-ai/revise">hors-zone-ai/revise&nbsp;→</a>
         </article>
         <article id="entretien-blanc" class="carte">
           <p class="badge">en conception</p>
@@ -154,6 +156,7 @@
             <li>Une note sur 4 critères</li>
             <li>3 points forts, 3 choses à travailler</li>
           </ul>
+          <a class="lien depot" href="https://github.com/hors-zone-ai/entretien-blanc">hors-zone-ai/entretien-blanc&nbsp;→</a>
         </article>
         <article class="carte a-venir">
           <p class="badge">à venir</p>
@@ -163,7 +166,6 @@
         </article>
       </div>
       <p class="meta clair">tes résultats restent à toi&nbsp;· rien ne sert à entraîner une IA&nbsp;· aucune analyse de ta voix ni de ton visage&nbsp;· aucune note transmise à un recruteur</p>
-      <p class="meta clair">partie ouverte&nbsp;: <a href="https://github.com/hors-zone-ai/revise">hors-zone-ai/revise</a>&nbsp;· <a href="https://github.com/hors-zone-ai/entretien-blanc">hors-zone-ai/entretien-blanc</a>&nbsp;· le cœur (prompts, critères, contenus) reste privé</p>
     </div>
   </section>
 
