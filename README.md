@@ -6,7 +6,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 - aucun cookie, aucun outil de mesure d'audience ;
 - rien qui se charge depuis un autre site (police, script, image) ;
-- pas de JavaScript tant qu'on peut s'en passer ;
+- pas de JavaScript tant qu'on peut s'en passer : le seul script est celui de l'encadré des comptes de l'accueil, qui lit `comptes.csv` pour se mettre à jour tout seul (sans lui, les chiffres écrits dans la page restent affichés) ;
 - chaque page, avec la feuille de style, pèse moins de 20 Ko.
 
 ## Les fichiers

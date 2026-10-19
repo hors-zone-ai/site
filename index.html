@@ -27,8 +27,10 @@
 .depots li a::before { content: ""; display: inline-block; width: .5rem; height: .5rem; background: var(--orange); margin-right: .5rem; }
 .depots li span { display: block; color: var(--gris); font-size: .72rem; }
 .valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
-.valeur { border-top: 1.5px solid var(--encre); padding-top: .8rem; }
 .num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
+.direct::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--orange); margin-right: .45rem; animation: pouls 2s infinite; }
+@keyframes pouls { 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .direct::before { animation: none; } }
 </style>
 </head>
 <body>
@@ -113,9 +115,10 @@
       <p>On ne prend que des devs&nbsp;: un dev accompagné, c'est un dev ou un étudiant en informatique qui code avec nous. Aujourd'hui, personne n'est payé&nbsp;: l'association fonctionne avec des bénévoles.</p>
       </div>
     <aside class="feuille" aria-label="Nos chiffres">
-      <p class="feuille-titre">// au 17 octobre 2026</p>
+      <p class="feuille-titre direct" id="maj">// en direct&nbsp;· d'après comptes.csv</p>
       <ul>
-        <li><span>1&nbsp;000&nbsp;€</span>reçu</li>
+        <li><span id="recu">1&nbsp;000&nbsp;€</span>reçus</li>
+        <li><span id="places">6 places</span>6 mois d'abonnement chacune</li>
         <li><span>0</span>dev accompagné</li>
       </ul>
       <p class="feuille-note">Fonds de départ, en attente du compte bancaire de l'asso.</p>
@@ -124,7 +127,7 @@
     <div class="bloc">
       <h3>Les 1&nbsp;000&nbsp;€ du départ</h3>
     <p>Les 1&nbsp;000&nbsp;€ reçus servent à lancer les premiers abonnements Claude Code ou Codex. Ce qu'ils financent&nbsp;: <strong>environ 38 mois d'abonnement, par exemple 6 devs pendant 6 mois.</strong></p>
-    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin.</p>
+    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin. L'encadré se recalcule tout seul à partir de comptes.csv&nbsp;: chaque don y ajoute des places.</p>
     </div>
     <div class="bloc">
       <h3>Merci à nos soutiens</h3>
@@ -148,5 +151,20 @@
   <p>Hors Zone AI&nbsp;· association loi 1901&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="mentions-legales.html">Mentions légales et données</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Code source</a></p>
   <p class="meta">site statique&nbsp;· 0 cookie&nbsp;· moins de 20&nbsp;Ko par page&nbsp;· licence MIT</p>
 </footer>
+<script>
+fetch('comptes.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
+  let recu = 0, solde = 0, der = '';
+  t.trim().split('\n').slice(1).forEach(l => {
+    const c = l.split(','), m = parseFloat(c[c.length - 1]) || 0;
+    if (c[1] === 'recette') { recu += m; solde += m; } else if (c[1] === 'depense') { solde -= m; }
+    der = c[0];
+  });
+  const places = Math.floor(Math.floor(solde * 1.15 / 30) / 6);
+  document.getElementById('recu').textContent = Math.round(recu).toLocaleString('fr-FR') + '\u00a0€';
+  document.getElementById('places').textContent = places + (places > 1 ? ' places' : ' place');
+  const d = der.split('-');
+  if (d.length === 3) document.getElementById('maj').textContent = '// en direct\u00a0· dernière opération le ' + d[2] + '/' + d[1] + '/' + d[0];
+}).catch(() => {});
+</script>
 </body>
 </html>
