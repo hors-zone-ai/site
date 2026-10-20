@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hors Zone AI&nbsp;· coder avec l'IA, gratuitement ou moins cher</title>
-<meta name="description" content="Association loi 1901 pour les développeurs et les étudiants en informatique : coder avec l'IA, gratuitement ou moins cher. Notre mission, qui est derrière, et nos comptes ouverts.">
+<meta name="description" content="Association loi 1901 pour les développeurs et les étudiants en informatique : coder avec l'IA, gratuitement ou moins cher. Qui est derrière, notre mission, et où va l'argent.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Développer avec l'IA coûte cher. Pas ici.">
@@ -20,9 +20,8 @@
 .vitrine a:not(.bouton) { color: var(--papier); }
 .chiffres { background: #1f1a16; border: 1px solid #3a332c; border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .82rem; }
 .chiffres p { margin: 0; color: var(--gris); }
-.chiffres ul { list-style: none; margin: .5rem 0 .75rem; padding: 0; }
-.chiffres li { display: grid; grid-template-columns: 5.5rem 1fr; gap: .5rem; padding: .6rem 0; border-top: 1px solid #3a332c; }
-.chiffres .note { font-size: .72rem; margin-bottom: 1rem; }
+.chiffres ul { list-style: none; margin: .5rem 0 1rem; padding: 0; }
+.chiffres li { padding: .6rem 0; border-top: 1px solid #3a332c; }
 .valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
 .num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
 .direct::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--orange); margin-right: .45rem; animation: pouls 2s infinite; }
@@ -53,13 +52,12 @@
       <p class="meta clair">gratuit&nbsp;· sans pub&nbsp;· open source</p>
     </div>
     <aside class="chiffres" aria-label="Nos chiffres en direct">
-      <p class="direct" id="maj">// en direct&nbsp;· d'après comptes.csv</p>
+      <p class="direct" id="maj">// en direct&nbsp;· d'après dons.csv</p>
       <ul>
-        <li><b id="dons">1&nbsp;000&nbsp;€</b>de dons</li>
-        <li><b>8</b>personnes accompagnées</li>
+        <li><b id="dons">1</b> <span id="dons-texte">don</span></li>
+        <li><b>8</b> personnes accompagnées</li>
       </ul>
-      <p class="note">Fonds de départ, en attente du compte bancaire de l'asso.</p>
-      <a class="lien" href="#comptes">Voir nos comptes&nbsp;→</a>
+      <a class="lien" href="#argent">Où va l'argent&nbsp;→</a>
     </aside>
   </section>
 
@@ -67,7 +65,7 @@
     <p class="surtitre">// l'association</p>
     <h2 id="titre-qui">Qui est derrière</h2>
     <p>Hors Zone AI est née à Paris en septembre 2026, sans actionnaire ni pub. Les outils sont construits par des bénévoles, et notre code est open source, sur GitHub.</p>
-    <p>Association loi 1901, RNA&nbsp;W751286221, siège à Paris. Nos comptes sont ouverts&nbsp;: <a href="#comptes">voir nos comptes</a>.</p>
+    <p>Association loi 1901, RNA&nbsp;W751286221, siège à Paris. Ce qu'on fait des dons&nbsp;: <a href="#argent">où va l'argent</a>.</p>
   </section>
 
   <section id="mission" class="filets" aria-labelledby="titre-valeurs">
@@ -92,17 +90,16 @@
       <div class="valeur">
         <p class="num">04</p>
         <h3>Impact</h3>
-        <p>On compte ce qui compte&nbsp;: personnes accompagnées, contributions acceptées, apps livrées. Et on publie nos chiffres, <a href="#comptes">comptes compris</a>.</p>
+        <p>On compte ce qui compte&nbsp;: personnes accompagnées, contributions acceptées, apps livrées. Et on publie nos chiffres, <a href="#argent">dons compris</a>.</p>
       </div>
     </div>
   </section>
 
-  <section id="comptes" class="filets" aria-labelledby="titre-comptes">
-    <p class="surtitre">// transparence</p>
-    <h2 id="titre-comptes"><span>Nos comptes, <mark>ouverts.</mark></span></h2>
-    <p class="chapo">Tout ce que Hors Zone AI reçoit et dépense est publié ici, ligne par ligne. Le détail vit dans un fichier de notre dépôt GitHub&nbsp;: chaque modification y laisse une trace publique.</p>
+  <section id="argent" class="filets" aria-labelledby="titre-argent">
+    <p class="surtitre">// nos dons</p>
+    <h2 id="titre-argent"><span>Où va <mark>l'argent.</mark></span></h2>
+    <p class="chapo">Hors Zone AI vit de dons. Voici à quoi ils servent, dans l'ordre.</p>
     <div class="bloc">
-        <h3>Où va l'argent</h3>
       <ol>
         <li><strong>Des abonnements Claude Code ou Codex pour les devs du programme de sponsoring.</strong> C'est le premier poste. Chaque accès est ouvert sur le compte de l'association, au nom d'une seule personne retenue dans le programme, pour la durée et les besoins de son travail sur nos projets. Jamais de compte partagé, jamais de revente.</li>
         <li><strong>Nos outils</strong>&nbsp;: l'IA de Révise et d'Entretien blanc, l'hébergement.</li>
@@ -111,21 +108,12 @@
       <p>On ne prend que des devs&nbsp;: une personne accompagnée, c'est un dev ou un étudiant en informatique qui code avec nous. Aujourd'hui, personne n'est payé&nbsp;: l'association fonctionne avec des bénévoles.</p>
     </div>
     <div class="bloc">
-      <h3>Les 1&nbsp;000&nbsp;€ du départ</h3>
-    <p>Les 1&nbsp;000&nbsp;€ reçus servent à lancer les premiers abonnements Claude Code ou Codex. Ce qu'ils financent&nbsp;: <strong>environ 38 mois d'abonnement, par exemple 6 devs pendant 6 mois.</strong></p>
-    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin. Le total des dons, en haut de la page, se met à jour tout seul à partir de comptes.csv.</p>
-    </div>
-    <div class="bloc">
       <h3>Merci à nos soutiens</h3>
-    <p>Chaque don est remercié ici, avec son montant. Il apparaît comme « anonyme », sauf si la personne nous demande d'afficher son nom.</p>
-    <ul>
-      <li><strong>1&nbsp;000&nbsp;€</strong>&nbsp;· anonyme&nbsp;· fonds de départ</li>
-    </ul>
-    <p class="petit">Les autres dons ouvriront avec le compte bancaire de l'association.</p>
-    </div>
-    <div class="bloc">
-      <h3>Le détail, ligne par ligne</h3>
-    <p>Le fichier <a href="https://github.com/hors-zone-ai/site/blob/main/comptes.csv">comptes.csv</a>, sur GitHub&nbsp;: date, sens, catégorie, libellé, montant. Son <a href="https://github.com/hors-zone-ai/site/commits/main/comptes.csv">historique</a> montre chaque modification.</p>
+      <p>Chaque don est remercié ici. Il apparaît comme « anonyme », sauf si la personne nous demande d'afficher son nom.</p>
+      <ul>
+        <li><strong>Anonyme</strong>&nbsp;· fonds de départ</li>
+      </ul>
+      <p class="petit">Les autres dons ouvriront avec le compte bancaire de l'association.</p>
     </div>
   </section>
 
@@ -138,16 +126,17 @@
   <p class="meta">site statique&nbsp;· 0 cookie&nbsp;· moins de 20&nbsp;Ko par page&nbsp;· licence MIT</p>
 </footer>
 <script>
-fetch('comptes.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
+fetch('dons.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
   let dons = 0, der = '';
   t.trim().split('\n').slice(1).forEach(l => {
-    const c = l.split(','), m = parseFloat(c[c.length - 1]) || 0;
-    if (c[1] === 'recette' && (c[2] === 'don' || c[2] === 'mecenat')) dons += m;
+    const c = l.split(',');
+    if (c[1] === 'don' || c[1] === 'mecenat') dons++;
     der = c[0];
   });
-  document.getElementById('dons').textContent = Math.round(dons).toLocaleString('fr-FR') + '\u00a0€';
+  document.getElementById('dons').textContent = dons;
+  document.getElementById('dons-texte').textContent = dons > 1 ? 'dons' : 'don';
   const d = der.split('-');
-  if (d.length === 3) document.getElementById('maj').textContent = '// en direct\u00a0· dernière opération le ' + d[2] + '/' + d[1] + '/' + d[0];
+  if (d.length === 3) document.getElementById('maj').textContent = '// en direct\u00a0· dernier don le ' + d[2] + '/' + d[1] + '/' + d[0];
 }).catch(() => {});
 </script>
 </body>
