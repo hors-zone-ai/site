@@ -55,9 +55,8 @@
     <aside class="chiffres" aria-label="Nos chiffres en direct">
       <p class="direct" id="maj">// en direct&nbsp;· d'après comptes.csv</p>
       <ul>
-        <li><b id="recu">1&nbsp;000&nbsp;€</b>reçus</li>
-        <li><b id="places">6 devs</b>6 mois d'abonnement chacun</li>
-        <li><b>0</b>dev accompagné</li>
+        <li><b id="dons">1&nbsp;000&nbsp;€</b><span>de dons, de quoi financer <b id="devs">6&nbsp;devs</b> pendant 6&nbsp;mois</span></li>
+        <li><b id="aides">0</b><span id="aides-texte">personne accompagnée</span></li>
       </ul>
       <p class="note">Fonds de départ, en attente du compte bancaire de l'asso.</p>
       <a class="lien" href="#comptes">Voir nos comptes&nbsp;→</a>
@@ -93,7 +92,7 @@
       <div class="valeur">
         <p class="num">04</p>
         <h3>Impact</h3>
-        <p>On compte ce qui compte&nbsp;: devs accompagnés, contributions acceptées, apps livrées. Et on publie nos chiffres, <a href="#comptes">comptes compris</a>.</p>
+        <p>On compte ce qui compte&nbsp;: personnes accompagnées, contributions acceptées, apps livrées. Et on publie nos chiffres, <a href="#comptes">comptes compris</a>.</p>
       </div>
     </div>
   </section>
@@ -109,7 +108,7 @@
         <li><strong>Nos outils</strong>&nbsp;: l'IA de Révise et d'Entretien blanc, l'hébergement.</li>
         <li><strong>Les frais de l'association</strong>&nbsp;: nom de domaine, assurance, dépôt de la marque.</li>
       </ol>
-      <p>On ne prend que des devs&nbsp;: un dev accompagné, c'est un dev ou un étudiant en informatique qui code avec nous. Aujourd'hui, personne n'est payé&nbsp;: l'association fonctionne avec des bénévoles.</p>
+      <p>On ne prend que des devs&nbsp;: une personne accompagnée, c'est un dev ou un étudiant en informatique qui code avec nous. Aujourd'hui, personne n'est payé&nbsp;: l'association fonctionne avec des bénévoles.</p>
     </div>
     <div class="bloc">
       <h3>Les 1&nbsp;000&nbsp;€ du départ</h3>
@@ -140,15 +139,19 @@
 </footer>
 <script>
 fetch('comptes.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
-  let recu = 0, solde = 0, der = '';
+  let dons = 0, der = '';
+  const aides = new Set();
   t.trim().split('\n').slice(1).forEach(l => {
     const c = l.split(','), m = parseFloat(c[c.length - 1]) || 0;
-    if (c[1] === 'recette') { recu += m; solde += m; } else if (c[1] === 'depense') { solde -= m; }
+    if (c[1] === 'recette' && (c[2] === 'don' || c[2] === 'mecenat')) dons += m;
+    if (c[1] === 'depense' && c[2] === 'acces-claude') (l.match(/\bdev \d+/gi) || []).forEach(p => aides.add(p.toLowerCase()));
     der = c[0];
   });
-  const places = Math.floor(Math.floor(solde * 1.15 / 30) / 6);
-  document.getElementById('recu').textContent = Math.round(recu).toLocaleString('fr-FR') + '\u00a0€';
-  document.getElementById('places').textContent = places + (places > 1 ? ' devs' : ' dev');
+  const devs = Math.floor(Math.floor(dons * 1.15 / 30) / 6), n = aides.size;
+  document.getElementById('dons').textContent = Math.round(dons).toLocaleString('fr-FR') + '\u00a0€';
+  document.getElementById('devs').textContent = devs + (devs > 1 ? '\u00a0devs' : '\u00a0dev');
+  document.getElementById('aides').textContent = n;
+  document.getElementById('aides-texte').textContent = n > 1 ? 'personnes accompagnées' : 'personne accompagnée';
   const d = der.split('-');
   if (d.length === 3) document.getElementById('maj').textContent = '// en direct\u00a0· dernière opération le ' + d[2] + '/' + d[1] + '/' + d[0];
 }).catch(() => {});
