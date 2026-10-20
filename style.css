@@ -72,7 +72,6 @@ main > section.vitrine, main > section.entete { max-width: 65rem; width: calc(10
 .bloc p, .bloc ol { max-width: 46rem; }
 .bloc h3 { font-family: var(--serif); font-weight: normal; font-size: 1.45rem; margin-bottom: .5rem; }
 .chapo { font-size: 1.12rem; max-width: 36rem; }
-.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.6rem 0 1rem; }
 
 /* Titres entre deux filets */
 .filets > .surtitre, .filets > h2, .filets > h2 + p { text-align: center; }

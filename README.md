@@ -6,20 +6,20 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 - aucun cookie, aucun outil de mesure d'audience ;
 - rien qui se charge depuis un autre site (police, script, image) ;
-- pas de JavaScript tant qu'on peut s'en passer : le seul script est celui des chiffres en direct de l'accueil, qui lit `dons.csv` pour se mettre à jour tout seul (sans lui, les chiffres écrits dans la page restent affichés) ;
+- pas de JavaScript tant qu'on peut s'en passer : le seul script est celui de l'accueil, qui lit `dons.csv` pour mettre à jour tout seul les chiffres en direct et le bandeau de remerciement (sans lui, ce qui est écrit dans la page reste affiché) ;
 - chaque page, avec la feuille de style, pèse moins de 20 Ko.
 
 ## Les fichiers
 
-- `index.html` : l'accueil, qui est aussi la page À propos (la vitrine, notre mission, où va l'argent).
+- `index.html` : l'accueil, qui est aussi la page À propos (la vitrine, notre mission, où va l'argent, le bandeau de remerciement).
 - `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Révise et Entretien blanc.
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une candidature ou une demande.
 - `apropos.html`, `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
 - `dons.csv` : le registre des dons, une ligne par don, sans montant (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
-- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine et les valeurs de l'accueil, le terminal et les apps de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
-- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=6`, puis `?v=7`…) sur les cinq pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
+- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine, les valeurs et le bandeau de remerciement de l'accueil, le terminal et les apps de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
+- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=7`, puis `?v=8`…) sur les cinq pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `marque/` : le logo et l'avatar.
 
 Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout. Seule exception, l'accueil n'a pas la signature « Pas ici. » en pied de page, puisque son titre la porte déjà. Règle d'écriture : rien n'est dit deux fois sur une même page (un surtitre ne répète pas son titre).
@@ -30,13 +30,14 @@ Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient 
 
 ## Le registre des dons
 
-On ne publie ni comptes ni montants : seulement le nombre de dons. `dons.csv` contient une ligne par don, en UTF-8, séparateur virgule :
+On ne publie ni comptes ni montants : seulement les dons. `dons.csv` contient une ligne par don, en UTF-8, séparateur virgule, sans virgule dans les valeurs :
 
 - `date` : AAAA-MM-JJ ;
 - `categorie` : `don` ou `mecenat` ;
-- `libelle` : « Don anonyme », sauf si le donateur demande à voir son nom.
+- `nom` : `Anonyme` par défaut ; le nom du donateur seulement s'il le demande ;
+- `logo` : vide par défaut ; sinon le chemin d'un logo déposé dans le dossier `donateurs/` (SVG, PNG ou WebP, léger), par exemple `donateurs/nom.svg`, seulement si le donateur le demande.
 
-L'accueil lit ce fichier tout seul : le nombre de dons et la date du dernier. Le nombre de personnes accompagnées s'écrit à la main dans `index.html`. Les chiffres écrits dans la page, affichés sans JavaScript, sont mis à jour dans le même commit que la ligne ajoutée.
+L'accueil lit ce fichier tout seul : le nombre de dons et la date du dernier dans l'encadré en direct, et une tuile par don dans le bandeau « Merci. » (le logo s'il y en a un, sinon le nom). Le nombre de personnes accompagnées s'écrit à la main dans `index.html`. Les chiffres et les tuiles écrits dans la page, affichés sans JavaScript, sont mis à jour dans le même commit que la ligne ajoutée.
 
 ## Voir le site sur votre ordinateur
 

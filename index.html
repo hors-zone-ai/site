@@ -12,12 +12,12 @@
 <meta property="og:url" content="https://hors-zone-ai.github.io/site/">
 <meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/avatar-512.png">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 <style>
-/* Styles propres à l'accueil : vitrine et chiffres en direct, valeurs */
+/* Styles propres à l'accueil : vitrine, chiffres en direct, valeurs, merci */
 .vitrine { display: grid; gap: 2.5rem; align-items: center; }
 @media (min-width: 54rem) { .vitrine { grid-template-columns: 1.45fr 1fr; } }
-.vitrine a:not(.bouton) { color: var(--papier); }
+.vitrine a, .bande a { color: var(--papier); }
 .chiffres { background: #1f1a16; border: 1px solid #3a332c; border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .82rem; }
 .chiffres p { margin: 0; color: var(--gris); }
 .chiffres ul { list-style: none; margin: .5rem 0 1rem; padding: 0; }
@@ -27,6 +27,10 @@
 .direct::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--orange); margin-right: .45rem; animation: pouls 2s infinite; }
 @keyframes pouls { 50% { opacity: .25; } }
 @media (prefers-reduced-motion: reduce) { .direct::before { animation: none; } }
+.donateurs { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; list-style: none; margin: 2rem 0 0; padding: 0; }
+.donateurs li { display: grid; place-items: center; min-width: 10rem; min-height: 4.5rem; padding: .5rem 1.25rem; border: 1.5px dashed var(--papier); border-radius: 10px; font-family: var(--mono); }
+.donateurs img { max-width: 9rem; max-height: 3rem; }
+#merci .meta { text-align: center; }
 </style>
 </head>
 <body>
@@ -45,10 +49,9 @@
 
   <section class="vitrine" aria-labelledby="titre">
     <div>
-      <p class="surtitre clair">// devs et étudiants en informatique</p>
+      <p class="surtitre clair">// association pour les devs et les étudiants en informatique</p>
       <h1 id="titre">Développer avec l'IA coûte cher. <mark>Pas ici.</mark></h1>
-      <p class="chapo">On aide ceux qui n'en ont pas les moyens&nbsp;: des outils d'IA moins chers ou payés par l'asso, et nos propres apps.</p>
-      <p class="actions"><a class="bouton" href="services.html#acces">Avoir Claude Code ou Codex</a></p>
+      <p class="chapo">On aide ceux qui n'en ont pas les moyens&nbsp;: des outils d'IA moins chers ou payés par nous, et nos propres apps.</p>
       <p class="meta clair">gratuit&nbsp;· sans pub&nbsp;· sans actionnaire&nbsp;· par des bénévoles</p>
     </div>
     <aside class="chiffres" aria-label="Nos chiffres en direct">
@@ -99,13 +102,16 @@
       </ol>
       <p>Être accompagné, c'est coder sur nos projets.</p>
     </div>
-    <div class="bloc">
-      <h3>Merci à nos soutiens</h3>
-      <p>Les dons apparaissent ici, sans nom sauf si leur auteur demande à l'afficher.</p>
-      <ul>
-        <li><strong>Anonyme</strong>&nbsp;· fonds de départ</li>
+  </section>
+
+  <section id="merci" class="bande" aria-labelledby="titre-merci">
+    <div class="bande-contenu filets">
+      <p class="surtitre clair">// nos soutiens</p>
+      <h2 id="titre-merci">Merci.</h2>
+      <ul id="donateurs" class="donateurs">
+        <li>Anonyme</li>
       </ul>
-      <p class="petit">La suite ouvrira avec notre compte bancaire.</p>
+      <p class="meta clair">Sur demande, votre nom ou votre logo s'affiche ici. La suite ouvrira avec notre compte bancaire.</p>
     </div>
   </section>
 
@@ -119,11 +125,18 @@
 <script>
 fetch('dons.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
   let dons = 0, der = '';
+  const tuiles = [];
   t.trim().split('\n').slice(1).forEach(l => {
-    const c = l.split(',');
-    if (c[1] === 'don' || c[1] === 'mecenat') dons++;
+    const c = l.split(','), nom = (c[2] || '').trim() || 'Anonyme', logo = (c[3] || '').trim();
+    if (c[1] === 'don' || c[1] === 'mecenat') {
+      dons++;
+      const li = document.createElement('li');
+      if (/^donateurs\/[\w.-]+\.(svg|png|webp)$/.test(logo)) { const im = document.createElement('img'); im.src = logo; im.alt = nom; li.append(im); } else li.textContent = nom;
+      tuiles.push(li);
+    }
     der = c[0];
   });
+  if (tuiles.length) document.getElementById('donateurs').replaceChildren(...tuiles);
   document.getElementById('dons').textContent = dons;
   document.getElementById('dons-texte').textContent = dons > 1 ? 'dons' : 'don';
   const d = der.split('-');
