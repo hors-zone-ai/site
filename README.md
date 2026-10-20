@@ -18,8 +18,8 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `apropos.html`, `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
 - `dons.csv` : le registre des dons, une ligne par don, sans montant (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
-- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine et les valeurs de l'accueil, le terminal de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
-- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=4`, puis `?v=5`…) sur les six pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
+- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine et les valeurs de l'accueil, le terminal et les apps de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
+- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=5`, puis `?v=6`…) sur les cinq pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `marque/` : le logo et l'avatar.
 
 Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout.

@@ -1,4 +1,4 @@
-/* Hors Zone AI, marque « Hors cadre ». Aucune police ni image externe. */
+/* Hors Zone AI, marque « Hors cadre ». Rien d'externe. */
 
 :root {
   --papier: #f4efe4;
@@ -52,21 +52,20 @@ nav a:not(.bouton) { text-decoration: none; padding-bottom: .1rem; border-bottom
 nav a:not(.bouton):hover, nav a[aria-current=page]:not(.bouton) { border-bottom-color: var(--orange); }
 nav a[aria-current=page] { font-weight: 700; }
 
-/* Étiquettes en monospace */
+/* Étiquettes */
 .surtitre { font-family: var(--mono); font-size: .8rem; margin: 0 0 .75rem; }
 .meta { font-family: var(--mono); font-size: .78rem; color: var(--doux); }
 .clair { color: var(--gris); }
 
-/* Boutons : encre sur orange, contraste 4,8 */
+/* Boutons, contraste 4,8 */
 .bouton, button {
   display: inline-block; background: var(--orange); color: var(--encre); border: 0; border-radius: 4px;
   padding: .7rem 1.1rem; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
 }
 .bouton:hover, button:hover, nav .bouton[aria-current=page] { outline: 2px solid var(--encre); outline-offset: 2px; }
 .bouton.petit { padding: .4rem .75rem; font-size: .9rem; }
-.bouton.contour { background: var(--papier); border: 2px solid var(--encre); padding: calc(.7rem - 2px) calc(1.1rem - 2px); }
 
-/* Haut de page sur fond encre, comme la vitrine de l'accueil, et encadrés */
+/* Haut de page sur fond encre */
 main > section.vitrine, main > section.entete { max-width: 65rem; width: calc(100% - 3rem); margin: 1.5rem auto 0; padding: 3rem clamp(1.25rem, 4vw, 3rem); background: var(--encre); color: var(--papier); border-radius: 10px; }
 .regles { max-width: 40rem; }
 .bloc { margin-top: 2.25rem; }
@@ -81,7 +80,7 @@ main > section.vitrine, main > section.entete { max-width: 65rem; width: calc(10
 .filets > h2::before, .filets > h2::after { content: ""; flex: 1 1 1.5rem; border-top: 1.5px solid; }
 .filets > h2 + p { margin-inline: auto; }
 
-/* Nos outils */
+/* Bandeau encre et cartes */
 .bande { background: var(--encre); color: var(--papier); }
 .bande-contenu { padding-top: 3.5rem; padding-bottom: 3.5rem; }
 .bande-contenu > h2 { color: var(--papier); margin-bottom: 1.75rem; }
@@ -95,11 +94,7 @@ main > section.vitrine, main > section.entete { max-width: 65rem; width: calc(10
 .carte li::before { content: "+ "; font-family: var(--mono); font-weight: 700; }
 .lien { font-weight: 700; }
 .carte .lien { margin-top: auto; }
-.carte.a-venir { background: transparent; color: var(--papier); border: 1.5px dashed var(--papier); }
-.carte.a-venir .badge { background: transparent; border: 1px solid var(--papier); }
-.carte.a-venir .lien { color: var(--papier); }
 .bande .meta { margin: 1.75rem 0 0; }
-.bande .meta a { color: var(--papier); }
 
 /* Formulaires */
 label { font-weight: 700; }

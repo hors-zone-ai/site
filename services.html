@@ -4,18 +4,35 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nos services&nbsp;· Hors Zone AI</title>
-<meta name="description" content="Pour les devs et les étudiants en informatique : un programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso), des offres réduites, et nos apps gratuites.">
+<meta name="description" content="Devs et étudiants en informatique : Claude Code ou Codex payé par l'asso sur candidature, des offres réduites et nos apps gratuites.">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <style>
-/* Styles propres à cette page : le terminal */
+/* Propre à cette page */
 .terminal { max-width: 46rem; margin: 1.75rem 0 0; padding: 1.1rem 1.25rem; background: var(--encre); color: var(--papier); border-radius: 6px; font: .82rem/1.8 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
 .terminal i { color: #a8a59c; }
 .terminal b { color: var(--orange); font-weight: 400; }
 .curseur { display: inline-block; width: .6em; height: 1.1em; vertical-align: -.2em; background: var(--orange); animation: clignote 1s steps(1) infinite; }
 @keyframes clignote { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .curseur { animation: none; } }
-.depot { font-family: var(--mono); font-size: .85rem; }
+.cas-grille { display: grid; gap: 2.5rem 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(19rem, 100%), 1fr)); }
+.vue { position: relative; aspect-ratio: 16/10; display: grid; place-items: center; background: var(--papier); border-radius: 14px; color: var(--encre); }
+.vue::after { content: "maquette"; position: absolute; top: .6rem; right: .8rem; font: .62rem var(--mono); color: var(--doux); }
+.fen { width: 62%; background: #fff; border: 1px solid var(--gris); border-radius: 10px; padding: .7rem .9rem; font-size: .78rem; }
+.fen b { display: block; font: .68rem var(--mono); margin-bottom: .4rem; }
+.fen i { display: block; height: .45rem; margin: .45rem 0; background: var(--gris); }
+.fen i:last-child { width: 60%; background: var(--orange); }
+.bul { margin: 0 0 .5rem; padding: .4rem .6rem; background: var(--encre); color: var(--papier); border-radius: 8px; }
+.puce { position: absolute; top: .6rem; left: .8rem; background: #fff; border: 1px solid var(--gris); border-radius: 99px; padding: .2rem .6rem; font: .66rem var(--mono); }
+.puce + .puce { top: auto; left: auto; bottom: .6rem; right: .8rem; }
+.cas { display: flex; flex-direction: column; }
+.cas .meta { margin: 1rem 0 .2rem; }
+.cas p:last-of-type { margin-bottom: .9rem; }
+.cas h3 { font-family: var(--serif); font-weight: normal; font-size: 1.6rem; margin: 0 0 .3rem; }
+.pilule { align-self: flex-start; margin-top: auto; background: var(--orange); color: var(--encre); border-radius: 99px; padding: .5rem 1.1rem; font-weight: 700; font-size: .9rem; text-decoration: none; }
+.pilule::before { content: "\25B6\FE0E  "; font-size: .7em; }
+.prochain { margin-top: 2.5rem; border: 1.5px dashed var(--papier); border-radius: 14px; padding: 0 1.5rem .4rem; }
+.prochain .lien { color: var(--papier); }
 </style>
 </head>
 <body>
@@ -135,35 +152,35 @@
     <div class="bande-contenu filets">
       <p class="surtitre clair">// 03&nbsp;· nos apps&nbsp;· gratuites&nbsp;· open source</p>
       <h2 id="titre-apps">Révise et Entretien blanc</h2>
-      <div class="cartes">
-        <article id="revise" class="carte">
-          <p class="badge">en conception</p>
+      <div class="cas-grille">
+        <article id="revise" class="cas">
+          <div class="vue" aria-hidden="true">
+            <div class="fen"><b>révise</b>Fiche<i></i><i></i><i></i><i></i></div>
+            <span class="puce">PDF ou photo</span><span class="puce">quiz&nbsp;· 10 questions</span>
+          </div>
+          <p class="meta clair">// app&nbsp;· en conception</p>
           <h3>Révise</h3>
-          <p class="accroche">Transforme tes cours en fiches, quiz et cartes mémoire.</p>
-          <ul>
-            <li>Texte, PDF ou photo de ton cahier</li>
-            <li>Une fiche, un quiz de 10 questions et des cartes mémoire en une minute</li>
-            <li>Rangé par matière, chaque point renvoie à ton cours</li>
-          </ul>
-          <a class="lien depot" href="https://github.com/hors-zone-ai/revise">hors-zone-ai/revise&nbsp;→</a>
+          <p>Transforme tes cours en fiches, quiz et cartes mémoire.</p>
+          <p class="meta clair">Une fiche, un quiz et des cartes mémoire en une minute</p>
+          <a class="pilule" href="https://github.com/hors-zone-ai/revise">Voir comment on la construit</a>
         </article>
-        <article id="entretien-blanc" class="carte">
-          <p class="badge">en conception</p>
+        <article id="entretien-blanc" class="cas">
+          <div class="vue" aria-hidden="true">
+            <div class="fen"><b>entretien blanc</b><p class="bul">Parle-moi d'un projet dont tu es fier.</p><i></i><i></i></div>
+            <span class="puce">6 à 8 questions</span><span class="puce">note sur 4 critères</span>
+          </div>
+          <p class="meta clair">// app&nbsp;· en conception</p>
           <h3>Entretien blanc</h3>
-          <p class="accroche">Te prépare à un entretien de stage, d'alternance, de job étudiant ou d'oral d'école.</p>
-          <ul>
-            <li>6 à 8 questions, avec des relances comme en vrai</li>
-            <li>Une note sur 4 critères</li>
-            <li>3 points forts, 3 choses à travailler</li>
-          </ul>
-          <a class="lien depot" href="https://github.com/hors-zone-ai/entretien-blanc">hors-zone-ai/entretien-blanc&nbsp;→</a>
+          <p>Te prépare à un entretien de stage, d'alternance, de job étudiant ou d'oral d'école.</p>
+          <p class="meta clair">Des relances comme en vrai, 3 points forts, 3 choses à travailler</p>
+          <a class="pilule" href="https://github.com/hors-zone-ai/entretien-blanc">Voir comment on la construit</a>
         </article>
-        <article class="carte a-venir">
-          <p class="badge">à venir</p>
-          <h3>Le prochain&nbsp;?</h3>
-          <p class="accroche">Une association, un BDE ou une mission locale a un besoin&nbsp;? On le construit avec vous, sans vous le facturer.</p>
-          <a class="lien" href="rejoindre.html#besoin">Proposer un besoin&nbsp;→</a>
-        </article>
+      </div>
+      <div class="cas prochain">
+        <p class="meta clair">// à venir</p>
+        <h3>Le prochain&nbsp;?</h3>
+        <p>Une association, un BDE ou une mission locale a un besoin&nbsp;? On le construit avec vous, sans vous le facturer.</p>
+        <a class="lien" href="rejoindre.html#besoin">Proposer un besoin&nbsp;→</a>
       </div>
       <p class="meta clair">tes résultats restent à toi&nbsp;· rien ne sert à entraîner une IA&nbsp;· aucune analyse de ta voix ni de ton visage&nbsp;· aucune note transmise à un recruteur</p>
     </div>
