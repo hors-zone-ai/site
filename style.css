@@ -122,8 +122,6 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .asso .accord { display: flex; margin-top: .75rem; }
 .asso button { margin: .5rem 0 .75rem; }
 
-.qui p:last-child { max-width: 40rem; }
-
 /* Pied de page */
 .bas { margin-top: 5rem; padding-bottom: 2.5rem; font-size: .88rem; color: var(--doux); }
 .bas::before { content: ""; display: block; border-top: 1.5px solid var(--encre); margin-bottom: 2rem; }

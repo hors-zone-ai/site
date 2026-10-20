@@ -11,7 +11,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 
 ## Les fichiers
 
-- `index.html` : l'accueil, qui est aussi la page À propos (la vitrine, qui est derrière, notre mission, où va l'argent).
+- `index.html` : l'accueil, qui est aussi la page À propos (la vitrine, notre mission, où va l'argent).
 - `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Révise et Entretien blanc.
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une candidature ou une demande.
@@ -19,7 +19,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `dons.csv` : le registre des dons, une ligne par don, sans montant (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
 - `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine et les valeurs de l'accueil, le terminal et les apps de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
-- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=5`, puis `?v=6`…) sur les cinq pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
+- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=6`, puis `?v=7`…) sur les cinq pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `marque/` : le logo et l'avatar.
 
 Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout. Seule exception, l'accueil n'a pas la signature « Pas ici. » en pied de page, puisque son titre la porte déjà. Règle d'écriture : rien n'est dit deux fois sur une même page (un surtitre ne répète pas son titre).
