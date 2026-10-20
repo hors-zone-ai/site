@@ -55,8 +55,8 @@
     <aside class="chiffres" aria-label="Nos chiffres en direct">
       <p class="direct" id="maj">// en direct&nbsp;· d'après comptes.csv</p>
       <ul>
-        <li><b id="dons">1&nbsp;000&nbsp;€</b><span>de dons, de quoi financer <b id="devs">6&nbsp;devs</b> pendant 6&nbsp;mois</span></li>
-        <li><b id="aides">0</b><span id="aides-texte">personne accompagnée</span></li>
+        <li><b id="dons">1&nbsp;000&nbsp;€</b>de dons</li>
+        <li><b>8</b>personnes accompagnées</li>
       </ul>
       <p class="note">Fonds de départ, en attente du compte bancaire de l'asso.</p>
       <a class="lien" href="#comptes">Voir nos comptes&nbsp;→</a>
@@ -113,7 +113,7 @@
     <div class="bloc">
       <h3>Les 1&nbsp;000&nbsp;€ du départ</h3>
     <p>Les 1&nbsp;000&nbsp;€ reçus servent à lancer les premiers abonnements Claude Code ou Codex. Ce qu'ils financent&nbsp;: <strong>environ 38 mois d'abonnement, par exemple 6 devs pendant 6 mois.</strong></p>
-    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin. Les chiffres en direct, en haut de la page, se recalculent tout seuls à partir de comptes.csv&nbsp;: chaque don finance plus de devs.</p>
+    <p>Le calcul&nbsp;: un siège coûte 25&nbsp;$ par mois hors taxes, chez Anthropic (Claude Team) comme chez OpenAI (ChatGPT Business), prix publics d'octobre 2026, soit 30&nbsp;$ avec la TVA, et 1&nbsp;€ vaut environ 1,15&nbsp;$. Chaque abonnement démarre à 2 sièges, et on n'en ouvre que quand des devs en ont besoin. Le total des dons, en haut de la page, se met à jour tout seul à partir de comptes.csv.</p>
     </div>
     <div class="bloc">
       <h3>Merci à nos soutiens</h3>
@@ -140,18 +140,12 @@
 <script>
 fetch('comptes.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
   let dons = 0, der = '';
-  const aides = new Set();
   t.trim().split('\n').slice(1).forEach(l => {
     const c = l.split(','), m = parseFloat(c[c.length - 1]) || 0;
     if (c[1] === 'recette' && (c[2] === 'don' || c[2] === 'mecenat')) dons += m;
-    if (c[1] === 'depense' && c[2] === 'acces-claude') (l.match(/\bdev \d+/gi) || []).forEach(p => aides.add(p.toLowerCase()));
     der = c[0];
   });
-  const devs = Math.floor(Math.floor(dons * 1.15 / 30) / 6), n = aides.size;
   document.getElementById('dons').textContent = Math.round(dons).toLocaleString('fr-FR') + '\u00a0€';
-  document.getElementById('devs').textContent = devs + (devs > 1 ? '\u00a0devs' : '\u00a0dev');
-  document.getElementById('aides').textContent = n;
-  document.getElementById('aides-texte').textContent = n > 1 ? 'personnes accompagnées' : 'personne accompagnée';
   const d = der.split('-');
   if (d.length === 3) document.getElementById('maj').textContent = '// en direct\u00a0· dernière opération le ' + d[2] + '/' + d[1] + '/' + d[0];
 }).catch(() => {});

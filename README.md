@@ -38,7 +38,7 @@ Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient 
 - `libelle` : un don s'écrit « Don anonyme », sauf si le donateur demande à voir son nom ; un accès `acces-claude` porte le pseudonyme de la personne accompagnée, jamais son nom, par exemple « Claude Code (dev 01) » ;
 - `montant_eur` : en euros, avec un point pour les centimes.
 
-L'accueil lit ce fichier tout seul : le total des dons (`don` et `mecenat`), le nombre de devs que ces dons peuvent financer pendant 6 mois, et les personnes accompagnées, comptées d'après les pseudonymes « dev 01 », « dev 02 »… des dépenses `acces-claude`. Les chiffres écrits dans la page, affichés sans JavaScript, sont mis à jour dans le même commit que la ligne ajoutée.
+L'accueil lit ce fichier tout seul : le total des dons (`don` et `mecenat`) et la date de la dernière opération. Le nombre de personnes accompagnées s'écrit à la main dans `index.html`. Les chiffres écrits dans la page, affichés sans JavaScript, sont mis à jour dans le même commit que la ligne ajoutée.
 
 ## Voir le site sur votre ordinateur
 
