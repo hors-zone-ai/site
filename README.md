@@ -22,7 +22,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=5`, puis `?v=6`…) sur les cinq pages : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `marque/` : le logo et l'avatar.
 
-Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout.
+Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout. Seule exception, l'accueil n'a pas la signature « Pas ici. » en pied de page, puisque son titre la porte déjà. Règle d'écriture : rien n'est dit deux fois sur une même page (un surtitre ne répète pas son titre).
 
 Deux formulaires (candidature au programme, besoin d'une structure) envoient vers le même webhook ; le champ caché `source` dit d'où vient chaque envoi.
 

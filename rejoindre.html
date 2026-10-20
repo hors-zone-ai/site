@@ -23,9 +23,9 @@
 <main id="contenu">
 
   <section class="entete" aria-labelledby="titre">
-    <p class="surtitre clair">// devs&nbsp;· structures</p>
+    <p class="surtitre clair">// deux façons</p>
     <h1 id="titre">Nous rejoindre</h1>
-    <p class="chapo">On prend des devs et des étudiants en informatique, et des structures qui ont un besoin. Une première tâche suffit pour commencer.</p>
+    <p class="chapo">Ici, tout le monde est bénévole.</p>
   </section>
 
   <section aria-label="Deux façons de nous rejoindre">
@@ -33,14 +33,14 @@
       <div class="chemin" id="devs">
         <h2>Tu codes</h2>
         <p>Dev ou étudiant en informatique&nbsp;: prends une première tâche sur GitHub. Licence MIT&nbsp;: tu gardes tes droits d'auteur.</p>
-        <p>Candidate à notre programme de sponsoring&nbsp;: si tu es retenu, l'asso te paie Claude Code ou Codex, au choix, à ton nom, pour coder sur nos projets (voir <a href="services.html#candidature">la candidature</a>).</p>
+        <p>Candidate à notre <a href="services.html#candidature">programme de sponsoring</a>&nbsp;: si tu es retenu, l'asso te paie Claude Code ou Codex pour travailler sur nos projets.</p>
         <pre class="cmd"><code>git clone <span>https://github.com/hors-zone-ai/site</span></code></pre>
-        <a class="lien" href="https://github.com/hors-zone-ai">Voir nos dépôts et leurs tâches&nbsp;→</a>
+        <a class="lien" href="https://github.com/hors-zone-ai">Voir nos dépôts&nbsp;→</a>
       </div>
       <div class="chemin">
         <h2>Vous êtes une structure</h2>
         <p>Association, BDE, mission locale, lycée&nbsp;: un outil vous aiderait, mais le faire coder coûte trop cher&nbsp;? Dites-le-nous.</p>
-        <a class="lien" href="#besoin">Proposer un besoin&nbsp;→</a>
+        <a class="lien" href="#besoin">Nous écrire&nbsp;→</a>
       </div>
     </div>
   </section>
@@ -48,15 +48,15 @@
   <section aria-label="Proposer un besoin">
     <div id="besoin" class="cadre">
       <h3>Proposer un besoin</h3>
-      <p>En deux lignes. Si un outil simple peut aider, on regarde avec vous comment le construire, sans vous le facturer.</p>
+      <p>Si c'est faisable, on regarde avec vous comment le construire, sans vous le facturer.</p>
       <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
         <input type="hidden" name="type" value="association">
         <input type="hidden" name="source" value="site, proposer un besoin">
         <label for="asso-email">Votre mail</label>
         <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@votre-asso.fr">
-        <label for="asso-message">Votre besoin, en deux lignes</label>
+        <label for="asso-message">Votre demande, en deux lignes</label>
         <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
-        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI me réponde par mail.</span></label>
+        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI me réponde.</span></label>
         <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
         <button type="submit">Envoyer</button>
       </form>
