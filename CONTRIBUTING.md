@@ -15,7 +15,7 @@ Chaque commit est signé avec `git commit -s`. Cette commande ajoute une ligne `
 
 ## Les règles du site
 
-- Le site est en français.
+- Le site est en français, avec sa version anglaise dans `en/` : un texte modifié l'est dans les deux langues.
 - Aucun cookie, aucun outil de mesure d'audience.
 - Rien qui se charge depuis un autre site : ni police, ni script, ni image.
 - Pas de JavaScript tant qu'on peut s'en passer.

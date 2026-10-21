@@ -51,6 +51,9 @@ nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.1rem; f
 nav a:not(.bouton) { text-decoration: none; padding-bottom: .1rem; border-bottom: 3px solid transparent; }
 nav a:not(.bouton):hover, nav a[aria-current=page]:not(.bouton) { border-bottom-color: var(--orange); }
 nav a[aria-current=page] { font-weight: 700; }
+.haut nav { margin-left: auto; }
+.langue { font: .8rem var(--mono); text-decoration: none; padding-bottom: .1rem; border-bottom: 3px solid transparent; }
+.langue:hover { border-bottom-color: var(--orange); }
 
 /* Étiquettes */
 .surtitre { font-family: var(--mono); font-size: .8rem; margin: 0 0 .75rem; }
@@ -141,5 +144,7 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 @media (max-width: 34rem) {
   nav { width: 100%; gap: .3rem .9rem; font-size: .85rem; }
   nav .bouton { margin-left: auto; }
+  .marque { order: -2; }
+  .langue { order: -1; margin-left: auto; }
   .filets > h2 { display: block; }
 }
