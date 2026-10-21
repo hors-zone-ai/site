@@ -1,6 +1,6 @@
 # Site de Hors Zone AI
 
-Le site de l'association [Hors Zone AI](https://github.com/hors-zone-ai) : sa mission (aider les devs et les étudiants en informatique à coder avec l'IA, gratuitement ou moins cher), l'accès aux outils d'IA et ses apps. Les deux premières apps, gratuites : **Révise** (fiches, quiz et cartes mémoire à partir de tes cours) et **Entretien blanc** (répétition d'entretiens). En ligne sur https://hors-zone-ai.github.io/site/.
+Le site de l'association [Hors Zone AI](https://github.com/hors-zone-ai) : sa mission (aider les devs et les étudiants en informatique à coder avec l'IA, gratuitement ou moins cher), l'accès aux outils d'IA et ses apps. Les deux premières apps, gratuites : **Humanizer** (retoucher un texte fait avec l'IA pour qu'il sonne comme toi) et **Entretien blanc** (répétition d'entretiens). En ligne sur https://hors-zone-ai.github.io/site/.
 
 C'est notre premier projet ouvert. La page doit rester légère et ne rien coûter à faire tourner, alors on s'en tient à peu de choses :
 
@@ -12,7 +12,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 ## Les fichiers
 
 - `index.html` : l'accueil, qui est aussi la page À propos (la vitrine, notre mission, où va l'argent, le bandeau de remerciement).
-- `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Révise et Entretien blanc.
+- `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Humanizer et Entretien blanc.
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une candidature ou une demande.
 - `apropos.html`, `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.

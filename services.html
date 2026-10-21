@@ -20,6 +20,7 @@
 .vue::after { content: "maquette"; position: absolute; top: .6rem; right: .8rem; font: .62rem var(--mono); color: var(--doux); }
 .fen { width: 62%; background: #fff; border: 1px solid var(--gris); border-radius: 10px; padding: .7rem .9rem; font-size: .78rem; }
 .fen b { display: block; font: .68rem var(--mono); margin-bottom: .4rem; }
+.fen s { display: block; margin-bottom: .5rem; color: var(--doux); }
 .fen i { display: block; height: .45rem; margin: .45rem 0; background: var(--gris); }
 .fen i:last-child { width: 60%; background: var(--orange); }
 .bul { margin: 0 0 .5rem; padding: .4rem .6rem; background: var(--encre); color: var(--papier); border-radius: 8px; }
@@ -69,7 +70,7 @@
       <article class="carte">
         <p class="badge">03&nbsp;· gratuit</p>
         <h2>Nos apps</h2>
-        <p class="accroche">Révise et Entretien blanc, en open source.</p>
+        <p class="accroche">Humanizer et Entretien blanc, en open source.</p>
         <a class="lien" href="#apps">Les découvrir&nbsp;→</a>
       </article>
     </div>
@@ -115,7 +116,7 @@
 <i># 2. retenu&nbsp;: tu reçois ton outil</i>
 <b>$</b> claude  <i># ou codex</i>
 <i># 3. code avec nous</i>
-<b>$</b> git clone <b>https://github.com/hors-zone-ai/revise</b>
+<b>$</b> git clone <b>https://github.com/hors-zone-ai/humanizer</b>
 <b>$</b> <span class="curseur" aria-hidden="true"></span></pre>
     <div id="candidature" class="cadre bloc">
       <h3>Ta candidature</h3>
@@ -156,16 +157,16 @@
       <p class="surtitre clair">// 03</p>
       <h2 id="titre-apps">Nos apps</h2>
       <div class="cas-grille">
-        <article id="revise" class="cas">
+        <article id="humanizer" class="cas">
           <div class="vue" aria-hidden="true">
-            <div class="fen"><b>chapitre 1</b><i></i><i></i><i></i><i></i></div>
-            <span class="puce">PDF ou photo</span><span class="puce">10 questions</span>
+            <div class="fen"><b>avant, après</b><s>N'hésitez pas à me contacter pour toute question.</s><p class="bul">Une question&nbsp;? Écrivez-moi.</p><i></i></div>
+            <span class="puce">mail, lettre, post</span>
           </div>
           <p class="meta clair">// en conception</p>
-          <h3>Révise</h3>
-          <p>Transforme tes cours en fiches, quiz et cartes mémoire.</p>
-          <p class="meta clair">En une minute, rangé par matière</p>
-          <a class="pilule" href="https://github.com/hors-zone-ai/revise">Voir comment on la construit</a>
+          <h3>Humanizer</h3>
+          <p>Retouche un texte fait avec l'IA pour qu'il sonne comme toi.</p>
+          <p class="meta clair">Ton vocabulaire et ton rythme, sans changer le fond</p>
+          <a class="pilule" href="https://github.com/hors-zone-ai/humanizer">Voir comment on la construit</a>
         </article>
         <article id="entretien-blanc" class="cas">
           <div class="vue" aria-hidden="true">
