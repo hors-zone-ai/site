@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hors Zone AI&nbsp;· code with AI, for free or for less</title>
+<meta name="description" content="French non-profit for developers and computer science students: code with AI, for free or for less. Our mission, and where the money goes.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Coding with AI is expensive. Not here.">
+<meta property="og:description" content="Hors Zone AI, a French non-profit: we help developers and computer science students code with AI, for free or for less.">
+<meta property="og:url" content="https://hors-zone-ai.github.io/site/en/">
+<meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/avatar-512.png">
+<link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/">
+<link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../style.css?v=8">
+<style>
+/* Home page only: showcase, live numbers, values, thanks */
+.vitrine { display: grid; gap: 2.5rem; align-items: center; }
+@media (min-width: 54rem) { .vitrine { grid-template-columns: 1.45fr 1fr; } }
+.vitrine a, .bande a { color: var(--papier); }
+.chiffres { background: #1f1a16; border: 1px solid #3a332c; border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .82rem; }
+.chiffres p { margin: 0; color: var(--gris); }
+.chiffres ul { list-style: none; margin: .5rem 0 1rem; padding: 0; }
+.chiffres li { padding: .6rem 0; border-top: 1px solid #3a332c; }
+.valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
+.num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
+.direct::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--orange); margin-right: .45rem; animation: pouls 2s infinite; }
+@keyframes pouls { 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .direct::before { animation: none; } }
+.donateurs { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; list-style: none; margin: 2rem 0 0; padding: 0; }
+.donateurs li { display: grid; place-items: center; min-width: 10rem; min-height: 4.5rem; padding: .5rem 1.25rem; border: 1.5px dashed var(--papier); border-radius: 10px; font-family: var(--mono); }
+.donateurs img { max-width: 9rem; max-height: 3rem; }
+#merci .meta { text-align: center; }
+</style>
+</head>
+<body>
+<a class="evitement" href="#contenu">Skip to content</a>
+
+<header class="haut">
+  <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
+  <nav aria-label="Pages">
+    <a href="index.html" aria-current="page">About</a>
+    <a href="services.html">Our services</a>
+    <a class="bouton petit" href="join.html">Join us</a>
+  </nav>
+  <a class="langue" href="../index.html" hreflang="fr" lang="fr" aria-label="FR, version française">FR</a>
+</header>
+
+<main id="contenu">
+
+  <section class="vitrine" aria-labelledby="titre">
+    <div>
+      <p class="surtitre clair">// the non-profit for devs and computer science students</p>
+      <h1 id="titre">Coding with AI is expensive. <mark>Not here.</mark></h1>
+      <p class="chapo">We help those who can't afford it: cheaper AI tools or ones we pay for, and our own apps.</p>
+      <p class="meta clair">free&nbsp;· no ads&nbsp;· no shareholders&nbsp;· run by volunteers</p>
+    </div>
+    <aside class="chiffres" aria-label="Our live numbers">
+      <p class="direct" id="maj">// live</p>
+      <ul>
+        <li><b id="dons">1</b> <span id="dons-texte">donation</span></li>
+        <li><b>8</b> people supported</li>
+      </ul>
+      <a class="lien" href="#argent">Where the money goes&nbsp;→</a>
+    </aside>
+  </section>
+
+  <section id="mission" class="filets" aria-labelledby="titre-valeurs">
+    <p class="surtitre">// our mission</p>
+    <h2 id="titre-valeurs">What drives us</h2>
+    <div class="valeurs">
+      <div class="valeur">
+        <p class="num">01</p>
+        <h3>Equal opportunity</h3>
+        <p>The price of a subscription shouldn't filter anyone out.</p>
+      </div>
+      <div class="valeur">
+        <p class="num">02</p>
+        <h3>Sharing</h3>
+        <p>What we make belongs to everyone: anyone can pick it up and improve it.</p>
+      </div>
+      <div class="valeur">
+        <p class="num">03</p>
+        <h3>Passing it on</h3>
+        <p>We learn the craft together, then each of us teaches it to others.</p>
+      </div>
+      <div class="valeur">
+        <p class="num">04</p>
+        <h3>Impact</h3>
+        <p>We measure what matters: people helped, code merged, apps shipped. And we publish the numbers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="argent" class="filets" aria-labelledby="titre-argent">
+    <p class="surtitre">// three budget lines</p>
+    <h2 id="titre-argent"><span>Where the <mark>money</mark> goes.</span></h2>
+    <div class="bloc">
+      <ol>
+        <li><strong>Subscriptions for the devs in our sponsorship programme.</strong> This comes first: every subscription is in the name of a single selected person, for as long as they work with us. No lending, no reselling.</li>
+        <li><strong>Humanizer and Entretien blanc</strong>: their AI and their hosting.</li>
+        <li><strong>Running costs</strong>: domain name, insurance, trademark filing.</li>
+      </ol>
+      <p>Being supported means coding on our projects.</p>
+    </div>
+  </section>
+
+  <section id="merci" class="bande" aria-labelledby="titre-merci">
+    <div class="bande-contenu filets">
+      <p class="surtitre clair">// our supporters</p>
+      <h2 id="titre-merci">Thank you.</h2>
+      <ul id="donateurs" class="donateurs">
+        <li>Anonymous</li>
+      </ul>
+      <p class="meta clair">On request, your name or logo appears here. You'll be able to give once our bank account is open.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bas">
+  <p><a href="index.html">About</a>&nbsp;· <a href="services.html">Our services</a>&nbsp;· <a href="join.html">Join us</a></p>
+  <p>Hors Zone AI&nbsp;· non-profit association (French loi 1901)&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="legal.html">Legal notice and data</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Source code</a></p>
+  <p class="meta">static site&nbsp;· 0 cookies&nbsp;· under 20&nbsp;KB per page&nbsp;· MIT License</p>
+</footer>
+<script>
+fetch('../dons.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
+  let dons = 0, der = '';
+  const tuiles = [];
+  t.trim().split('\n').slice(1).forEach(l => {
+    const c = l.split(','), n = (c[2] || '').trim(), nom = !n || n === 'Anonyme' ? 'Anonymous' : n, logo = (c[3] || '').trim();
+    if (c[1] === 'don' || c[1] === 'mecenat') {
+      dons++;
+      const li = document.createElement('li');
+      if (/^donateurs\/[\w.-]+\.(svg|png|webp)$/.test(logo)) { const im = document.createElement('img'); im.src = '../' + logo; im.alt = nom; li.append(im); } else li.textContent = nom;
+      tuiles.push(li);
+    }
+    der = c[0];
+  });
+  if (tuiles.length) document.getElementById('donateurs').replaceChildren(...tuiles);
+  document.getElementById('dons').textContent = dons;
+  document.getElementById('dons-texte').textContent = dons === 1 ? 'donation' : 'donations';
+  if (/^\d{4}-\d\d-\d\d$/.test(der)) document.getElementById('maj').textContent = '// live\u00a0· updated ' + new Date(der).toLocaleDateString('en-GB', {day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC'});
+}).catch(() => {});
+</script>
+</body>
+</html>

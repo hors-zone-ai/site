@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join us&nbsp;· Hors Zone AI</title>
+<meta name="description" content="Dev, computer science student or organisation with a need: how to join Hors Zone AI.">
+<link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/rejoindre.html">
+<link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/join.html">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="../style.css?v=8">
+</head>
+<body>
+<a class="evitement" href="#contenu">Skip to content</a>
+
+<header class="haut">
+  <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
+  <nav aria-label="Pages">
+    <a href="index.html">About</a>
+    <a href="services.html">Our services</a>
+    <a class="bouton petit" href="join.html" aria-current="page">Join us</a>
+  </nav>
+  <a class="langue" href="../rejoindre.html" hreflang="fr" lang="fr" aria-label="FR, version française">FR</a>
+</header>
+
+<main id="contenu">
+
+  <section class="entete" aria-labelledby="titre">
+    <p class="surtitre clair">// two ways</p>
+    <h1 id="titre">Join us</h1>
+    <p class="chapo">Everyone here is a volunteer.</p>
+  </section>
+
+  <section aria-label="Two ways to join us">
+    <div class="chemins">
+      <div class="chemin" id="devs">
+        <h2>You code</h2>
+        <p>Dev or computer science student: pick a first task on GitHub. MIT License: you keep your copyright.</p>
+        <p>Apply to our <a href="services.html#candidature">sponsorship programme</a>: if you're selected, we pay for Claude Code or Codex so you can work on our projects.</p>
+        <pre class="cmd"><code>git clone <span>https://github.com/hors-zone-ai/site</span></code></pre>
+        <a class="lien" href="https://github.com/hors-zone-ai">See our repositories&nbsp;→</a>
+      </div>
+      <div class="chemin">
+        <h2>You're an organisation</h2>
+        <p>Non-profit, student union, youth employment service, high school: a tool would help you, but having it built costs too much? Let us know.</p>
+        <a class="lien" href="#besoin">Write to us&nbsp;→</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Tell us what you need">
+    <div id="besoin" class="cadre">
+      <h3>Tell us what you need</h3>
+      <p>If it's doable, we'll work out with you how to build it, free of charge.</p>
+      <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+        <input type="hidden" name="type" value="association">
+        <input type="hidden" name="source" value="site en, proposer un besoin">
+        <input type="hidden" name="langue" value="en">
+        <label for="asso-email">Your email</label>
+        <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@your-organisation.org">
+        <label for="asso-message">Your request, in two lines</label>
+        <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
+        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>I agree that Hors Zone AI may reply to me.</span></label>
+        <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bas">
+  <p class="signature">Good tools are expensive. <mark>Not here.</mark></p>
+  <p><a href="index.html">About</a>&nbsp;· <a href="services.html">Our services</a>&nbsp;· <a href="join.html">Join us</a></p>
+  <p>Hors Zone AI&nbsp;· non-profit association (French loi 1901)&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="legal.html">Legal notice and data</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Source code</a></p>
+  <p class="meta">static site&nbsp;· 0 cookies&nbsp;· under 20&nbsp;KB per page&nbsp;· MIT License</p>
+</footer>
+</body>
+</html>
