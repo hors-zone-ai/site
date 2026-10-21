@@ -23,7 +23,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `en/` : la version anglaise, une page par page française : `index.html`, `services.html`, `join.html` (Nous rejoindre), `thanks.html` (merci), `legal.html` (mentions légales, la version française fait foi). Même feuille de style, liée en `../style.css`.
 - `marque/` : le logo et l'avatar.
 
-Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout. Chaque page a sa jumelle dans l'autre langue (lien FR ou EN en haut à droite, balises `hreflang`) : un texte modifié l'est dans les deux langues. Seule exception, l'accueil n'a pas la signature « Pas ici. » en pied de page, puisque son titre la porte déjà. Règle d'écriture : rien n'est dit deux fois sur une même page (un surtitre ne répète pas son titre).
+Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout. Chaque page a sa jumelle dans l'autre langue (lien FR ou EN en haut à droite, balises `hreflang`) : un texte modifié l'est dans les deux langues. Seule exception, l'accueil n'a pas la signature « Pas ici. » en pied de page, puisque son titre la porte déjà. Règles d'écriture : rien n'est dit deux fois sur une même page, et chaque section n'a qu'un titre, entre deux filets, sans surtitre au-dessus (seule la vitrine de l'accueil garde le sien).
 
 Deux formulaires (candidature au programme, besoin d'une structure) envoient vers le même webhook ; le champ caché `source` dit d'où vient chaque envoi (« site en, … » pour les pages anglaises). Les formulaires anglais envoient aussi `langue=en` : le webhook renvoie alors vers `en/thanks.html`.
 

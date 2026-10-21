@@ -34,6 +34,7 @@
 .cas h3 { font-family: var(--serif); font-weight: normal; font-size: 1.6rem; margin: 0 0 .3rem; }
 .prochain { margin-top: 2.5rem; border: 1.5px dashed var(--papier); border-radius: 14px; padding: 0 1.5rem .4rem; }
 .prochain .lien { color: var(--papier); }
+#offres .petit { text-align: center; }
 </style>
 </head>
 <body>
@@ -52,7 +53,6 @@
 <main id="contenu">
 
   <section class="entete" aria-labelledby="titre">
-    <p class="surtitre clair">// devs et étudiants en informatique</p>
     <h1 id="titre">Nos services</h1>
     <p class="chapo">Trois façons de t'aider.</p>
     <div class="cartes">
@@ -78,9 +78,7 @@
   </section>
 
   <section id="acces" class="filets" aria-labelledby="titre-acces">
-    <p class="surtitre">// 01</p>
-    <h2 id="titre-acces"><span>Claude Code ou Codex, <mark>payé par l'asso</mark></span></h2>
-    <p class="chapo">Pour ceux qui n'ont pas les moyens de payer ces outils.</p>
+    <h2 id="titre-acces">Programme de sponsoring</h2>
     <div class="cartes">
       <article class="carte">
         <p class="badge">au choix&nbsp;· Anthropic</p>
@@ -107,11 +105,11 @@
       <li>Uniquement des offres officielles.</li>
       <li>L'accès dure le temps de ton travail sur nos projets, puis passe à quelqu'un d'autre.</li>
     </ul>
-    <p class="meta">Financé par les dons&nbsp;: voir <a href="index.html#argent">où va l'argent</a>. Marques citées&nbsp;: propriété de leurs titulaires, sans lien avec nous.</p>
+    <p class="meta">Financé par les dons.</p>
+    <p><a class="bouton" href="#candidature">S'inscrire&nbsp;→</a></p>
   </section>
 
-  <section aria-labelledby="titre-etapes">
-    <p class="surtitre">// comment ça marche</p>
+  <section class="filets" aria-labelledby="titre-etapes">
     <h2 id="titre-etapes">En trois étapes</h2>
     <pre class="terminal"><i># 1. candidate avec le formulaire ci-dessous</i>
 <i># 2. retenu&nbsp;: tu reçois ton outil</i>
@@ -146,16 +144,14 @@
     </div>
   </section>
 
-  <section id="offres" aria-labelledby="titre-offres">
-    <p class="surtitre">// 02</p>
-    <h2 id="titre-offres">Des outils d'IA moins chers</h2>
+  <section id="offres" class="filets" aria-labelledby="titre-offres">
+    <h2 id="titre-offres">Offres réduites</h2>
     <p class="chapo">L'asso négocie les tarifs avec les éditeurs.</p>
     <p class="petit">Rien n'est signé pour l'instant&nbsp;: les premiers accords seront annoncés ici.</p>
   </section>
 
   <section id="apps" class="bande" aria-labelledby="titre-apps">
     <div class="bande-contenu filets">
-      <p class="surtitre clair">// 03</p>
       <h2 id="titre-apps">Nos apps</h2>
       <div class="cas-grille">
         <article id="humanizer" class="cas">
