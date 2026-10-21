@@ -19,7 +19,7 @@
 /* Styles propres à l'accueil : vitrine, chiffres en direct, valeurs, merci */
 .vitrine { display: grid; gap: 2.5rem; align-items: center; }
 @media (min-width: 54rem) { .vitrine { grid-template-columns: 1.45fr 1fr; } }
-.vitrine a, .bande a { color: var(--papier); }
+.vitrine a:not(.bouton), .bande a { color: var(--papier); }
 .chiffres { background: #1f1a16; border: 1px solid #3a332c; border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .82rem; }
 .chiffres p { margin: 0; color: var(--gris); }
 .chiffres ul { list-style: none; margin: .5rem 0 1rem; padding: 0; }
@@ -55,6 +55,7 @@
       <p class="surtitre clair">// association loi 1901 pour les devs et les étudiants en informatique</p>
       <h1 id="titre">Développer avec l'IA coûte cher. <mark>Pas ici.</mark></h1>
       <p class="chapo">On aide ceux qui n'en ont pas les moyens&nbsp;: des outils d'IA moins chers ou payés par nous, et nos propres apps.</p>
+      <p><a class="bouton" href="services.html">Voir nos services&nbsp;→</a></p>
       <p class="meta clair">gratuit&nbsp;· sans pub&nbsp;· sans actionnaire&nbsp;· par des bénévoles</p>
     </div>
     <aside class="chiffres" aria-label="Nos chiffres en direct">
