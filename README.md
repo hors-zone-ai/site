@@ -12,7 +12,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 ## Les fichiers
 
 - `index.html` : l'accueil, qui est aussi la page À propos (la vitrine, notre mission, où va l'argent, le bandeau de remerciement).
-- `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Humanizer et Entretien blanc.
+- `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Humanizer et Entretien blanc (dépôts privés).
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une candidature ou une demande.
 - `apropos.html`, `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
