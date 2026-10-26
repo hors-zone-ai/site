@@ -3,120 +3,265 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hors Zone AI&nbsp;· coder avec l'IA, gratuitement ou moins cher</title>
-<meta name="description" content="Association loi 1901 pour les développeurs et les étudiants en informatique : coder avec l'IA, gratuitement ou moins cher. Notre mission, et où va l'argent.">
+<title>Hors Zone AI&nbsp;· Développer avec l'IA coûte cher. Pas ici.</title>
+<meta name="description" content="Association loi 1901 pour les devs et les étudiants en informatique : si tu n'as pas les moyens de payer Claude Code ou Codex, l'asso le paie pour toi, à ton nom. Gratuit, sur candidature.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:title" content="Développer avec l'IA coûte cher. Pas ici.">
-<meta property="og:description" content="Hors Zone AI, association loi 1901 : on aide les devs et les étudiants en informatique à coder avec l'IA, gratuitement ou moins cher.">
+<meta property="og:description" content="Hors Zone AI, association loi 1901 : Claude Code ou Codex payé par l'asso pour les devs et les étudiants en informatique qui n'en ont pas les moyens.">
 <meta property="og:url" content="https://hors-zone-ai.github.io/site/">
 <meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/avatar-512.png">
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/">
 <link rel="icon" type="image/png" href="marque/avatar-64-apercu.png">
-<link rel="stylesheet" href="style.css?v=8">
+<link rel="stylesheet" href="style.css?v=9">
 <style>
-/* Styles propres à l'accueil : vitrine, chiffres en direct, valeurs, merci */
-.vitrine { display: grid; gap: 2.5rem; align-items: center; }
-@media (min-width: 54rem) { .vitrine { grid-template-columns: 1.45fr 1fr; } }
-.vitrine a:not(.bouton), .bande a { color: var(--papier); }
-.chiffres { background: #1f1a16; border: 1px solid #3a332c; border-radius: 6px; padding: 1rem 1.1rem; font-family: var(--mono); font-size: .82rem; }
-.chiffres p { margin: 0; color: var(--gris); }
-.chiffres ul { list-style: none; margin: .5rem 0 1rem; padding: 0; }
-.chiffres li { padding: .6rem 0; border-top: 1px solid #3a332c; }
-.valeurs { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); margin-top: 1.75rem; }
-.num { font-family: var(--mono); color: var(--orange); font-weight: 700; font-size: 1.15rem; margin: 0 0 .4rem; }
+main.accueil > section { max-width: none; margin: 0; padding: 0; }
+.int { max-width: 68rem; margin: 0 auto; padding: 5.5rem 1.5rem; }
+.accueil h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); max-width: 14em; margin-bottom: 1.5rem; }
+.accueil h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); margin-bottom: 1rem; }
+.accueil h3 { font-family: var(--serif); font-weight: normal; font-size: 1.6rem; line-height: 1.15; margin: 0 0 .5rem; }
+.hero .int { padding-top: 5rem; padding-bottom: 4.5rem; }
+.hero .chapo { font-size: 1.25rem; max-width: 36rem; margin-bottom: 2rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 1rem; }
+.fond-clair { background: var(--papier-clair); border-block: 1px solid rgba(21, 18, 15, .14); }
+.intro { font-size: 1.12rem; color: var(--doux); max-width: 40rem; margin-bottom: 2.5rem; }
+.grille3 { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+.faits .int { padding-top: 0; padding-bottom: 0; }
+.faits p { margin: 0; padding: 2rem 0; }
+.faits b { display: block; font-family: var(--serif); font-weight: normal; font-size: 3.2rem; line-height: 1; color: var(--orange); margin-bottom: .6rem; }
+.porte { display: flex; flex-direction: column; background: var(--papier-clair); border: 1px solid rgba(21, 18, 15, .14); padding: 1.75rem; }
+.porte p { color: var(--doux); flex: 1; }
+.porte a { font-weight: 700; }
+.sombre { background: var(--encre); color: var(--papier); }
+.sombre .intro { color: #bdb6a8; }
+.etape { border: 1.5px dashed #5a544b; padding: 1.75rem; }
+.etape b { display: block; font-family: var(--serif); font-weight: normal; font-size: 3.3rem; line-height: 1; color: var(--orange); margin-bottom: 1rem; }
+.etape p { margin: 0; color: #d8d1c3; }
+.sombre .meta { color: #bdb6a8; margin: 2rem 0; max-width: 52rem; }
+.apps { display: grid; gap: 1.75rem; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
+.app { background: var(--papier-clair); border: 1px solid rgba(21, 18, 15, .14); }
+.ecran { border-bottom: 1px solid rgba(21, 18, 15, .14); padding: 1.5rem; min-height: 14rem; }
+.statut { display: inline-block; font: .72rem var(--mono); border: 1px solid var(--encre); padding: .1rem .5rem; margin: 0 0 .9rem; }
+.app .corps { padding: 1.6rem; }
+.app .corps p { margin: 0; color: var(--doux); }
+.boite { background: #fff; border: 1px solid rgba(21, 18, 15, .14); padding: .75rem .9rem; font-size: .9rem; line-height: 1.5; }
+.barre-texte { text-decoration: line-through; text-decoration-color: rgba(226, 79, 23, .6); color: var(--doux); }
+.fleche { font: .8rem var(--mono); color: var(--orange); margin: .5rem 0; }
+.crit { display: grid; grid-template-columns: 6.5rem 1fr 1.8rem; gap: .6rem; align-items: center; font: .78rem var(--mono); margin: .45rem 0; }
+.crit span { height: .5rem; background: rgba(21, 18, 15, .1); }
+.crit i { display: block; height: 100%; background: var(--orange); }
+.num { font: .85rem var(--mono); color: var(--orange); margin: 0 0 .4rem; }
+.pilier p:last-child { color: var(--doux); }
+.transparence { display: grid; gap: 3rem; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); align-items: start; }
+.direct-bloc { background: var(--encre); color: var(--papier); padding: 1.75rem; font-family: var(--mono); }
+.direct-bloc p { margin: 0 0 .6rem; }
+.direct-bloc b { font-family: var(--serif); font-weight: normal; font-size: 2.6rem; color: var(--orange); }
+.direct { font-size: .8rem; color: #bdb6a8; margin-bottom: 1rem !important; }
 .direct::before { content: ""; display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; background: var(--orange); margin-right: .45rem; animation: pouls 2s infinite; }
 @keyframes pouls { 50% { opacity: .25; } }
 @media (prefers-reduced-motion: reduce) { .direct::before { animation: none; } }
-.donateurs { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; list-style: none; margin: 2rem 0 0; padding: 0; }
-.donateurs li { display: grid; place-items: center; min-width: 10rem; min-height: 4.5rem; padding: .5rem 1.25rem; border: 1.5px dashed var(--papier); border-radius: 10px; font-family: var(--mono); }
-.donateurs img { max-width: 9rem; max-height: 3rem; }
-#merci .meta { text-align: center; }
+.inactif { margin-top: 1rem; background: var(--papier); cursor: default; }
+.inactif:hover { transform: none; box-shadow: 3px 3px 0 var(--encre); }
+.argent { padding-left: 1.3rem; }
+.argent li { margin-bottom: .75rem; }
+.donateurs { display: flex; flex-wrap: wrap; gap: .75rem; list-style: none; margin: .75rem 0; padding: 0; }
+.donateurs li { display: grid; place-items: center; min-width: 8rem; min-height: 3.5rem; padding: .4rem 1rem; border: 1.5px dashed var(--encre); font-family: var(--mono); font-size: .85rem; }
+.donateurs img { max-width: 8rem; max-height: 2.6rem; }
+.membre { display: flex; gap: 1.1rem; align-items: center; background: var(--papier-clair); border: 1px solid rgba(21, 18, 15, .14); padding: 1.25rem; }
+.membre p { margin: 0; color: var(--doux); }
+.initiales { flex: none; display: grid; place-items: center; width: 4.25rem; height: 4.25rem; border: 2px dashed var(--encre); font-weight: 800; font-size: 1.2rem; }
+.membre .initiales + div h3 { margin: 0; }
+.faq { max-width: 54rem; }
+details { border-top: 1px solid rgba(21, 18, 15, .14); padding: 1.1rem 0; }
+details:last-child { border-bottom: 1px solid rgba(21, 18, 15, .14); }
+summary { cursor: pointer; font-family: var(--serif); font-size: 1.4rem; list-style: none; display: flex; justify-content: space-between; gap: 1rem; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--mono); color: var(--orange); }
+details[open] summary::after { content: "-"; }
+details p { margin: .75rem 0 0; color: var(--doux); max-width: 46rem; }
+.fin { background: var(--orange); text-align: center; }
+.fin .int { padding: 4.5rem 1.5rem; }
+.fin h2 { margin-bottom: 1.75rem; }
+.fin .bouton { background: var(--encre); color: var(--papier); box-shadow: 4px 4px 0 var(--papier); }
+main.accueil + .bas { margin-top: 0; }
+@media (max-width: 40rem) { .int { padding: 3.75rem 1.25rem; } .faits b { font-size: 2.6rem; } }
 </style>
 </head>
 <body>
 <a class="evitement" href="#contenu">Aller au contenu</a>
-
+<p class="bandeau">Candidatures ouvertes pour le programme de sponsoring&nbsp;· <a href="#comment">Comment ça marche&nbsp;→</a></p>
 <header class="haut">
-  <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
-  <nav aria-label="Pages">
-    <a href="index.html" aria-current="page">À propos</a>
-    <a href="services.html">Nos services</a>
-    <a class="bouton petit" href="rejoindre.html">Nous rejoindre</a>
-  </nav>
-  <a class="langue" href="en/index.html" hreflang="en" lang="en" aria-label="EN, English version">EN</a>
+  <div class="haut-int">
+    <a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a>
+    <nav aria-label="Pages">
+      <a href="services.html">Le programme</a>
+      <a href="index.html#apps">Nos apps</a>
+      <a href="index.html#transparence">L'asso</a>
+      <a href="index.html#faq">Questions</a>
+    </nav>
+    <a class="langue" href="en/index.html" hreflang="en" lang="en" aria-label="EN, English version">EN</a>
+    <a class="bouton petit" href="services.html#candidature">Candidater</a>
+  </div>
 </header>
 
-<main id="contenu">
+<main id="contenu" class="accueil">
 
-  <section class="vitrine" aria-labelledby="titre">
-    <div>
-      <p class="surtitre clair">// association loi 1901 pour les devs et les étudiants en informatique</p>
+  <section class="hero pointille" aria-labelledby="titre">
+    <div class="int">
+      <p class="surtitre">// association loi 1901 pour les devs et les étudiants en informatique</p>
       <h1 id="titre">Développer avec l'IA coûte cher. <mark>Pas ici.</mark></h1>
-      <p class="chapo">On aide ceux qui n'en ont pas les moyens&nbsp;: des outils d'IA moins chers ou payés par nous, et nos propres apps.</p>
-      <p><a class="bouton" href="services.html">Voir nos services&nbsp;→</a></p>
-      <p class="meta clair">gratuit&nbsp;· sans pub</p>
+      <p class="chapo">Si tu n'as pas les moyens de payer Claude Code ou Codex, l'association le paie pour toi, à ton nom. En échange, tu codes avec nous sur des apps gratuites, utiles à d'autres étudiants.</p>
+      <p class="actions"><a class="bouton" href="services.html#candidature">Candidater (c'est gratuit)</a> <a class="bouton second" href="#comment">Comment ça marche</a></p>
     </div>
-    <aside class="chiffres" aria-label="Nos chiffres en direct">
-      <p class="direct" id="maj">// en direct</p>
-      <ul>
-        <li><b id="dons">1</b> <span id="dons-texte">don</span></li>
-        <li><b>8</b> personnes accompagnées</li>
-      </ul>
-      <a class="lien" href="#argent">Où va l'argent&nbsp;→</a>
-    </aside>
   </section>
 
-  <section id="mission" class="filets" aria-labelledby="titre-valeurs">
-    <h2 id="titre-valeurs">Notre mission</h2>
-    <div class="valeurs">
-      <div class="valeur">
-        <p class="num">01</p>
-        <h3>Égalité des chances</h3>
-        <p>Le prix d'un abonnement ne devrait trier personne.</p>
-      </div>
-      <div class="valeur">
-        <p class="num">02</p>
-        <h3>Transmission</h3>
-        <p>On apprend le métier ensemble, et chacun le transmet ensuite.</p>
-      </div>
-      <div class="valeur">
-        <p class="num">03</p>
-        <h3>Impact</h3>
-        <p>On mesure ce qui compte&nbsp;: les gens aidés, le code accepté, les apps livrées. Et on publie les chiffres.</p>
+  <section class="faits fond-clair" aria-label="Nos engagements">
+    <div class="int grille3">
+      <p><b>0&#8239;€</b>pour toi : l'abonnement est payé par l'asso, à ton nom.</p>
+      <p><b>2&#8239;apps</b>gratuites en construction, sans pub, pour les étudiants.</p>
+      <p><b>100&#8239;%</b>bénévole : pas d'actionnaire, financé par les dons.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="titre-portes">
+    <div class="int">
+      <h2 id="titre-portes">Trois façons d'en être</h2>
+      <p class="intro">Que tu codes, que tu veuilles aider ou que tu représentes une école ou une entreprise, il y a une porte pour toi.</p>
+      <div class="grille3">
+        <div class="porte"><h3>Tu codes</h3><p>Dev ou étudiant en informatique, sans les moyens de payer les outils d'IA : candidate au programme de sponsoring.</p><a href="services.html#candidature">Candidater</a></div>
+        <div class="porte"><h3>Tu veux aider</h3><p>Chaque don paie des abonnements pour les devs du programme. Le formulaire de dons arrive avec le compte bancaire de l'asso.</p><a href="#transparence">Soutenir l'asso</a></div>
+        <div class="porte"><h3>Tu représentes une structure</h3><p>École, BDE, entreprise ou éditeur d'outils : parlons d'un partenariat, d'un mécénat ou d'offres pour les étudiants.</p><a href="rejoindre.html#besoin">Nous écrire</a></div>
       </div>
     </div>
   </section>
 
-  <section id="argent" class="filets" aria-labelledby="titre-argent">
-    <h2 id="titre-argent">Où va l'argent</h2>
-    <div class="bloc">
-      <ol>
-        <li><strong>Des abonnements pour les devs du programme de sponsoring.</strong> C'est le premier poste&nbsp;: chaque accès est au nom d'une seule personne retenue, le temps de son travail avec nous. Ni prêt, ni revente.</li>
-        <li><strong>Humanizer et Entretien blanc</strong>&nbsp;: leur IA et leur hébergement.</li>
-        <li><strong>Les frais de fonctionnement</strong>&nbsp;: nom de domaine, assurance, dépôt de la marque.</li>
-      </ol>
-      <p>Être accompagné, c'est coder sur nos projets.</p>
+  <section id="comment" class="sombre" aria-labelledby="titre-comment">
+    <div class="int">
+      <h2 id="titre-comment">Comment ça marche</h2>
+      <p class="intro">Trois étapes, et chaque candidature est lue en entier par l'équipe.</p>
+      <div class="grille3">
+        <div class="etape"><b>01</b><h3>Tu candidates</h3><p>Nom, prénom, ton GitHub et une lettre de motivation de 500 mots au plus. Dix minutes.</p></div>
+        <div class="etape"><b>02</b><h3>On échange</h3><p>On lit chaque candidature et on te répond en 48&nbsp;h maximum, même si c'est non.</p></div>
+        <div class="etape"><b>03</b><h3>Tu codes</h3><p>Claude Code ou Codex à ton nom, payé par l'asso, le temps que tu codes sur nos projets.</p></div>
+      </div>
+      <p class="meta">// les règles : un compte à ton nom, jamais partagé ni revendu&nbsp;· seulement des abonnements officiels</p>
+      <p><a class="bouton" href="services.html#candidature">Candidater (c'est gratuit)</a></p>
     </div>
   </section>
 
-  <section id="merci" class="bande" aria-labelledby="titre-merci">
-    <div class="bande-contenu filets">
-      <h2 id="titre-merci">Merci.</h2>
-      <ul id="donateurs" class="donateurs">
-        <li>Anonyme</li>
-      </ul>
-      <p class="meta clair">Sur demande, votre nom ou votre logo s'affiche ici. La suite ouvrira avec notre compte bancaire.</p>
+  <section id="apps" aria-labelledby="titre-apps">
+    <div class="int">
+      <h2 id="titre-apps">Nos apps</h2>
+      <p class="intro">Ce qu'on construit ensemble, gratuit et sans pub, pour les étudiants qui n'ont pas les moyens de payer ces outils.</p>
+      <div class="apps">
+        <div class="app">
+          <div class="ecran" aria-hidden="true">
+            <p class="statut">en construction&nbsp;· aperçu</p>
+            <p class="boite barre-texte">Je suis extrêmement motivé et passionné par les défis innovants de votre entreprise dynamique.</p>
+            <p class="fleche">// humanizer</p>
+            <p class="boite">Votre équipe data m'intéresse parce que j'ai déjà nettoyé 40&nbsp;000 lignes de données en stage, et j'ai aimé ça.</p>
+          </div>
+          <div class="corps"><h3>Humanizer</h3><p>Retouche un texte écrit avec l'IA pour qu'il sonne comme toi : ton vocabulaire, ton rythme, le même fond. Mail, lettre de motivation, post.</p></div>
+        </div>
+        <div class="app">
+          <div class="ecran" aria-hidden="true">
+            <p class="statut">en construction&nbsp;· aperçu</p>
+            <p class="boite">« Parle-moi d'un projet où quelque chose ne s'est pas passé comme prévu. »</p>
+            <div class="crit">clarté<span><i style="width:75%"></i></span>3/4</div>
+            <div class="crit">exemples<span><i style="width:50%"></i></span>2/4</div>
+            <div class="crit">structure<span><i style="width:75%"></i></span>3/4</div>
+            <div class="crit">motivation<span><i style="width:100%"></i></span>4/4</div>
+          </div>
+          <div class="corps"><h3>Entretien blanc</h3><p>Répète ton entretien de stage, d'alternance ou de job étudiant : 6 à 8 questions avec relances, une note sur 4 critères, 3 points forts et 3 choses à travailler.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="mission" class="fond-clair" aria-labelledby="titre-mission">
+    <div class="int">
+      <h2 id="titre-mission">Ce qui nous guide</h2>
+      <div class="grille3">
+        <div class="pilier"><p class="num">01</p><h3>Égalité des chances</h3><p>Le prix d'un abonnement ne devrait pas trier qui apprend à coder avec l'IA.</p></div>
+        <div class="pilier"><p class="num">02</p><h3>Transmission</h3><p>On apprend le métier ensemble, sur de vraies apps, et chacun le transmet ensuite.</p></div>
+        <div class="pilier"><p class="num">03</p><h3>Impact</h3><p>On mesure ce qui compte : les gens aidés, le code accepté, les apps livrées. Et on publie les chiffres.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="transparence" aria-labelledby="titre-transparence">
+    <div class="int">
+      <h2 id="titre-transparence">En toute transparence</h2>
+      <p class="intro">On démarre, et on montre tout : ce qu'on a, ce qu'on en fait, qui on est.</p>
+      <div class="transparence">
+        <div>
+          <div class="direct-bloc">
+            <p class="direct" id="maj">// en direct</p>
+            <p><b id="dons">1</b> <span id="dons-texte">don</span></p>
+            <p><b>8</b> personnes accompagnées</p>
+            <span class="bouton petit inactif">Faire un don&nbsp;· bientôt</span>
+          </div>
+          <h3 style="margin-top:2rem">Merci</h3>
+          <ul id="donateurs" class="donateurs"><li>Anonyme</li></ul>
+          <p class="meta">Sur demande, ton nom ou ton logo apparaît ici.</p>
+        </div>
+        <div id="argent">
+          <h3>Où va l'argent</h3>
+          <ol class="argent">
+            <li><strong>Les abonnements des devs du programme.</strong> C'est le premier poste : un accès à ton nom, le temps de ton travail avec nous.</li>
+            <li><strong>L'IA et l'hébergement de nos apps.</strong> Pour que Humanizer et Entretien blanc restent gratuits.</li>
+            <li><strong>Le fonctionnement.</strong> Nom de domaine, assurance.</li>
+          </ol>
+          <p class="meta">association loi 1901&nbsp;· RNA W751286221&nbsp;· Paris</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fond-clair" aria-labelledby="titre-equipe">
+    <div class="int">
+      <h2 id="titre-equipe">Qui porte l'asso</h2>
+      <p class="intro">Des bénévoles, pas une entreprise.</p>
+      <div class="grille3">
+        <div class="membre"><span class="initiales" aria-hidden="true">TK</span><div><h3>Théo Karcenty</h3><p>président</p></div></div>
+        <div class="membre"><span class="initiales" aria-hidden="true">LS</span><div><h3>Louca Silvant</h3><p>vice-président, le code des apps</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="titre-faq">
+    <div class="int">
+      <h2 id="titre-faq">Les questions qu'on nous pose</h2>
+      <div class="faq">
+        <details open><summary>C'est vraiment gratuit&#8239;?</summary><p>Oui. Tu ne paies rien, ni à l'inscription ni après.</p></details>
+        <details><summary>Qui peut candidater&#8239;?</summary><p>Les devs et les étudiants en informatique qui n'ont pas les moyens de payer ces outils.</p></details>
+        <details><summary>Qu'est-ce que je dois faire en échange&#8239;?</summary><p>Coder avec nous sur les apps de l'association, le temps de l'accès. Quand le travail s'arrête, l'accès passe à quelqu'un d'autre.</p></details>
+        <details><summary>Vous êtes liés à Anthropic ou à OpenAI&#8239;?</summary><p>Non. On paie des abonnements officiels, comme n'importe quel client. Les marques citées appartiennent à leurs titulaires.</p></details>
+        <details><summary>Que deviennent mes données&#8239;?</summary><p>Elles servent à étudier ta candidature, rien d'autre. On les garde le temps de l'étude et, si tu rejoins le programme, jusqu'à 12 mois après la fin. Tu peux demander leur suppression quand tu veux.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="fin" aria-labelledby="titre-fin">
+    <div class="int">
+      <h2 id="titre-fin">Tu codes. L'asso paie l'abonnement.</h2>
+      <p><a class="bouton" href="services.html#candidature">Candidater (c'est gratuit)</a></p>
     </div>
   </section>
 
 </main>
 
 <footer class="bas">
-    <p><a href="index.html">À propos</a>&nbsp;· <a href="services.html">Nos services</a>&nbsp;· <a href="rejoindre.html">Nous rejoindre</a></p>
-  <p>Hors Zone AI&nbsp;· association loi 1901&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="mentions-legales.html">Mentions légales et données</a>&nbsp;· <a href="https://github.com/hors-zone-ai">Code source</a>&nbsp;· <a href="https://x.com/Hors_Zone_AI">@Hors_Zone_AI sur X</a></p>
-  <p class="meta">site statique&nbsp;· 0 cookie&nbsp;· moins de 20&nbsp;Ko par page&nbsp;· licence MIT</p>
+  <div class="bas-int">
+    <div class="cols">
+      <div><a class="marque" href="index.html"><span class="zone">Hors Zone</span><span class="ai">AI</span></a></div>
+      <div><p class="col-titre">// le programme</p><a href="services.html">Comment ça marche</a><a href="services.html#candidature">Candidater</a><a href="index.html#faq">Questions</a></div>
+      <div><p class="col-titre">// l'asso</p><a href="index.html#transparence">Transparence</a><a href="index.html#apps">Nos apps</a><a href="rejoindre.html">Nous rejoindre</a></div>
+      <div><p class="col-titre">// nous suivre</p><a href="https://x.com/Hors_Zone_AI">@Hors_Zone_AI sur X</a><a href="https://github.com/hors-zone-ai">Code source</a><a href="mailto:admin@horszone.ai">admin@horszone.ai</a></div>
+    </div>
+    <p class="legal">Hors Zone AI&nbsp;· association loi 1901&nbsp;· RNA&nbsp;W751286221&nbsp;· Paris&nbsp;· <a href="mentions-legales.html">Mentions légales et données</a>&nbsp;· site statique, 0 cookie, licence MIT</p>
+  </div>
 </footer>
 <script>
 fetch('dons.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
@@ -136,7 +281,7 @@ fetch('dons.csv', {cache: 'no-store'}).then(r => r.text()).then(t => {
   document.getElementById('dons').textContent = dons;
   document.getElementById('dons-texte').textContent = dons > 1 ? 'dons' : 'don';
   const d = der.split('-');
-  if (d.length === 3) document.getElementById('maj').textContent = '// en direct\u00a0· mis à jour le ' + d[2] + '/' + d[1] + '/' + d[0];
+  if (d.length === 3) document.getElementById('maj').textContent = '// en direct · mis à jour le ' + d[2] + '/' + d[1] + '/' + d[0];
 }).catch(() => {});
 </script>
 </body>

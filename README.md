@@ -7,23 +7,23 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - aucun cookie, aucun outil de mesure d'audience ;
 - rien qui se charge depuis un autre site (police, script, image) ;
 - pas de JavaScript tant qu'on peut s'en passer : le seul script est celui de l'accueil (dans les deux langues), qui lit `dons.csv` pour mettre à jour tout seul les chiffres en direct et le bandeau de remerciement (sans lui, ce qui est écrit dans la page reste affiché) ;
-- chaque page, avec la feuille de style, pèse moins de 20 Ko.
+- des pages légères : chaque page, avec la feuille de style, reste sous 40 Ko, sans image lourde ni police téléchargée (les titres utilisent les polices serif déjà installées, Charter sur Mac).
 
 ## Les fichiers
 
-- `index.html` : l'accueil, qui est aussi la page À propos (la vitrine, notre mission, où va l'argent, le bandeau de remerciement).
+- `index.html` : l'accueil, refait le 26/10 après un benchmark de 12 sites d'associations : accroche et bouton « Candidater », trois engagements, trois portes (tu codes, tu veux aider, tu représentes une structure), comment ça marche, nos apps, ce qui nous guide, en toute transparence (chiffres en direct, merci, où va l'argent), qui porte l'asso, questions.
 - `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Humanizer et Entretien blanc (dépôts privés).
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une candidature ou une demande.
 - `apropos.html`, `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
 - `dons.csv` : le registre des dons, une ligne par don, sans montant, plus une ligne `maj` quand on vérifie les chiffres (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
-- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine, les valeurs et le bandeau de remerciement de l'accueil, le terminal et les apps de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
-- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=8`, puis `?v=9`…) sur les dix pages, françaises et anglaises : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
+- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine, les valeurs et le bandeau de remerciement de l'accueil, le terminal et les apps de Nos services) est dans un bloc `<style>` en haut de cette page.
+- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=9`, puis `?v=10`…) sur les dix pages, françaises et anglaises : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `en/` : la version anglaise, une page par page française : `index.html`, `services.html`, `join.html` (Nous rejoindre), `thanks.html` (merci), `legal.html` (mentions légales, la version française fait foi). Même feuille de style, liée en `../style.css`.
 - `marque/` : le logo et l'avatar.
 
-Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout. Chaque page a sa jumelle dans l'autre langue (lien FR ou EN en haut à droite, balises `hreflang`) : un texte modifié l'est dans les deux langues. Seule exception, l'accueil n'a pas la signature « Pas ici. » en pied de page, puisque son titre la porte déjà. Règles d'écriture : rien n'est dit deux fois sur une même page, et chaque section n'a qu'un titre, entre deux filets, sans surtitre au-dessus (seule la vitrine de l'accueil garde le sien).
+Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout. Chaque page a sa jumelle dans l'autre langue (lien FR ou EN en haut à droite, balises `hreflang`) : un texte modifié l'est dans les deux langues. En haut de chaque page, un menu fixe avec le bouton « Candidater » ; en bas, un pied de page en quatre colonnes. Règles d'écriture : rien n'est dit deux fois sur une même page, et chaque section n'a qu'un titre, sans surtitre au-dessus (seule l'accroche de l'accueil garde le sien).
 
 Deux formulaires (candidature au programme, besoin d'une structure) envoient vers le même webhook ; le champ caché `source` dit d'où vient chaque envoi (« site en, … » pour les pages anglaises). Les formulaires anglais envoient aussi `langue=en` : le webhook renvoie alors vers `en/thanks.html`.
 

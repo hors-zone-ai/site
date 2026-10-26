@@ -7,7 +7,7 @@
   --orange: #e24f17;
   --doux: #5f5e5a;
   --gris: #d3d1c7;
-  --serif: Georgia, "Times New Roman", serif;
+  --serif: "Charter", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
   --mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 }
 
@@ -18,8 +18,6 @@ body {
   margin: 0;
   color: var(--encre);
   background-color: var(--papier);
-  background-image: radial-gradient(rgba(21, 18, 15, .08) 1px, transparent 1.2px);
-  background-size: 20px 20px;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.55;
 }
@@ -36,18 +34,23 @@ h2 { font-size: clamp(1.75rem, 3.6vw, 2.35rem); margin: 0 0 .5rem; }
 h3 { font-size: 1.05rem; margin: 0 0 .35rem; }
 
 /* Mise en page */
-.haut, main > section, .bande-contenu, .bas, .texte { max-width: 68rem; margin: 0 auto; padding-inline: 1.5rem; }
+.haut-int, main > section, .bande-contenu, .bas-int, .texte { max-width: 68rem; margin: 0 auto; padding-inline: 1.5rem; }
+.pointille { background-image: radial-gradient(rgba(21, 18, 15, .09) 1px, transparent 1.2px); background-size: 22px 22px; }
+[id] { scroll-margin-top: 5.5rem; }
 main > section.bande { max-width: none; padding: 0; }
 main > section + section { padding-top: 4.5rem; }
 main > section.bande + section { padding-top: 4rem; }
 main > section + .bande { margin-top: 4.5rem; }
 
 /* En-tête */
-.haut { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1.25rem; padding-top: 1.25rem; }
+.haut { position: sticky; top: 0; z-index: 10; background: var(--papier); border-bottom: 1px solid rgba(21, 18, 15, .14); }
+.haut-int { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.5rem; min-height: 4.25rem; padding-block: .6rem; }
+.bandeau { margin: 0; background: var(--orange); color: var(--encre); text-align: center; font-size: .92rem; padding: .55rem 1rem; }
+.bandeau a { font-weight: 700; }
 .marque { font-weight: 800; font-size: 1.25rem; letter-spacing: -.02em; line-height: 1; color: var(--encre); text-decoration: none; }
 .marque .zone { display: inline-block; border: 2px dashed var(--encre); padding: .3rem .5rem; background: var(--papier); }
 .marque .ai { color: var(--orange); margin-left: .2em; }
-nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.1rem; font-size: .9rem; }
+nav { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem 1.4rem; font-size: .92rem; }
 nav a:not(.bouton) { text-decoration: none; padding-bottom: .1rem; border-bottom: 3px solid transparent; }
 nav a:not(.bouton):hover, nav a[aria-current=page]:not(.bouton) { border-bottom-color: var(--orange); }
 nav a[aria-current=page] { font-weight: 700; }
@@ -62,11 +65,13 @@ nav a[aria-current=page] { font-weight: 700; }
 
 /* Boutons, contraste 4,8 */
 .bouton, button {
-  display: inline-block; background: var(--orange); color: var(--encre); border: 0; border-radius: 4px;
-  padding: .7rem 1.1rem; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
+  display: inline-block; background: var(--orange); color: var(--encre); border: 2px solid var(--encre); border-radius: 0; box-shadow: 4px 4px 0 var(--encre);
+  padding: .75rem 1.25rem; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; transition: transform .1s, box-shadow .1s;
 }
-.bouton:hover, button:hover, nav .bouton[aria-current=page] { outline: 2px solid var(--encre); outline-offset: 2px; }
-.bouton.petit { padding: .4rem .75rem; font-size: .9rem; }
+.bouton:hover, button:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--encre); }
+.bouton.petit { padding: .45rem .9rem; font-size: .9rem; box-shadow: 3px 3px 0 var(--encre); }
+.bouton.second { background: transparent; box-shadow: none; }
+.bouton.second:hover { transform: none; background: var(--papier-clair); }
 
 /* Haut de page sur fond encre */
 main > section.vitrine, main > section.entete { max-width: 65rem; width: calc(100% - 3rem); margin: 1.5rem auto 0; padding: 3rem clamp(1.25rem, 4vw, 3rem); background: var(--encre); color: var(--papier); border-radius: 10px; }
@@ -125,10 +130,15 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .asso button { margin: .5rem 0 .75rem; }
 
 /* Pied de page */
-.bas { margin-top: 5rem; padding-bottom: 2.5rem; font-size: .88rem; color: var(--doux); }
-.bas::before { content: ""; display: block; border-top: 1.5px solid var(--encre); margin-bottom: 2rem; }
-.bas p { margin: 0 0 .5rem; }
-.signature { font-family: var(--serif); font-size: 1.6rem; color: var(--encre); margin-bottom: 1rem !important; }
+.bas { margin-top: 6rem; background: var(--encre); color: #d8d1c3; padding: 4rem 0 2.5rem; font-size: .9rem; }
+.bas a { display: block; margin-bottom: .5rem; color: #d8d1c3; text-decoration: none; }
+.bas a:hover { color: var(--papier); text-decoration: underline; text-decoration-color: var(--orange); }
+.bas .marque { display: inline-block; color: var(--papier); }
+.bas .marque .zone { border-color: var(--papier); background: transparent; }
+.cols { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); }
+.col-titre { font: .78rem var(--mono); color: #9c968a; margin: 0 0 .8rem; }
+.legal { border-top: 1px solid #2b2722; margin: 2.75rem 0 0; padding-top: 1.25rem; font: .78rem/1.8 var(--mono); color: #9c968a; }
+.legal a { display: inline; margin: 0; color: #9c968a; text-decoration: underline; }
 
 /* Pages simples */
 .texte { max-width: 46rem; padding-top: 1rem; }
@@ -139,12 +149,12 @@ p.petit { font-size: .85rem; color: var(--doux); margin: .25rem 0 0; }
 .evitement:focus { left: 1rem; top: 1rem; padding: .5rem; background: var(--papier); }
 .a-completer { background: #ffe58a; padding: 0 .25em; }
 
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .bouton, button { transition: none; } }
 
-@media (max-width: 34rem) {
-  nav { width: 100%; gap: .3rem .9rem; font-size: .85rem; }
-  nav .bouton { margin-left: auto; }
+@media (max-width: 40rem) {
+  .haut-int { gap: .5rem .9rem; }
   .marque { order: -2; }
   .langue { order: -1; margin-left: auto; }
+  .haut nav { order: 3; width: 100%; margin-left: 0; gap: .3rem 1rem; font-size: .85rem; }
   .filets > h2 { display: block; }
 }
