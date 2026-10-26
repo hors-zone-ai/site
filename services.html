@@ -3,39 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nos services&nbsp;· Hors Zone AI</title>
-<meta name="description" content="Devs et étudiants en informatique : Claude Code ou Codex payé par l'asso sur candidature, des offres réduites et nos apps gratuites.">
+<title>Programme de sponsoring&nbsp;· Hors Zone AI</title>
+<meta name="description" content="Devs et étudiants en informatique : Claude Code ou Codex payé par l'asso, à ton nom, sur candidature. Et bientôt des offres réduites.">
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/services.html">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/services.html">
 <link rel="icon" type="image/png" href="marque/avatar-64-apercu.png">
-<link rel="stylesheet" href="style.css?v=9">
-<style>
-/* Propre à cette page */
-.terminal { max-width: 46rem; margin: 1.75rem 0 0; padding: 1.1rem 1.25rem; background: var(--encre); color: var(--papier); border-radius: 6px; font: .82rem/1.8 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
-.terminal i { color: #a8a59c; }
-.terminal b { color: var(--orange); font-weight: 400; }
-.curseur { display: inline-block; width: .6em; height: 1.1em; vertical-align: -.2em; background: var(--orange); animation: clignote 1s steps(1) infinite; }
-@keyframes clignote { 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .curseur { animation: none; } }
-.cas-grille { display: grid; gap: 2.5rem 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(19rem, 100%), 1fr)); }
-.vue { position: relative; aspect-ratio: 16/10; display: grid; place-items: center; background: var(--papier); border-radius: 14px; color: var(--encre); }
-.vue::after { content: "maquette"; position: absolute; top: .6rem; right: .8rem; font: .62rem var(--mono); color: var(--doux); }
-.fen { width: 62%; background: #fff; border: 1px solid var(--gris); border-radius: 10px; padding: .7rem .9rem; font-size: .78rem; }
-.fen b { display: block; font: .68rem var(--mono); margin-bottom: .4rem; }
-.fen s { display: block; margin-bottom: .5rem; color: var(--doux); }
-.fen i { display: block; height: .45rem; margin: .45rem 0; background: var(--gris); }
-.fen i:last-child { width: 60%; background: var(--orange); }
-.bul { margin: 0 0 .5rem; padding: .4rem .6rem; background: var(--encre); color: var(--papier); border-radius: 8px; }
-.puce { position: absolute; top: .6rem; left: .8rem; background: #fff; border: 1px solid var(--gris); border-radius: 99px; padding: .2rem .6rem; font: .66rem var(--mono); }
-.puce + .puce { top: auto; left: auto; bottom: .6rem; right: .8rem; }
-.cas { display: flex; flex-direction: column; }
-.cas .meta { margin: 1rem 0 .2rem; }
-.cas p:last-of-type { margin-bottom: .9rem; }
-.cas h3 { font-family: var(--serif); font-weight: normal; font-size: 1.6rem; margin: 0 0 .3rem; }
-.prochain { margin-top: 2.5rem; border: 1.5px dashed var(--papier); border-radius: 14px; padding: 0 1.5rem .4rem; }
-.prochain .lien { color: var(--papier); }
-#offres .petit { text-align: center; }
-</style>
+<link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 <a class="evitement" href="#contenu">Aller au contenu</a>
@@ -54,138 +27,92 @@
   </div>
 </header>
 
-<main id="contenu">
+<main id="contenu" class="plein">
 
-  <section class="entete" aria-labelledby="titre">
-    <h1 id="titre">Nos services</h1>
-    <p class="chapo">Trois façons de t'aider.</p>
-    <div class="cartes">
-      <article class="carte">
-        <p class="badge">01&nbsp;· sur candidature</p>
-        <h2>Programme de sponsoring</h2>
-        <p class="accroche">Ton abonnement d'IA pris en charge.</p>
-        <a class="lien" href="#acces">Voir les conditions&nbsp;→</a>
-      </article>
-      <article class="carte">
-        <p class="badge">02&nbsp;· bientôt</p>
-        <h2>Offres réduites</h2>
-        <p class="accroche">Des remises pour tous, sans candidature.</p>
-        <a class="lien" href="#offres">En savoir plus&nbsp;→</a>
-      </article>
-      <article class="carte">
-        <p class="badge">03&nbsp;· gratuit</p>
-        <h2>Nos apps</h2>
-        <p class="accroche">Humanizer et Entretien blanc.</p>
-        <a class="lien" href="#apps">Les découvrir&nbsp;→</a>
-      </article>
+  <section class="hero pointille" aria-labelledby="titre">
+    <div class="int">
+      <h1 id="titre">Ton abonnement d'IA&#8239;? <mark>On le paie.</mark></h1>
+      <p class="chapo">Claude Code ou Codex, à ton nom, le temps que tu codes avec nous. Sur candidature, si tu n'as pas les moyens de te l'offrir.</p>
+      <p class="actions"><a class="bouton" href="#candidature">Candidater (c'est gratuit)</a> <a class="bouton second" href="#regles">Les règles</a></p>
     </div>
   </section>
 
-  <section id="acces" class="filets" aria-labelledby="titre-acces">
-    <h2 id="titre-acces">Programme de sponsoring</h2>
-    <div class="cartes">
-      <article class="carte">
-        <p class="badge">au choix&nbsp;· Anthropic</p>
-        <h3>Claude Code</h3>
-        <p class="accroche">L'assistant de code, dans ton terminal et ton éditeur.</p>
-        <ul>
-          <li>Sur notre abonnement Claude</li>
-          <li>Pas d'entraînement de modèle sur ton code par défaut</li>
-        </ul>
-      </article>
-      <article class="carte">
-        <p class="badge">au choix&nbsp;· OpenAI</p>
-        <h3>Codex</h3>
-        <p class="accroche">L'agent de code, en ligne ou en local.</p>
-        <ul>
-          <li>Sur notre abonnement ChatGPT</li>
-          <li>Les limites d'usage de l'offre Plus</li>
-        </ul>
-      </article>
-    </div>
-    <ul class="regles bloc">
-      <li>Toujours un compte à ton nom, jamais partagé.</li>
-      <li>Aucune revente&nbsp;: les éditeurs l'interdisent, et nous aussi.</li>
-      <li>Uniquement des offres officielles.</li>
-      <li>L'accès dure le temps de ton travail sur nos projets, puis passe à quelqu'un d'autre.</li>
-    </ul>
-    <p class="meta">Financé par les dons.</p>
-    <p><a class="bouton" href="#candidature">S'inscrire&nbsp;→</a></p>
-  </section>
-
-  <section class="filets" aria-labelledby="titre-etapes">
-    <h2 id="titre-etapes">En trois étapes</h2>
-    <pre class="terminal"><i># 1. candidate avec le formulaire ci-dessous</i>
-<i># 2. retenu&nbsp;: tu reçois ton outil</i>
-<b>$</b> claude  <i># ou codex</i>
-<i># 3. code avec nous</i>
-<b>$</b> git clone <b>https://github.com/hors-zone-ai/site</b>
-<b>$</b> <span class="curseur" aria-hidden="true"></span></pre>
-    <div id="candidature" class="cadre bloc">
-      <h3>Ta candidature</h3>
-      <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
-        <input type="hidden" name="type" value="etudiant">
-        <input type="hidden" name="source" value="site, candidature sponsoring">
-        <label for="cand-nom">Nom</label>
-        <input id="cand-nom" name="nom" type="text" required autocomplete="family-name" maxlength="100">
-        <label for="cand-prenom">Prénom</label>
-        <input id="cand-prenom" name="prenom" type="text" required autocomplete="given-name" maxlength="100">
-        <label for="cand-email">Ton mail</label>
-        <input id="cand-email" name="email" type="email" required autocomplete="email" placeholder="toi@mail.fr">
-        <label for="cand-github">Ton GitHub, pseudo ou lien</label>
-        <input id="cand-github" name="github" type="text" required maxlength="200">
-        <div class="choix" role="radiogroup" aria-label="Outil choisi">
-          <span>Je veux&nbsp;:</span>
-          <label><input type="radio" name="outil" value="claude-code" checked> Claude Code</label>
-          <label><input type="radio" name="outil" value="codex"> Codex</label>
-        </div>
-        <label for="cand-lettre">Ta lettre de motivation, 500 mots au plus</label>
-        <textarea id="cand-lettre" name="lettre" rows="8" maxlength="3500" required></textarea>
-        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI l'étudie et m'écrive à son sujet.</span></label>
-        <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="offres" class="filets" aria-labelledby="titre-offres">
-    <h2 id="titre-offres">Offres réduites</h2>
-    <p class="chapo">L'asso négocie les tarifs avec les éditeurs.</p>
-    <p class="petit">Rien n'est signé pour l'instant&nbsp;: les premiers accords seront annoncés ici.</p>
-  </section>
-
-  <section id="apps" class="bande" aria-labelledby="titre-apps">
-    <div class="bande-contenu filets">
-      <h2 id="titre-apps">Nos apps</h2>
-      <div class="cas-grille">
-        <article id="humanizer" class="cas">
-          <div class="vue" aria-hidden="true">
-            <div class="fen"><b>avant, après</b><s>N'hésitez pas à me contacter pour toute question.</s><p class="bul">Une question&nbsp;? Écrivez-moi.</p><i></i></div>
-            <span class="puce">mail, lettre, post</span>
-          </div>
-          <p class="meta clair">// en conception</p>
-          <h3>Humanizer</h3>
-          <p>Retouche un texte fait avec l'IA pour qu'il sonne comme toi.</p>
-          <p class="meta clair">Ton vocabulaire et ton rythme, sans changer le fond</p>
+  <section class="fond-clair" aria-labelledby="titre-outil">
+    <div class="int">
+      <h2 id="titre-outil">Ton outil, au choix</h2>
+      <div class="grille2">
+        <article class="porte">
+          <p class="statut">Anthropic</p>
+          <h3>Claude Code</h3>
+          <p>L'assistant de code, dans ton terminal et ton éditeur.</p>
+          <ul>
+            <li>Sur notre abonnement Claude</li>
+            <li>Pas d'entraînement de modèle sur ton code par défaut</li>
+          </ul>
         </article>
-        <article id="entretien-blanc" class="cas">
-          <div class="vue" aria-hidden="true">
-            <div class="fen"><b>Q1</b><p class="bul">Parle-moi d'un projet dont tu es fier.</p><i></i><i></i></div>
-            <span class="puce">6 à 8 questions</span><span class="puce">note sur 4 critères</span>
-          </div>
-          <p class="meta clair">// en conception</p>
-          <h3>Entretien blanc</h3>
-          <p>Te prépare aux oraux de stage, d'alternance, de job étudiant ou d'école.</p>
-          <p class="meta clair">Des relances comme en vrai, 3 points forts, 3 choses à travailler</p>
+        <article class="porte">
+          <p class="statut">OpenAI</p>
+          <h3>Codex</h3>
+          <p>L'agent de code, en ligne ou en local.</p>
+          <ul>
+            <li>Sur notre abonnement ChatGPT</li>
+            <li>Les limites d'usage de l'offre Plus</li>
+          </ul>
         </article>
       </div>
-      <div class="cas prochain">
-        <p class="meta clair">// à venir</p>
-        <h3>Le prochain&#8239;?</h3>
-        <p>Une association, un BDE ou une mission locale a une idée d'outil&nbsp;? On le construit avec vous, sans vous le facturer.</p>
-        <a class="lien" href="rejoindre.html#besoin">Proposer un besoin&nbsp;→</a>
+    </div>
+  </section>
+
+  <section id="regles" class="sombre" aria-labelledby="titre-regles">
+    <div class="int">
+      <h2 id="titre-regles">Les règles</h2>
+      <ul class="regles grille2">
+        <li>Toujours un compte à ton nom, jamais partagé.</li>
+        <li>Aucune revente&#8239;: les éditeurs l'interdisent, et nous aussi.</li>
+        <li>Uniquement des offres officielles.</li>
+        <li>L'accès dure le temps de ton travail sur nos projets, puis passe à quelqu'un d'autre.</li>
+      </ul>
+      <p class="meta">// financé par les dons</p>
+    </div>
+  </section>
+
+  <section id="candidature" class="fond-clair" aria-labelledby="titre-candidature">
+    <div class="int">
+      <div class="formulaire">
+        <h2 id="titre-candidature">Ta candidature</h2>
+        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+          <input type="hidden" name="type" value="etudiant">
+          <input type="hidden" name="source" value="site, candidature sponsoring">
+          <label for="cand-nom">Nom</label>
+          <input id="cand-nom" name="nom" type="text" required autocomplete="family-name" maxlength="100">
+          <label for="cand-prenom">Prénom</label>
+          <input id="cand-prenom" name="prenom" type="text" required autocomplete="given-name" maxlength="100">
+          <label for="cand-email">Ton mail</label>
+          <input id="cand-email" name="email" type="email" required autocomplete="email" placeholder="toi@mail.fr">
+          <label for="cand-github">Ton GitHub, pseudo ou lien</label>
+          <input id="cand-github" name="github" type="text" required maxlength="200">
+          <div class="choix" role="radiogroup" aria-label="Outil choisi">
+            <span>Je veux&nbsp;:</span>
+            <label><input type="radio" name="outil" value="claude-code" checked> Claude Code</label>
+            <label><input type="radio" name="outil" value="codex"> Codex</label>
+          </div>
+          <label for="cand-lettre">Ta lettre de motivation, 500 mots au plus</label>
+          <textarea id="cand-lettre" name="lettre" rows="8" maxlength="3500" required></textarea>
+          <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI l'étudie et m'écrive à son sujet.</span></label>
+          <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+          <button type="submit">Envoyer</button>
+        </form>
       </div>
-      <p class="meta clair">tes résultats restent à toi&nbsp;· rien ne sert à entraîner une IA&nbsp;· aucune analyse de ta voix ni de ton visage&nbsp;· aucune note transmise à un recruteur</p>
+    </div>
+  </section>
+
+  <section id="offres" aria-labelledby="titre-offres">
+    <div class="int">
+      <div class="encart">
+        <p class="statut">bientôt&nbsp;· sans candidature</p>
+        <h2 id="titre-offres">Offres réduites</h2>
+        <p>L'asso négocie les tarifs avec les éditeurs. Rien n'est signé pour l'instant&nbsp;: les premiers accords seront annoncés ici.</p>
+      </div>
     </div>
   </section>
 

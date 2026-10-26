@@ -14,35 +14,17 @@
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/">
 <link rel="icon" type="image/png" href="marque/avatar-64-apercu.png">
-<link rel="stylesheet" href="style.css?v=9">
+<link rel="stylesheet" href="style.css?v=10">
 <style>
-main.accueil > section { max-width: none; margin: 0; padding: 0; }
-.int { max-width: 68rem; margin: 0 auto; padding: 5.5rem 1.5rem; }
-.accueil h1 { font-size: clamp(2.6rem, 7vw, 4.6rem); max-width: 14em; margin-bottom: 1.5rem; }
-.accueil h2 { font-size: clamp(2rem, 4.5vw, 2.9rem); margin-bottom: 1rem; }
-.accueil h3 { font-family: var(--serif); font-weight: normal; font-size: 1.6rem; line-height: 1.15; margin: 0 0 .5rem; }
-.hero .int { padding-top: 5rem; padding-bottom: 4.5rem; }
-.hero .chapo { font-size: 1.25rem; max-width: 36rem; margin-bottom: 2rem; }
-.actions { display: flex; flex-wrap: wrap; gap: 1rem; }
-.fond-clair { background: var(--papier-clair); border-block: 1px solid rgba(21, 18, 15, .14); }
-.intro { font-size: 1.12rem; color: var(--doux); max-width: 40rem; margin-bottom: 2.5rem; }
-.grille3 { display: grid; gap: 1.5rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
 .faits .int { padding-top: 0; padding-bottom: 0; }
 .faits p { margin: 0; padding: 2rem 0; }
 .faits b { display: block; font-family: var(--serif); font-weight: normal; font-size: 3.2rem; line-height: 1; color: var(--orange); margin-bottom: .6rem; }
-.porte { display: flex; flex-direction: column; background: var(--papier-clair); border: 1px solid rgba(21, 18, 15, .14); padding: 1.75rem; }
-.porte p { color: var(--doux); flex: 1; }
-.porte a { font-weight: 700; }
-.sombre { background: var(--encre); color: var(--papier); }
-.sombre .intro { color: #bdb6a8; }
 .etape { border: 1.5px dashed #5a544b; padding: 1.75rem; }
 .etape b { display: block; font-family: var(--serif); font-weight: normal; font-size: 3.3rem; line-height: 1; color: var(--orange); margin-bottom: 1rem; }
 .etape p { margin: 0; color: #d8d1c3; }
-.sombre .meta { color: #bdb6a8; margin: 2rem 0; max-width: 52rem; }
 .apps { display: grid; gap: 1.75rem; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); }
 .app { background: var(--papier-clair); border: 1px solid rgba(21, 18, 15, .14); }
 .ecran { border-bottom: 1px solid rgba(21, 18, 15, .14); padding: 1.5rem; min-height: 14rem; }
-.statut { display: inline-block; font: .72rem var(--mono); border: 1px solid var(--encre); padding: .1rem .5rem; margin: 0 0 .9rem; }
 .app .corps { padding: 1.6rem; }
 .app .corps p { margin: 0; color: var(--doux); }
 .boite { background: #fff; border: 1px solid rgba(21, 18, 15, .14); padding: .75rem .9rem; font-size: .9rem; line-height: 1.5; }
@@ -84,8 +66,7 @@ details p { margin: .75rem 0 0; color: var(--doux); max-width: 46rem; }
 .fin .int { padding: 4.5rem 1.5rem; }
 .fin h2 { margin-bottom: 1.75rem; }
 .fin .bouton { background: var(--encre); color: var(--papier); box-shadow: 4px 4px 0 var(--papier); }
-main.accueil + .bas { margin-top: 0; }
-@media (max-width: 40rem) { .int { padding: 3.75rem 1.25rem; } .faits b { font-size: 2.6rem; } }
+@media (max-width: 40rem) { .faits b { font-size: 2.6rem; } }
 </style>
 </head>
 <body>
@@ -105,7 +86,7 @@ main.accueil + .bas { margin-top: 0; }
   </div>
 </header>
 
-<main id="contenu" class="accueil">
+<main id="contenu" class="plein">
 
   <section class="hero pointille" aria-labelledby="titre">
     <div class="int">

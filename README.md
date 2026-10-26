@@ -12,14 +12,14 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 ## Les fichiers
 
 - `index.html` : l'accueil, refait le 26/10 après un benchmark de 12 sites d'associations : accroche et bouton « Candidater », trois engagements, trois portes (tu codes, tu veux aider, tu représentes une structure), comment ça marche, nos apps, ce qui nous guide, en toute transparence (chiffres en direct, merci, où va l'argent), qui porte l'asso, questions.
-- `services.html` : nos services : 01 programme de sponsoring sur candidature (Claude Code ou Codex payé par l'asso, avec le formulaire de candidature), 02 offres réduites, 03 nos apps Humanizer et Entretien blanc (dépôts privés).
-- `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
+- `services.html` : le programme de sponsoring (« Le programme » dans le menu) : l'accroche, l'outil au choix (Claude Code ou Codex), les règles, le formulaire de candidature, puis les offres réduites (bientôt). Les étapes et les apps sont sur l'accueil, pas ici, pour ne rien dire deux fois.
+- `rejoindre.html` : nous rejoindre : deux portes (tu codes, vous êtes une structure) et le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une candidature ou une demande.
 - `apropos.html`, `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
 - `dons.csv` : le registre des dons, une ligne par don, sans montant, plus une ligne `maj` quand on vérifie les chiffres (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
-- `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine, les valeurs et le bandeau de remerciement de l'accueil, le terminal et les apps de Nos services) est dans un bloc `<style>` en haut de cette page.
-- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=9`, puis `?v=10`…) sur les dix pages, françaises et anglaises : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
+- `style.css` : la feuille de style commune : en-tête, sections pleine largeur (le contenu dans `.int`), cartes, formulaires, pied de page. Ce qui ne sert qu'à l'accueil (engagements, étapes, apps, transparence, équipe, questions) est dans un bloc `<style>` en haut de l'accueil.
+- Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=10`, puis `?v=11`…) sur les dix pages, françaises et anglaises : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `en/` : la version anglaise, une page par page française : `index.html`, `services.html`, `join.html` (Nous rejoindre), `thanks.html` (merci), `legal.html` (mentions légales, la version française fait foi). Même feuille de style, liée en `../style.css`.
 - `marque/` : le logo et l'avatar.
 
