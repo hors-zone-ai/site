@@ -16,7 +16,7 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `rejoindre.html` : nous rejoindre, pour les étudiants devs et les structures, avec le formulaire « Proposer un besoin ».
 - `merci.html` : la page affichée après une candidature ou une demande.
 - `apropos.html`, `outils.html`, `acces.html`, `mission.html`, `comptes.html` : anciennes adresses, elles redirigent vers les nouvelles pages.
-- `dons.csv` : le registre des dons, une ligne par don, sans montant (voir plus bas).
+- `dons.csv` : le registre des dons, une ligne par don, sans montant, plus une ligne `maj` quand on vérifie les chiffres (voir plus bas).
 - `mentions-legales.html` : mentions légales et données personnelles.
 - `style.css` : la feuille de style commune. Ce qui ne sert qu'à une page (la vitrine, les valeurs et le bandeau de remerciement de l'accueil, le terminal et les apps de Nos services) est dans un bloc `<style>` en haut de cette page, pour que chacune reste sous 20 Ko.
 - Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=8`, puis `?v=9`…) sur les dix pages, françaises et anglaises : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
@@ -34,11 +34,11 @@ Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient 
 On ne publie ni comptes ni montants : seulement les dons. `dons.csv` contient une ligne par don, en UTF-8, séparateur virgule, sans virgule dans les valeurs :
 
 - `date` : AAAA-MM-JJ ;
-- `categorie` : `don` ou `mecenat` ;
+- `categorie` : `don` ou `mecenat` ; ou `maj` pour dire que les chiffres ont été vérifiés ce jour-là, sans nouveau don (ni nom ni logo) ;
 - `nom` : `Anonyme` par défaut ; le nom du donateur seulement s'il le demande ;
 - `logo` : vide par défaut ; sinon le chemin d'un logo déposé dans le dossier `donateurs/` (SVG, PNG ou WebP, léger), par exemple `donateurs/nom.svg`, seulement si le donateur le demande.
 
-Les deux accueils, français et anglais, lisent ce fichier tout seuls : le nombre de dons et la date du dernier dans l'encadré en direct, et une tuile par don dans le bandeau « Merci. » (le logo s'il y en a un, sinon le nom). Le nombre de personnes accompagnées s'écrit à la main dans `index.html`. Les chiffres et les tuiles écrits dans la page, affichés sans JavaScript, sont mis à jour dans le même commit que la ligne ajoutée.
+Les deux accueils, français et anglais, lisent ce fichier tout seuls : le nombre de dons et la date de la dernière ligne (don ou vérification) dans l'encadré en direct, et une tuile par don dans le bandeau « Merci. » (le logo s'il y en a un, sinon le nom). Le nombre de personnes accompagnées s'écrit à la main dans `index.html`. Les chiffres et les tuiles écrits dans la page, affichés sans JavaScript, sont mis à jour dans le même commit que la ligne ajoutée.
 
 ## Voir le site sur votre ordinateur
 
