@@ -3,39 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Our services&nbsp;· Hors Zone AI</title>
-<meta name="description" content="Devs and computer science students: Claude Code or Codex paid for by us if you're selected, discounted offers and our free apps.">
+<title>Sponsorship programme&nbsp;· Hors Zone AI</title>
+<meta name="description" content="Devs and computer science students: Claude Code or Codex paid for by the association, in your name, on application. Discounted offers coming soon.">
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/services.html">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/services.html">
 <link rel="icon" type="image/png" href="../marque/avatar-64-apercu.png">
-<link rel="stylesheet" href="../style.css?v=9">
-<style>
-/* This page only */
-.terminal { max-width: 46rem; margin: 1.75rem 0 0; padding: 1.1rem 1.25rem; background: var(--encre); color: var(--papier); border-radius: 6px; font: .82rem/1.8 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
-.terminal i { color: #a8a59c; }
-.terminal b { color: var(--orange); font-weight: 400; }
-.curseur { display: inline-block; width: .6em; height: 1.1em; vertical-align: -.2em; background: var(--orange); animation: clignote 1s steps(1) infinite; }
-@keyframes clignote { 50% { opacity: 0; } }
-@media (prefers-reduced-motion: reduce) { .curseur { animation: none; } }
-.cas-grille { display: grid; gap: 2.5rem 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(19rem, 100%), 1fr)); }
-.vue { position: relative; aspect-ratio: 16/10; display: grid; place-items: center; background: var(--papier); border-radius: 14px; color: var(--encre); }
-.vue::after { content: "mockup"; position: absolute; top: .6rem; right: .8rem; font: .62rem var(--mono); color: var(--doux); }
-.fen { width: 62%; background: #fff; border: 1px solid var(--gris); border-radius: 10px; padding: .7rem .9rem; font-size: .78rem; }
-.fen b { display: block; font: .68rem var(--mono); margin-bottom: .4rem; }
-.fen s { display: block; margin-bottom: .5rem; color: var(--doux); }
-.fen i { display: block; height: .45rem; margin: .45rem 0; background: var(--gris); }
-.fen i:last-child { width: 60%; background: var(--orange); }
-.bul { margin: 0 0 .5rem; padding: .4rem .6rem; background: var(--encre); color: var(--papier); border-radius: 8px; }
-.puce { position: absolute; top: .6rem; left: .8rem; background: #fff; border: 1px solid var(--gris); border-radius: 99px; padding: .2rem .6rem; font: .66rem var(--mono); }
-.puce + .puce { top: auto; left: auto; bottom: .6rem; right: .8rem; }
-.cas { display: flex; flex-direction: column; }
-.cas .meta { margin: 1rem 0 .2rem; }
-.cas p:last-of-type { margin-bottom: .9rem; }
-.cas h3 { font-family: var(--serif); font-weight: normal; font-size: 1.6rem; margin: 0 0 .3rem; }
-.prochain { margin-top: 2.5rem; border: 1.5px dashed var(--papier); border-radius: 14px; padding: 0 1.5rem .4rem; }
-.prochain .lien { color: var(--papier); }
-#offres .petit { text-align: center; }
-</style>
+<link rel="stylesheet" href="../style.css?v=10">
 </head>
 <body>
 <a class="evitement" href="#contenu">Skip to content</a>
@@ -54,139 +27,93 @@
   </div>
 </header>
 
-<main id="contenu">
+<main id="contenu" class="plein">
 
-  <section class="entete" aria-labelledby="titre">
-    <h1 id="titre">Our services</h1>
-    <p class="chapo">Three ways to help you.</p>
-    <div class="cartes">
-      <article class="carte">
-        <p class="badge">01&nbsp;· on application</p>
-        <h2>Sponsorship programme</h2>
-        <p class="accroche">Your AI subscription, covered.</p>
-        <a class="lien" href="#acces">See the conditions&nbsp;→</a>
-      </article>
-      <article class="carte">
-        <p class="badge">02&nbsp;· coming soon</p>
-        <h2>Discounted offers</h2>
-        <p class="accroche">Lower prices for everyone, no application needed.</p>
-        <a class="lien" href="#offres">Learn more&nbsp;→</a>
-      </article>
-      <article class="carte">
-        <p class="badge">03&nbsp;· free</p>
-        <h2>Our apps</h2>
-        <p class="accroche">Humanizer and Entretien blanc.</p>
-        <a class="lien" href="#apps">Discover them&nbsp;→</a>
-      </article>
+  <section class="hero pointille" aria-labelledby="titre">
+    <div class="int">
+      <h1 id="titre">Your AI subscription? <mark>We pay for it.</mark></h1>
+      <p class="chapo">Claude Code or Codex, in your name, for as long as you code with us. On application, if you can't afford it yourself.</p>
+      <p class="actions"><a class="bouton" href="#candidature">Apply (it's free)</a> <a class="bouton second" href="#regles">The rules</a></p>
     </div>
   </section>
 
-  <section id="acces" class="filets" aria-labelledby="titre-acces">
-    <h2 id="titre-acces">Sponsorship programme</h2>
-    <div class="cartes">
-      <article class="carte">
-        <p class="badge">your choice&nbsp;· Anthropic</p>
-        <h3>Claude Code</h3>
-        <p class="accroche">The coding assistant, in your terminal and your editor.</p>
-        <ul>
-          <li>On our Claude subscription</li>
-          <li>No model training on your code by default</li>
-        </ul>
-      </article>
-      <article class="carte">
-        <p class="badge">your choice&nbsp;· OpenAI</p>
-        <h3>Codex</h3>
-        <p class="accroche">The coding agent, in the cloud or locally.</p>
-        <ul>
-          <li>On our ChatGPT subscription</li>
-          <li>The usage limits of the Plus plan</li>
-        </ul>
-      </article>
-    </div>
-    <ul class="regles bloc">
-      <li>Always an account in your name, never shared.</li>
-      <li>No reselling: the vendors forbid it, and so do we.</li>
-      <li>Official plans only.</li>
-      <li>Access lasts as long as you work on our projects, then goes to someone else.</li>
-    </ul>
-    <p class="meta">Funded by donations.</p>
-    <p><a class="bouton" href="#candidature">Sign up&nbsp;→</a></p>
-  </section>
-
-  <section class="filets" aria-labelledby="titre-etapes">
-    <h2 id="titre-etapes">In three steps</h2>
-    <pre class="terminal"><i># 1. apply with the form below</i>
-<i># 2. selected: you get your tool</i>
-<b>$</b> claude  <i># or codex</i>
-<i># 3. code with us</i>
-<b>$</b> git clone <b>https://github.com/hors-zone-ai/site</b>
-<b>$</b> <span class="curseur" aria-hidden="true"></span></pre>
-    <div id="candidature" class="cadre bloc">
-      <h3>Your application</h3>
-      <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
-        <input type="hidden" name="type" value="etudiant">
-        <input type="hidden" name="source" value="site en, candidature sponsoring">
-        <input type="hidden" name="langue" value="en">
-        <label for="cand-prenom">First name</label>
-        <input id="cand-prenom" name="prenom" type="text" required autocomplete="given-name" maxlength="100">
-        <label for="cand-nom">Last name</label>
-        <input id="cand-nom" name="nom" type="text" required autocomplete="family-name" maxlength="100">
-        <label for="cand-email">Your email</label>
-        <input id="cand-email" name="email" type="email" required autocomplete="email" placeholder="you@mail.com">
-        <label for="cand-github">Your GitHub, username or link</label>
-        <input id="cand-github" name="github" type="text" required maxlength="200">
-        <div class="choix" role="radiogroup" aria-label="Chosen tool">
-          <span>I want:</span>
-          <label><input type="radio" name="outil" value="claude-code" checked> Claude Code</label>
-          <label><input type="radio" name="outil" value="codex"> Codex</label>
-        </div>
-        <label for="cand-lettre">Your motivation letter, 500 words max</label>
-        <textarea id="cand-lettre" name="lettre" rows="8" maxlength="3500" required></textarea>
-        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>I agree that Hors Zone AI may review it and write to me about it.</span></label>
-        <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-
-  <section id="offres" class="filets" aria-labelledby="titre-offres">
-    <h2 id="titre-offres">Discounted offers</h2>
-    <p class="chapo">We negotiate prices with the vendors.</p>
-    <p class="petit">Nothing is signed yet: the first deals will be announced here.</p>
-  </section>
-
-  <section id="apps" class="bande" aria-labelledby="titre-apps">
-    <div class="bande-contenu filets">
-      <h2 id="titre-apps">Our apps</h2>
-      <div class="cas-grille">
-        <article id="humanizer" class="cas">
-          <div class="vue" aria-hidden="true">
-            <div class="fen"><b>before, after</b><s>Please do not hesitate to contact me should you have any questions.</s><p class="bul">Questions? Write to me.</p><i></i></div>
-            <span class="puce">email, letter, post</span>
-          </div>
-          <p class="meta clair">// in design</p>
-          <h3>Humanizer</h3>
-          <p>Reworks a text written with AI so it sounds like you.</p>
-          <p class="meta clair">Your words and your rhythm, without changing the substance</p>
+  <section class="fond-clair" aria-labelledby="titre-outil">
+    <div class="int">
+      <h2 id="titre-outil">Your tool, your choice</h2>
+      <div class="grille2">
+        <article class="porte">
+          <p class="statut">Anthropic</p>
+          <h3>Claude Code</h3>
+          <p>The coding assistant, in your terminal and your editor.</p>
+          <ul>
+            <li>On our Claude subscription</li>
+            <li>No model training on your code by default</li>
+          </ul>
         </article>
-        <article id="entretien-blanc" class="cas">
-          <div class="vue" aria-hidden="true">
-            <div class="fen"><b>Q1</b><p class="bul">Tell me about a project you're proud of.</p><i></i><i></i></div>
-            <span class="puce">6 to 8 questions</span><span class="puce">scored on 4 criteria</span>
-          </div>
-          <p class="meta clair">// in design</p>
-          <h3>Entretien blanc</h3>
-          <p>Mock interviews for internships, work-study programmes, student jobs or school admissions.</p>
-          <p class="meta clair">Follow-ups like the real thing, 3 strengths, 3 things to work on</p>
+        <article class="porte">
+          <p class="statut">OpenAI</p>
+          <h3>Codex</h3>
+          <p>The coding agent, in the cloud or locally.</p>
+          <ul>
+            <li>On our ChatGPT subscription</li>
+            <li>The usage limits of the Plus plan</li>
+          </ul>
         </article>
       </div>
-      <div class="cas prochain">
-        <p class="meta clair">// to come</p>
-        <h3>The next one?</h3>
-        <p>A non-profit, a student union or a youth employment service has an idea for a tool? We build it with you, free of charge.</p>
-        <a class="lien" href="join.html#besoin">Tell us what you need&nbsp;→</a>
+    </div>
+  </section>
+
+  <section id="regles" class="sombre" aria-labelledby="titre-regles">
+    <div class="int">
+      <h2 id="titre-regles">The rules</h2>
+      <ul class="regles grille2">
+        <li>Always an account in your name, never shared.</li>
+        <li>No reselling: the vendors forbid it, and so do we.</li>
+        <li>Official plans only.</li>
+        <li>Access lasts as long as you work on our projects, then goes to someone else.</li>
+      </ul>
+      <p class="meta">// funded by donations</p>
+    </div>
+  </section>
+
+  <section id="candidature" class="fond-clair" aria-labelledby="titre-candidature">
+    <div class="int">
+      <div class="formulaire">
+        <h2 id="titre-candidature">Your application</h2>
+        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+          <input type="hidden" name="type" value="etudiant">
+          <input type="hidden" name="source" value="site en, candidature sponsoring">
+          <input type="hidden" name="langue" value="en">
+          <label for="cand-prenom">First name</label>
+          <input id="cand-prenom" name="prenom" type="text" required autocomplete="given-name" maxlength="100">
+          <label for="cand-nom">Last name</label>
+          <input id="cand-nom" name="nom" type="text" required autocomplete="family-name" maxlength="100">
+          <label for="cand-email">Your email</label>
+          <input id="cand-email" name="email" type="email" required autocomplete="email" placeholder="you@mail.com">
+          <label for="cand-github">Your GitHub, username or link</label>
+          <input id="cand-github" name="github" type="text" required maxlength="200">
+          <div class="choix" role="radiogroup" aria-label="Chosen tool">
+            <span>I want:</span>
+            <label><input type="radio" name="outil" value="claude-code" checked> Claude Code</label>
+            <label><input type="radio" name="outil" value="codex"> Codex</label>
+          </div>
+          <label for="cand-lettre">Your motivation letter, 500 words max</label>
+          <textarea id="cand-lettre" name="lettre" rows="8" maxlength="3500" required></textarea>
+          <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>I agree that Hors Zone AI may review it and write to me about it.</span></label>
+          <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+          <button type="submit">Send</button>
+        </form>
       </div>
-      <p class="meta clair">your results stay yours&nbsp;· nothing is used to train an AI&nbsp;· no analysis of your voice or face&nbsp;· no score passed on to a recruiter</p>
+    </div>
+  </section>
+
+  <section id="offres" aria-labelledby="titre-offres">
+    <div class="int">
+      <div class="encart">
+        <p class="statut">coming soon&nbsp;· no application needed</p>
+        <h2 id="titre-offres">Discounted offers</h2>
+        <p>We negotiate prices with the vendors. Nothing is signed yet: the first deals will be announced here.</p>
+      </div>
     </div>
   </section>
 

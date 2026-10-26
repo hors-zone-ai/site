@@ -8,7 +8,7 @@
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/rejoindre.html">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/join.html">
 <link rel="icon" type="image/png" href="../marque/avatar-64-apercu.png">
-<link rel="stylesheet" href="../style.css?v=9">
+<link rel="stylesheet" href="../style.css?v=10">
 </head>
 <body>
 <a class="evitement" href="#contenu">Skip to content</a>
@@ -27,46 +27,47 @@
   </div>
 </header>
 
-<main id="contenu">
+<main id="contenu" class="plein">
 
-  <section class="entete" aria-labelledby="titre">
-    <h1 id="titre">Join us</h1>
-    <p class="chapo">Everyone here is a volunteer.</p>
-  </section>
-
-  <section aria-label="Two ways to join us">
-    <div class="chemins">
-      <div class="chemin" id="devs">
-        <h2>You code</h2>
-        <p>Dev or computer science student: pick a first task on GitHub. MIT License: you keep your copyright.</p>
-        <p>Apply to our <a href="services.html#candidature">sponsorship programme</a>: if you're selected, we pay for Claude Code or Codex so you can work on our projects.</p>
-        <pre class="cmd"><code>git clone <span>https://github.com/hors-zone-ai/site</span></code></pre>
-        <a class="lien" href="https://github.com/hors-zone-ai">See our repositories&nbsp;→</a>
-      </div>
-      <div class="chemin">
-        <h2>You're an organisation</h2>
-        <p>Non-profit, student union, youth employment service, high school: a tool would help you, but having it built costs too much? Let us know.</p>
-        <a class="lien" href="#besoin">Write to us&nbsp;→</a>
+  <section class="hero pointille" aria-labelledby="titre">
+    <div class="int">
+      <h1 id="titre">Join us</h1>
+      <p class="chapo">Everyone here is a volunteer.</p>
+      <div class="grille2">
+        <div class="porte" id="devs">
+          <h2>You code</h2>
+          <p>Dev or computer science student: pick a first task on GitHub. MIT License: you keep your copyright.</p>
+          <p>Apply to our <a href="services.html#candidature">sponsorship programme</a>: if you're selected, we pay for Claude Code or Codex so you can work on our projects.</p>
+          <pre class="cmd"><code>git clone <span>https://github.com/hors-zone-ai/site</span></code></pre>
+          <a class="lien" href="https://github.com/hors-zone-ai">See our repositories&nbsp;→</a>
+        </div>
+        <div class="porte">
+          <h2>You're an organisation</h2>
+          <p>Non-profit, student union, youth employment service, high school: a tool would help you, but having it built costs too much? Let us know.</p>
+          <a class="lien" href="#besoin">Write to us&nbsp;→</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <section aria-label="Tell us what you need">
-    <div id="besoin" class="cadre">
-      <h3>Tell us what you need</h3>
-      <p>If it's doable, we'll work out with you how to build it, free of charge.</p>
-      <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
-        <input type="hidden" name="type" value="association">
-        <input type="hidden" name="source" value="site en, proposer un besoin">
-        <input type="hidden" name="langue" value="en">
-        <label for="asso-email">Your email</label>
-        <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@your-organisation.org">
-        <label for="asso-message">Your request, in two lines</label>
-        <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
-        <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>I agree that Hors Zone AI may reply to me.</span></label>
-        <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
-        <button type="submit">Send</button>
-      </form>
+  <section id="besoin" class="fond-clair" aria-labelledby="titre-besoin">
+    <div class="int">
+      <div class="formulaire">
+        <h2 id="titre-besoin">Tell us what you need</h2>
+        <p>If it's doable, we'll work out with you how to build it, free of charge.</p>
+        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+          <input type="hidden" name="type" value="association">
+          <input type="hidden" name="source" value="site en, proposer un besoin">
+          <input type="hidden" name="langue" value="en">
+          <label for="asso-email">Your email</label>
+          <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@your-organisation.org">
+          <label for="asso-message">Your request, in two lines</label>
+          <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
+          <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>I agree that Hors Zone AI may reply to me.</span></label>
+          <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+          <button type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </section>
 
