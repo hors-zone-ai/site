@@ -7,6 +7,19 @@
 <meta name="description" content="Dev, computer science student or organisation with a need: how to join Hors Zone AI.">
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/rejoindre.html">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/join.html">
+<link rel="canonical" href="https://hors-zone-ai.github.io/site/en/join.html">
+<link rel="alternate" hreflang="x-default" href="https://hors-zone-ai.github.io/site/rejoindre.html">
+<meta property="og:site_name" content="Hors Zone AI">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Join us&nbsp;· Hors Zone AI">
+<meta property="og:description" content="Dev, computer science student or organisation with a need: how to join Hors Zone AI.">
+<meta property="og:url" content="https://hors-zone-ai.github.io/site/en/join.html">
+<meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/partage-en-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hors Zone AI: Coding with AI is expensive. Not here.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../marque/avatar-64-apercu.png">
 <link rel="stylesheet" href="../style.css?v=10">
 </head>
@@ -55,16 +68,16 @@
       <div class="formulaire">
         <h2 id="titre-besoin">Tell us what you need</h2>
         <p>If it's doable, we'll work out with you how to build it, free of charge.</p>
-        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post" toolname="propose_a_need" tooldescription="Tell Hors Zone AI (French non-profit) what an organisation needs (non-profit, student union, youth employment service, high school): a tool it can't afford to have built. If it's doable, the association builds it with them, free of charge. The person reviews and submits the form themselves.">
           <input type="hidden" name="type" value="association">
           <input type="hidden" name="source" value="site en, proposer un besoin">
           <input type="hidden" name="langue" value="en">
           <label for="asso-email">Your email</label>
-          <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@your-organisation.org">
+          <input id="asso-email" name="email" toolparamdescription="Email of the organisation or the person writing, for the reply" type="email" required autocomplete="email" placeholder="contact@your-organisation.org">
           <label for="asso-message">Your request, in two lines</label>
-          <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
-          <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>I agree that Hors Zone AI may reply to me.</span></label>
-          <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+          <textarea id="asso-message" name="message" toolparamdescription="The request in two lines: who the organisation is and what tool it needs" rows="3" maxlength="1000" required></textarea>
+          <label class="accord"><input type="checkbox" name="consentement" value="oui" toolparamdescription="Agreement for Hors Zone AI to reply; tick only with the person's consent" required> <span>I agree that Hors Zone AI may reply to me.</span></label>
+          <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" toolparamdescription="Anti-spam field: always leave empty" tabindex="-1" autocomplete="off"></label></p>
           <button type="submit">Send</button>
         </form>
         <p class="petit">Hors Zone AI uses this information only to reply to you. Both fields are required. Retention, rights and contact: <a href="legal.html#data">Legal notice and data</a>.</p>

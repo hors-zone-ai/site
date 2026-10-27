@@ -7,6 +7,19 @@
 <meta name="description" content="Devs and computer science students: Claude Code or Codex paid for by the association, in your name, on application. Discounted offers coming soon.">
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/services.html">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/services.html">
+<link rel="canonical" href="https://hors-zone-ai.github.io/site/en/services.html">
+<link rel="alternate" hreflang="x-default" href="https://hors-zone-ai.github.io/site/services.html">
+<meta property="og:site_name" content="Hors Zone AI">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Your AI subscription? We pay for it.">
+<meta property="og:description" content="Devs and computer science students: Claude Code or Codex paid for by the association, in your name, on application. Discounted offers coming soon.">
+<meta property="og:url" content="https://hors-zone-ai.github.io/site/en/services.html">
+<meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/partage-en-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hors Zone AI: Coding with AI is expensive. Not here.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="../marque/avatar-64-apercu.png">
 <link rel="stylesheet" href="../style.css?v=10">
 </head>
@@ -80,27 +93,27 @@
     <div class="int">
       <div class="formulaire">
         <h2 id="titre-candidature">Your application</h2>
-        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post" toolname="apply_to_sponsorship_programme" tooldescription="Apply to the Hors Zone AI sponsorship programme (French non-profit): the association pays for Claude Code or Codex, in the selected person's name, for developers and computer science students who can't afford it. The person reviews and submits the form themselves. Reply within 48 hours.">
           <input type="hidden" name="type" value="etudiant">
           <input type="hidden" name="source" value="site en, candidature sponsoring">
           <input type="hidden" name="langue" value="en">
           <label for="cand-prenom">First name</label>
-          <input id="cand-prenom" name="prenom" type="text" required autocomplete="given-name" maxlength="100">
+          <input id="cand-prenom" name="prenom" toolparamdescription="Applicant's first name" type="text" required autocomplete="given-name" maxlength="100">
           <label for="cand-nom">Last name</label>
-          <input id="cand-nom" name="nom" type="text" required autocomplete="family-name" maxlength="100">
+          <input id="cand-nom" name="nom" toolparamdescription="Applicant's last name" type="text" required autocomplete="family-name" maxlength="100">
           <label for="cand-email">Your email</label>
-          <input id="cand-email" name="email" type="email" required autocomplete="email" placeholder="you@mail.com">
+          <input id="cand-email" name="email" toolparamdescription="Email address for the association's reply" type="email" required autocomplete="email" placeholder="you@mail.com">
           <label for="cand-github">Your GitHub, username or link</label>
-          <input id="cand-github" name="github" type="text" required maxlength="200">
+          <input id="cand-github" name="github" toolparamdescription="GitHub username or profile link" type="text" required maxlength="200">
           <div class="choix" role="radiogroup" aria-label="Chosen tool">
             <span>I want:</span>
-            <label><input type="radio" name="outil" value="claude-code" checked> Claude Code</label>
-            <label><input type="radio" name="outil" value="codex"> Codex</label>
+            <label><input type="radio" name="outil" value="claude-code" toolparamdescription="Tool wanted: claude-code for Claude Code (Anthropic), codex for Codex (OpenAI)" checked> Claude Code</label>
+            <label><input type="radio" name="outil" value="codex" toolparamdescription="Tool wanted: claude-code for Claude Code (Anthropic), codex for Codex (OpenAI)"> Codex</label>
           </div>
           <label for="cand-lettre">Your motivation letter, 500 words max</label>
-          <textarea id="cand-lettre" name="lettre" rows="8" maxlength="3500" required></textarea>
-          <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>I agree that Hors Zone AI may review it and write to me about it.</span></label>
-          <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+          <textarea id="cand-lettre" name="lettre" toolparamdescription="Motivation letter written by the applicant, 500 words max" rows="8" maxlength="3500" required></textarea>
+          <label class="accord"><input type="checkbox" name="consentement" value="oui" toolparamdescription="The applicant's agreement for Hors Zone AI to review the application and write about it; tick only with their consent" required> <span>I agree that Hors Zone AI may review it and write to me about it.</span></label>
+          <p class="pot" aria-hidden="true"><label>Leave empty <input type="text" name="site_web" toolparamdescription="Anti-spam field: always leave empty" tabindex="-1" autocomplete="off"></label></p>
           <button type="submit">Send</button>
         </form>
         <p class="petit">Hors Zone AI uses this information only to review your application and reply to you. All fields are required: without them, we can't review it. Retention, rights and contact: <a href="legal.html#data">Legal notice and data</a>.</p>
