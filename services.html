@@ -7,6 +7,19 @@
 <meta name="description" content="Devs et étudiants en informatique : Claude Code ou Codex payé par l'asso, à ton nom, sur candidature. Et bientôt des offres réduites.">
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/services.html">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/services.html">
+<link rel="canonical" href="https://hors-zone-ai.github.io/site/services.html">
+<link rel="alternate" hreflang="x-default" href="https://hors-zone-ai.github.io/site/services.html">
+<meta property="og:site_name" content="Hors Zone AI">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Ton abonnement d'IA&#8239;? On le paie.">
+<meta property="og:description" content="Devs et étudiants en informatique : Claude Code ou Codex payé par l'asso, à ton nom, sur candidature. Et bientôt des offres réduites.">
+<meta property="og:url" content="https://hors-zone-ai.github.io/site/services.html">
+<meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/partage-fr-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hors Zone AI : Développer avec l'IA coûte cher. Pas ici.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="marque/avatar-64-apercu.png">
 <link rel="stylesheet" href="style.css?v=10">
 </head>
@@ -80,26 +93,26 @@
     <div class="int">
       <div class="formulaire">
         <h2 id="titre-candidature">Ta candidature</h2>
-        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post" toolname="apply_to_sponsorship_programme" tooldescription="Candidater au programme de sponsoring de Hors Zone AI (association loi 1901) : l'association paie Claude Code ou Codex, au nom de la personne retenue, aux devs et étudiants en informatique qui n'en ont pas les moyens. La personne relit et envoie elle-même le formulaire. Réponse en 48 h maximum.">
           <input type="hidden" name="type" value="etudiant">
           <input type="hidden" name="source" value="site, candidature sponsoring">
           <label for="cand-nom">Nom</label>
-          <input id="cand-nom" name="nom" type="text" required autocomplete="family-name" maxlength="100">
+          <input id="cand-nom" name="nom" toolparamdescription="Nom de famille de la personne qui candidate" type="text" required autocomplete="family-name" maxlength="100">
           <label for="cand-prenom">Prénom</label>
-          <input id="cand-prenom" name="prenom" type="text" required autocomplete="given-name" maxlength="100">
+          <input id="cand-prenom" name="prenom" toolparamdescription="Prénom de la personne qui candidate" type="text" required autocomplete="given-name" maxlength="100">
           <label for="cand-email">Ton mail</label>
-          <input id="cand-email" name="email" type="email" required autocomplete="email" placeholder="toi@mail.fr">
+          <input id="cand-email" name="email" toolparamdescription="Mail où l'association répond" type="email" required autocomplete="email" placeholder="toi@mail.fr">
           <label for="cand-github">Ton GitHub, pseudo ou lien</label>
-          <input id="cand-github" name="github" type="text" required maxlength="200">
+          <input id="cand-github" name="github" toolparamdescription="Pseudo GitHub ou lien vers le profil GitHub" type="text" required maxlength="200">
           <div class="choix" role="radiogroup" aria-label="Outil choisi">
             <span>Je veux&nbsp;:</span>
-            <label><input type="radio" name="outil" value="claude-code" checked> Claude Code</label>
-            <label><input type="radio" name="outil" value="codex"> Codex</label>
+            <label><input type="radio" name="outil" value="claude-code" toolparamdescription="Outil voulu : claude-code pour Claude Code (Anthropic), codex pour Codex (OpenAI)" checked> Claude Code</label>
+            <label><input type="radio" name="outil" value="codex" toolparamdescription="Outil voulu : claude-code pour Claude Code (Anthropic), codex pour Codex (OpenAI)"> Codex</label>
           </div>
           <label for="cand-lettre">Ta lettre de motivation, 500 mots au plus</label>
-          <textarea id="cand-lettre" name="lettre" rows="8" maxlength="3500" required></textarea>
-          <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI l'étudie et m'écrive à son sujet.</span></label>
-          <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+          <textarea id="cand-lettre" name="lettre" toolparamdescription="Lettre de motivation écrite par la personne, 500 mots au plus" rows="8" maxlength="3500" required></textarea>
+          <label class="accord"><input type="checkbox" name="consentement" value="oui" toolparamdescription="Accord de la personne pour que Hors Zone AI étudie sa candidature et lui écrive à son sujet ; à cocher seulement avec son accord" required> <span>J'accepte que Hors Zone AI l'étudie et m'écrive à son sujet.</span></label>
+          <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" toolparamdescription="Champ anti-spam : toujours laisser vide" tabindex="-1" autocomplete="off"></label></p>
           <button type="submit">Envoyer</button>
         </form>
         <p class="petit">Hors Zone AI se sert de ces informations seulement pour étudier ta candidature et te répondre. Tous les champs sont obligatoires&nbsp;: sans eux, on ne peut pas l'étudier. Durées, droits et contact&nbsp;: <a href="mentions-legales.html#donnees">Mentions légales et données</a>.</p>

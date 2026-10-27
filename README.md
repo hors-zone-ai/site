@@ -21,13 +21,25 @@ C'est notre premier projet ouvert. La page doit rester légère et ne rien coût
 - `style.css` : la feuille de style commune : en-tête, sections pleine largeur (le contenu dans `.int`), cartes, formulaires, pied de page. Ce qui ne sert qu'à l'accueil (engagements, étapes, apps, transparence, équipe, questions) est dans un bloc `<style>` en haut de l'accueil.
 - Après chaque modification de `style.css`, augmenter le numéro de version du lien (`style.css?v=10`, puis `?v=11`…) sur les dix pages, françaises et anglaises : sans ça, les navigateurs gardent l'ancienne feuille jusqu'à 10 minutes.
 - `en/` : la version anglaise, une page par page française : `index.html`, `services.html`, `join.html` (Nous rejoindre), `thanks.html` (merci), `legal.html` (mentions légales, la version française fait foi). Même feuille de style, liée en `../style.css`.
-- `marque/` : le logo et l'avatar.
+- `marque/` : le logo, l'avatar et les images de partage (`partage-fr-1200x630.png`, `partage-en-1200x630.png`, utilisées par Open Graph et X).
+- `sitemap.xml` : les six pages à indexer, avec leurs jumelles FR et EN.
 
 Le menu et le pied de page sont recopiés dans chaque page : une modification se fait partout. Chaque page a sa jumelle dans l'autre langue (lien FR ou EN en haut à droite, balises `hreflang`) : un texte modifié l'est dans les deux langues. En haut de chaque page, un menu fixe avec le bouton « Candidater » ; en bas, un pied de page en quatre colonnes. Règles d'écriture : rien n'est dit deux fois sur une même page, et chaque section n'a qu'un titre, sans surtitre au-dessus (seule l'accroche de l'accueil garde le sien).
 
 Deux formulaires (candidature au programme, besoin d'une structure) envoient vers le même webhook ; le champ caché `source` dit d'où vient chaque envoi (« site en, … » pour les pages anglaises). Les formulaires anglais envoient aussi `langue=en` : le webhook renvoie alors vers `en/thanks.html`.
 
 Les formulaires sont de simples formulaires HTML, sans JavaScript. Ils envoient vers un webhook de l'association, qui vérifie le mail et l'accord, écarte les robots (un champ piège caché) et renvoie vers `merci.html`.
+
+## Moteurs de recherche et agents IA
+
+Le site est fait pour être lu par les moteurs de recherche et par les agents IA (ChatGPT, Claude, Perplexity, Gemini) :
+
+- HTML sans JavaScript obligatoire, formulaires avec des labels, pas de captcha (un champ piège à la place).
+- Balise canonical, hreflang avec `x-default`, Open Graph et carte X sur les six pages publiques ; `noindex` sur merci, thanks et les mentions légales.
+- Données structurées JSON-LD sur l'accueil (FR et EN) : l'association (NGO), le site (WebSite) et les questions (FAQPage). Les questions du JSON-LD reprennent mot pour mot celles de la page : si la FAQ change, le JSON-LD change avec.
+- Les deux formulaires sont annotés pour WebMCP (`toolname`, `tooldescription`, `toolparamdescription`) : un agent dans le navigateur peut les préremplir, la personne garde le clic final sur Envoyer (pas de `toolautosubmit`). Un champ ajouté ou renommé reçoit sa description. Dans Chrome, WebMCP demande encore un jeton d'essai (origin trial) lié à l'adresse du site.
+- `robots.txt`, `llms.txt` et `.well-known/security.txt` vivent dans le dépôt [hors-zone-ai.github.io](https://github.com/hors-zone-ai/hors-zone-ai.github.io), à la racine de l'adresse github.io. Tous les robots sont autorisés, y compris ceux qui entraînent les IA (choix de l'association, 27/10/2026).
+- Le jour où le site passe sur horszone.ai : remplacer `https://hors-zone-ai.github.io/site/` par la nouvelle adresse dans les balises, le JSON-LD et `sitemap.xml`, et déplacer robots.txt, llms.txt et security.txt à la racine de ce dépôt.
 
 ## Le registre des dons
 

@@ -7,6 +7,19 @@
 <meta name="description" content="Dev, étudiant en informatique ou structure avec un besoin : comment rejoindre Hors Zone AI.">
 <link rel="alternate" hreflang="fr" href="https://hors-zone-ai.github.io/site/rejoindre.html">
 <link rel="alternate" hreflang="en" href="https://hors-zone-ai.github.io/site/en/join.html">
+<link rel="canonical" href="https://hors-zone-ai.github.io/site/rejoindre.html">
+<link rel="alternate" hreflang="x-default" href="https://hors-zone-ai.github.io/site/rejoindre.html">
+<meta property="og:site_name" content="Hors Zone AI">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Nous rejoindre&nbsp;· Hors Zone AI">
+<meta property="og:description" content="Dev, étudiant en informatique ou structure avec un besoin : comment rejoindre Hors Zone AI.">
+<meta property="og:url" content="https://hors-zone-ai.github.io/site/rejoindre.html">
+<meta property="og:image" content="https://hors-zone-ai.github.io/site/marque/partage-fr-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hors Zone AI : Développer avec l'IA coûte cher. Pas ici.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="marque/avatar-64-apercu.png">
 <link rel="stylesheet" href="style.css?v=10">
 </head>
@@ -55,15 +68,15 @@
       <div class="formulaire">
         <h2 id="titre-besoin">Proposer un besoin</h2>
         <p>Si c'est faisable, on regarde avec vous comment le construire, sans vous le facturer.</p>
-        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post">
+        <form class="asso" action="https://lazytech.app.n8n.cloud/webhook/hzai-liste-attente" method="post" toolname="propose_a_need" tooldescription="Proposer à Hors Zone AI (association loi 1901) le besoin d'une structure (association, BDE, mission locale, lycée) : un outil qu'elle n'a pas les moyens de faire coder. Si c'est faisable, l'association le construit avec elle, sans le lui facturer. La personne relit et envoie elle-même le formulaire.">
           <input type="hidden" name="type" value="association">
           <input type="hidden" name="source" value="site, proposer un besoin">
           <label for="asso-email">Votre mail</label>
-          <input id="asso-email" name="email" type="email" required autocomplete="email" placeholder="contact@votre-asso.fr">
+          <input id="asso-email" name="email" toolparamdescription="Mail de la structure ou de la personne qui écrit, pour la réponse" type="email" required autocomplete="email" placeholder="contact@votre-asso.fr">
           <label for="asso-message">Votre demande, en deux lignes</label>
-          <textarea id="asso-message" name="message" rows="3" maxlength="1000" required></textarea>
-          <label class="accord"><input type="checkbox" name="consentement" value="oui" required> <span>J'accepte que Hors Zone AI me réponde.</span></label>
-          <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" tabindex="-1" autocomplete="off"></label></p>
+          <textarea id="asso-message" name="message" toolparamdescription="La demande en deux lignes : qui est la structure et de quel outil elle a besoin" rows="3" maxlength="1000" required></textarea>
+          <label class="accord"><input type="checkbox" name="consentement" value="oui" toolparamdescription="Accord pour que Hors Zone AI réponde ; à cocher seulement avec l'accord de la personne" required> <span>J'accepte que Hors Zone AI me réponde.</span></label>
+          <p class="pot" aria-hidden="true"><label>Ne pas remplir <input type="text" name="site_web" toolparamdescription="Champ anti-spam : toujours laisser vide" tabindex="-1" autocomplete="off"></label></p>
           <button type="submit">Envoyer</button>
         </form>
         <p class="petit">Hors Zone AI se sert de ces informations seulement pour vous répondre. Les deux champs sont obligatoires. Durées, droits et contact&nbsp;: <a href="mentions-legales.html#donnees">Mentions légales et données</a>.</p>
